@@ -13,6 +13,16 @@
 
 ## 使用方法
 
+下载源文件
+
+```bash
+git clone https://github.com/jaywcjlove/oscnews.git --depth=1
+# 开源中国仓库
+git clone https://gitee.com/jaywcjlove/oscnews.git --depth=1
+```
+
+下载之后，通过下面方式导入到插件列表中。
+
 Chrome 浏览器打开 `chrome://extensions/`
 
 ![](./img/osc-extensions.png)
