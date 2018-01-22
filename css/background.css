@@ -1,0 +1,92 @@
+body,html {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  padding: 30px 20px 15px 20px;
+}
+
+.news-list {
+  font-size: 14px;
+  padding: 0 20px 15px 20px;
+}
+
+.news-list .item {
+  padding: 15px 10px;
+  border-bottom: 1px dashed #ececec;
+  display: flex;
+}
+
+.news-list .item:hover {
+  background: #f7f7f7;
+}
+
+.news-list .item .title {
+  font-size: 1.125rem;
+  line-height: 25px;
+  display: block;
+}
+
+.news-list .item .summary {
+  font-size: .875rem;
+  max-height: 3em;
+  margin: 8px 0;
+  color: #6a6a6a;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-list .item .summary:after {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  right: 0;
+  display: block;
+  width: 160px;
+  height: 20px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 96%);
+}
+
+.news-list .item:hover .summary:after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #f7f7f7 96%);
+}
+
+.news-list .item .thumb {
+  max-width: 150px;
+  margin-left: 20px;
+  float: right;
+}
+
+.news-list .item .box-aw {
+  min-width: 0;
+}
+
+.news-list .item .from .avatar {
+  overflow: hidden;
+  width: 24px;
+  min-width: 24px;
+  max-width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  border-radius: 12px;
+}
+
+.news-list .item .from a,
+.news-list .item .from img,
+.news-list .item .from span,
+.news-list .item .from svg:not([class~=hide]) {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.news-list .item .from .mr {
+  margin-right: 15px;
+  font-size: .75rem;
+  color: #9d9d9d;
+  vertical-align: middle;
+}
+
+.news-list .item .from a {
+  text-decoration: none;
+}
