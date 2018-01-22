@@ -10,3 +10,9 @@
 <div align="center">
   <img src="./img/osc-news.png"> 
 </div>
+
+## 使用方法
+
+Chrome 浏览器打开 `chrome://extensions/`
+
+![](./img/osc-extensions.png)
