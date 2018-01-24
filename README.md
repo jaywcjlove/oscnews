@@ -21,7 +21,19 @@ git clone https://github.com/jaywcjlove/oscnews.git --depth=1
 git clone https://gitee.com/jaywcjlove/oscnews.git --depth=1
 ```
 
-下载之后，通过下面方式导入到插件列表中。
+安装依赖
+
+```bash
+npm install 
+```
+
+编译源码
+
+```bash
+npm run build
+```
+
+下载编译之后，通过下面方式，将生成的 `dist` 目录，导入到插件列表中。
 
 Chrome 浏览器打开 `chrome://extensions/`
 

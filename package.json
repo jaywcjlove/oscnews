@@ -4,8 +4,8 @@
   "description": "开源中国看新闻",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js",
-    "dev": "webpack --watch"
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack --watch"
   },
   "repository": {
     "type": "git",
