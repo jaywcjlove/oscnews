@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://www.oschina.net/">
-    <img height="80" src="img/oschina.svg?sanitize=true">
+    <img height="80" src="src/assets/oschina.svg?sanitize=true">
   </a>
 </p>
 

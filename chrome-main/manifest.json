@@ -3,7 +3,7 @@
   "version": "1.0",
   "description": "开源中国新闻",
   "icons": {
-    "128": "img/osc-logo.png"
+    "128": "osc-logo.png"
   },
   "permissions": [
     "*://*/*",
@@ -13,21 +13,15 @@
   ],
   "background": {
     "scripts": [
-      "js/background.js"
+      "chrome.background.js"
     ]
   },
   "browser_action": {
     "default_title": "",
-    "default_icon": "img/osc-logo.png"
+    "default_icon": "osc-logo.png"
   },
-  "content_scripts": [
-    {
-      "matches": [ "*://*/*" ],
-      "js": [ "js/getcontent.js" ]
-    }
-  ],
   "manifest_version": 2,
   "chrome_url_overrides": {
-    "newtab": "background.html"
+    "newtab": "index.html"
   }
 }
