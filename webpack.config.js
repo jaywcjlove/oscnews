@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'js/[hash:8].[name].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'oscnews')
   },
   module: {
     rules: [
@@ -37,7 +37,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['oscnews']),
     new HtmlWebpackPlugin({
       title: '',
       template: 'src/index.html'
@@ -46,9 +46,9 @@ module.exports = {
       onEnd: [
         {
           copy: [
-            { source: "./chrome-main/manifest.json", destination: "./dist/manifest.json" },
-            { source: "./chrome-main/chrome.background.js", destination: "./dist/chrome.background.js" },
-            { source: "./chrome-main/osc-logo.png", destination: "./dist/osc-logo.png" }
+            { source: "./chrome-main/manifest.json", destination: "./oscnews/manifest.json" },
+            { source: "./chrome-main/chrome.background.js", destination: "./oscnews/chrome.background.js" },
+            { source: "./chrome-main/osc-logo.png", destination: "./oscnews/osc-logo.png" }
           ]
         },
       ]

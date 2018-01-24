@@ -1,6 +1,6 @@
 {
   "name": "oscnews",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "开源中国新闻",
   "icons": {
     "128": "osc-logo.png"
