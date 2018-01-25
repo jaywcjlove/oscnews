@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'js/[hash:8].[name].js',
-    path: path.resolve(__dirname, 'oscnews')
+    path: path.resolve(__dirname, '../oscnews')
   },
   module: {
     rules: [
@@ -40,7 +40,7 @@ module.exports = {
     new CleanWebpackPlugin(['oscnews']),
     new HtmlWebpackPlugin({
       title: '',
-      template: 'src/index.html'
+      template: './src/index.html'
     }),
     new FileManagerPlugin({
       onEnd: [
