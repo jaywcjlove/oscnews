@@ -55,7 +55,7 @@ export default class OSCNews extends PureComponent {
       });
     }).catch((error)=>{
       this.setState({
-        newList: localStorage.getItem('osc-list')
+        newList: osclist || `请求错误，请检查网路！`,
       })
     })
   }

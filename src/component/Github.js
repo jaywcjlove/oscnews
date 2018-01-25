@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import fetchs from '../utils/fetch';
 import styles from './Github.less';
+import cheerio from 'cheerio';
+
+const githublist = localStorage.getItem('github-list');
 
 export default class Github extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: 'loading...',
+      content: githublist || 'loading...',
     };
   }
   componentDidMount() {
@@ -15,20 +18,36 @@ export default class Github extends Component {
   }
   getTrending() {
     fetchs('https://github.com/trending').then((response) => {
-      response = response.replace(/<div class="explore-content">([^<]+)<\/div >/, (node,list) => {
-      // response = response.replace(/<div\b[^>]+\bclass="explore-content"[^>]*>([\s\S]*?)<\/div>/gi, (node,list) => {
-        console.log('list:', list)
+      response.replace(/<body\b[^>]*>([\s\S]*?)<\/body>/gi, (node, body) => {
+        response = body;
+        return node;
+      })
+      response = response.replace(/<a\b[^>]+\bhref="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (node, url, text) => {
+        if (/^\//.test(url)) {
+          node = `<a href="https://github.com${url}">${text}</a>`;
+        }
         return node;
       });
-      // console.log('response:', response)
+      const $ = cheerio.load(response);
+      // 清除头像，避免被和谐
+      $('.f6 .mr-3').not('.mr-3:first-child').empty();
+      const _html = $('div.explore-content').html();
+      this.setState({
+        content: _html
+      },()=>{
+        localStorage.setItem('github-list', _html);
+      });
     }).catch((err) => {
-      console.log('value:', err)
+      this.setState({
+        content: githublist || `请求错误，请检查网路！`,
+      });
     })
   }
   render() {
     return (
-      <div>
-        {this.state.content}
+      <div className={styles.warpper}>
+        <h1 className={styles.title}>Github Trending</h1>
+        <div className={styles.list} dangerouslySetInnerHTML={{ __html: this.state.content }} />
       </div>
     )
   }
