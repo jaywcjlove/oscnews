@@ -15,6 +15,9 @@
 
 [Chrome 网上商店](https://chrome.google.com/webstore/detail/oscnews/iheapfheanfjcemgneblljhaebonakbg) 搜索 `oscnews` 安装，或者直接下载 [crx 文件](https://github.com/jaywcjlove/oscnews/releases/download/v1.0.0/oscnews-v1.0.0.crx) 安装，打开 [chrome://extensions](chrome://extensions/) 将 crx 拖拽到扩展列表中安装。
 
+> [开源中国下载 crx 文件](https://gitee.com/jaywcjlove/oscnews/releases/v1.0.0)  
+> [GitHub下载 crx 文件](https://github.com/jaywcjlove/oscnews/releases/download/v1.0.0/oscnews-v1.0.0.crx)  
+
 ## 开发模式安装
 
 下载源文件
