@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import classNames from 'classnames';
+import cheerio from 'cheerio';
 import fetchs from '../utils/fetch';
 import styles from './Github.less';
-import cheerio from 'cheerio';
 
 const githublist = localStorage.getItem('github-list');
 
@@ -21,7 +20,7 @@ export default class Github extends Component {
       response.replace(/<body\b[^>]*>([\s\S]*?)<\/body>/gi, (node, body) => {
         response = body;
         return node;
-      })
+      });
       response = response.replace(/<a\b[^>]+\bhref="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (node, url, text) => {
         if (/^\//.test(url)) {
           node = `<a href="https://github.com${url}">${text}</a>`;
@@ -33,15 +32,15 @@ export default class Github extends Component {
       $('.f6 .mr-3').not('.mr-3:first-child').empty();
       const _html = $('div.explore-content').html();
       this.setState({
-        content: _html
-      },()=>{
+        content: _html,
+      }, () => {
         localStorage.setItem('github-list', _html);
       });
-    }).catch((err) => {
+    }).catch(() => {
       this.setState({
-        content: githublist || `请求错误，请检查网路！`,
+        content: githublist || '请求错误，请检查网路！',
       });
-    })
+    });
   }
   render() {
     return (
@@ -49,6 +48,6 @@ export default class Github extends Component {
         <h1 className={styles.title}>Github Trending</h1>
         <div className={styles.list} dangerouslySetInnerHTML={{ __html: this.state.content }} />
       </div>
-    )
+    );
   }
 }

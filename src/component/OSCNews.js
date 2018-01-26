@@ -24,7 +24,7 @@ export default class OSCNews extends PureComponent {
         }, {
           title: '软件更新',
           type: 'project',
-        }
+        },
       ],
     };
   }
@@ -32,9 +32,9 @@ export default class OSCNews extends PureComponent {
     this.getNewsList();
   }
   getNewsList() {
-    const { newType, newList, newPage } = this.state;
+    const { newType, newPage } = this.state;
     localStorage.setItem('osc-type', newType);
-    fetchs(`http://www.oschina.net/action/ajax/get_more_news_list?newsType=${this.state.newType}&p=${this.state.newPage}`).then((response) => {
+    fetchs(`http://www.oschina.net/action/ajax/get_more_news_list?newsType=${newType}&p=${newPage}`).then((response) => {
       response = response.replace(/<a\b[^>]+\bhref="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (node, url, text) => {
         if (/^\//.test(url)) {
           node = `<a href="http://www.oschina.net${url}" class="title">${text}</a>`;
@@ -45,19 +45,19 @@ export default class OSCNews extends PureComponent {
           return node.replace(url, `https://static.oschina.net${url}`);
         }
         return node;
-      }).replace(/<svg[\s\S]*?<\/svg>/gi, (node) => {
+      }).replace(/<svg[\s\S]*?<\/svg>/gi, () => {
         return messgeIcon;
       });
       this.setState({
         newList: response,
-      },() => {
+      }, () => {
         localStorage.setItem('osc-list', response);
       });
-    }).catch((error)=>{
+    }).catch(() => {
       this.setState({
-        newList: osclist || `请求错误，请检查网路！`,
-      })
-    })
+        newList: osclist || '请求错误，请检查网路！',
+      });
+    });
   }
   onChangeTab(item) {
     this.setState({
@@ -65,7 +65,7 @@ export default class OSCNews extends PureComponent {
       newPage: 1,
     }, () => {
       this.getNewsList();
-    })
+    });
   }
   render() {
     const { newType, newTabs } = this.state;
@@ -73,9 +73,16 @@ export default class OSCNews extends PureComponent {
       <div className={styles.warpper}>
         <div className={styles.tabs}>
           {newTabs.map((item, idx) => {
-            return <div key={idx} className={classNames({
-              'active': item.type === newType
-            })} onClick={this.onChangeTab.bind(this, item)}>{item.title}</div>
+            return (
+              <div key={idx}
+                className={classNames({
+                  active: item.type === newType,
+                })}
+                onClick={this.onChangeTab.bind(this, item)}
+              >
+                {item.title}
+              </div>
+            );
           })}
         </div>
         <div className={styles.newList} dangerouslySetInnerHTML={{ __html: this.state.newList }} />

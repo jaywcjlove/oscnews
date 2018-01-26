@@ -13,27 +13,58 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx|mjs)$/,
-        exclude: [/node_modules/, /\.(cache)/],
-        loader: require.resolve('babel-loader'),
-        options: require('./.babelrc'),
-      }, {
-        test: /\.(png|svg|jpg|gif)$/,
-        loader: require.resolve('file-loader')
-      }, {
-        test: /\.(css|less)$/,
+        exclude: [/node_modules/],
+        enforce: 'pre',
         use: [
-          require.resolve('style-loader'),
+          // TODO:禁用require.ensure也不是一种标准的语言特征。
+          // 我们等待https://github.com/facebookincubator/create-react-app/issues/2176。
+          // { parser: { requireEnsure: false } },
           {
-            loader: require.resolve('css-loader'),
+            // 首先运行linter。
+            // 在Babel处理js之前做这一点很重要。
             options: {
-              modules: true,
-              localIdentName: '[name]-[hash:base64:5]',
-              importLoaders: 1,
+              // formatter: eslintFormatter,
+              eslintPath: require.resolve('eslint'),
+              configFile: require.resolve('./.eslintrc.js'),
             },
+            loader: require.resolve('eslint-loader'),
           },
-          require.resolve('less-loader'),
+        ],
+      },
+      {
+        // “oneOf”将遍历所有以下加载程序，直到一个符合要求。
+        // 当没有加载器匹配时，它将返回到加载程序列表末尾的“file”加载器。
+        oneOf: [
+          {
+            test: /\.(js|jsx|mjs)$/,
+            exclude: [/node_modules/, /\.(cache)/],
+            loader: require.resolve('babel-loader'),
+            options: require('./.babelrc'),
+          }, {
+            test: /\.(js|jsx|mjs)$/,
+            exclude: [/node_modules/, /\.(cache)/],
+            loader: require.resolve('babel-loader'),
+            options: require('./.babelrc'),
+          }, {
+            test: /\.(png|svg|jpg|gif)$/,
+            loader: require.resolve('file-loader')
+          }, {
+            test: /\.(css|less)$/,
+            use: [
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('css-loader'),
+                options: {
+                  modules: true,
+                  localIdentName: '[name]-[hash:base64:5]',
+                  importLoaders: 1,
+                },
+              },
+              require.resolve('less-loader'),
+            ]
+          }
         ]
-      }
+      },
     ]
   },
   plugins: [
