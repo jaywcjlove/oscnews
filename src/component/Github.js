@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import cheerio from 'cheerio';
-import fetchs from '../utils/fetch';
+import { fetchs } from '../utils/';
 import styles from './Github.less';
 
 const githublist = localStorage.getItem('github-list');
@@ -16,7 +16,7 @@ export default class Github extends Component {
     this.getTrending();
   }
   getTrending() {
-    fetchs('https://github.com/trending').then((response) => {
+    fetchs('https://github.com/trending', 3).then((response) => {
       response.replace(/<body\b[^>]*>([\s\S]*?)<\/body>/gi, (node, body) => {
         response = body;
         return node;
