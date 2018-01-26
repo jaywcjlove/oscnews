@@ -13,7 +13,7 @@
 
 ## 商店安装
 
-[Chrome 网上商店](https://chrome.google.com/webstore/detail/oscnews/iheapfheanfjcemgneblljhaebonakbg) 搜索 `oscnews` 安装，或者直接下载 crx 文件安装，打开 [chrome://extensions](chrome://extensions/) 将 crx 拖拽到扩展列表中安装。
+[Chrome 网上商店](https://chrome.google.com/webstore/detail/oscnews/iheapfheanfjcemgneblljhaebonakbg) 搜索 `oscnews` 安装，或者直接下载 [crx 文件](https://github.com/jaywcjlove/oscnews/releases/download/v1.0.0/oscnews-v1.0.0.crx) 安装，打开 [chrome://extensions](chrome://extensions/) 将 crx 拖拽到扩展列表中安装。
 
 ## 开发模式安装
 
@@ -40,3 +40,10 @@ npm run build
 下载编译之后，在 Chrome 浏览器地址栏输入 [chrome://extensions](chrome://extensions/)  打开插件界面，通过下图方式，将生成的 `oscnews` 目录，导入到插件列表中。
 
 ![](./img/osc-extensions.png)
+
+
+应用商店生成 crx 文件
+
+```
+https://clients2.google.com/service/update2/crx?response=redirect&x=id%3D<这里是扩展ID>%26uc&prodversion=32
+```
