@@ -50,3 +50,20 @@ npm run build
 ```
 https://clients2.google.com/service/update2/crx?response=redirect&x=id%3D<这里是扩展ID>%26uc&prodversion=32
 ```
+
+## TODO
+
+- [ ] 浏览历史记录
+- [ ] Linux命令检索，集成 [linux-command](https://github.com/jaywcjlove/linux-command)
+- [ ] 开源中国新闻翻页
+- [ ] Github 趋势榜天、周、月统计切换，语言切换
+- [ ] 开发文档导航
+- [ ] 常用网站导航
+- [ ] Github 登录，浏览自己项目
+- [ ] Gitlab 登录，相关功能
+- [ ] 集成 [octotree](https://github.com/buunguyen/octotree) 部分功能
+- [ ] 插件官方网站
+- [ ] 设置功能
+  - [ ] 是否在新标签页显示
+  - [ ] 菜单配置
+  - [ ] 分享应用到微博
