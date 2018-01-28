@@ -5,6 +5,7 @@ import logo from '../assets/oschina.svg';
 import gitee from '../assets/gitee.svg';
 import github from '../assets/github.svg';
 import apple from '../assets/apple.svg';
+import setting from '../assets/setting.svg';
 import styles from './Header.less';
 
 const contentType = localStorage.getItem('content-type');
@@ -24,7 +25,7 @@ export default class Header extends Component {
         }, {
           title: '历史记录',
           type: 'history',
-        }
+        },
       ],
     };
   }
@@ -52,7 +53,8 @@ export default class Header extends Component {
           </div>
           <a href="https://gitee.com/" > <img title="码云" alt="码云" src={ gitee } /></a>
           <a href="https://github.com/" > <img title="Github" alt="Github" src={ github } /></a>
-          <a href="http://jaywcjlove.github.io/awesome-mac/index.zh.html" > <img title="Mac精品软件推荐" alt="Mac精品软件推荐" src={ apple } /></a>
+          <a href="http://wangchujiang.com/awesome-mac/index.zh.html" > <img title="Mac精品软件推荐" alt="Mac精品软件推荐" src={ apple } /></a>
+          <span className={styles.setting}> <img title="Mac精品软件推荐" alt="Mac精品软件推荐" src={setting} /> </span>
         </div>
       </div>
     );
