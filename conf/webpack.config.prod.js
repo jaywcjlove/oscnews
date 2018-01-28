@@ -2,14 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
+const paths = require('./paths');
 
 module.exports = {
-  bail: true,
-  devtool: 'source-map',
-  entry: './src/index.js',
+  entry: paths.entry,
   output: {
     filename: 'js/[hash:8].[name].js',
-    path: path.resolve(__dirname, '../oscnews')
+    path: paths.output,
   },
   module: {
     rules: [
@@ -78,11 +77,7 @@ module.exports = {
     new FileManagerPlugin({
       onEnd: [
         {
-          copy: [
-            { source: "./chrome-main/manifest.json", destination: "./oscnews/manifest.json" },
-            { source: "./chrome-main/background.js", destination: "./oscnews/background.js" },
-            { source: "./chrome-main/osc-logo.png", destination: "./oscnews/osc-logo.png" }
-          ]
+          copy: paths.copyFile,
         },
       ]
     })

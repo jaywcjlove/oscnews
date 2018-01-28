@@ -22,7 +22,7 @@ export default class Header extends Component {
           type: 'trending',
         }, {
           title: '开发文档',
-          type: 'devdocument',
+          type: 'document',
         },
       ],
     };

@@ -50,7 +50,6 @@ export default class Github extends Component {
     });
   }
   render() {
-    console.log('githublist:', githublist);
     return (
       <div className={styles.warpper}>
         <h1 className={styles.title}><a target="_blank" rel="noopener noreferrer" href="http://github.com/trending">Github Trending</a></h1>

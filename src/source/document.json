@@ -1,0 +1,363 @@
+[
+  {
+    "title": "Node.js",
+    "website": "https://nodejs.org/en/",
+    "des": "是一个基于 Chrome V8 引擎的 JavaScript 运行环境。",
+    "logo": "icons/node-logo.svg",
+    "urls": {
+      "cn": "http://nodejs.cn/",
+      "git": "https://github.com/nodejs/node"
+    },
+    "tags": [ "服务端" ]
+  },
+  {
+    "title": "Babel",
+    "website": "https://babeljs.io/",
+    "des": "用于编写下一代JavaScript的编译器",
+    "logo": "icons/babel-logo.svg",
+    "urls": {
+      "cn": "https://babel.docschina.org/",
+      "git": "https://github.com/babel/babel"
+    },
+    "tags": [ "编译器" ]
+  },
+  {
+    "title": "TypeScript",
+    "website": "http://www.typescriptlang.org/",
+    "des": "TypeScript是JavaScript类型的超集，它可以编译成纯JavaScript。",
+    "logo": "icons/typescript-icon.svg",
+    "urls": {
+      "cn": "https://www.tslang.cn/",
+      "git": "https://github.com/Microsoft/TypeScript"
+    },
+    "tags": [ "编译器" ]
+  },
+  {
+    "title": "Webpack",
+    "website": "https://webpack.js.org/",
+    "des": "前端资源打包工具",
+    "logo": "icons/webpack-logo.svg",
+    "urls": {
+      "cn": "https://doc.webpack-china.org/",
+      "git": "https://github.com/webpack/webpack"
+    },
+    "tags": [ "构建工具" ]
+  },
+  {
+    "title": "Rollup",
+    "website": "http://rollupjs.org",
+    "des": "前端资源打包工具",
+    "logo": "icons/rollupjs-logo.svg",
+    "urls": {
+      "cn": "https://rollupjs.cn/",
+      "git": "https://github.com/rollup/rollup"
+    },
+    "tags": [ "构建工具" ]
+  },
+  {
+    "title": "Gulp",
+    "website": "http://gulpjs.com",
+    "des": "基于流的自动化构建",
+    "logo": "icons/gulp.svg",
+    "urls": {
+      "cn": "http://www.gulpjs.com.cn/",
+      "git": "https://github.com/gulpjs/gulp"
+    },
+    "tags": [ "构建工具" ]
+  },
+  {
+    "title": "Grunt",
+    "website": "http://gruntjs.com/",
+    "des": "JavaScript世界的构建工具",
+    "logo": "icons/grunt.svg",
+    "urls": {
+      "cn": "https://grunt.docschina.org/",
+      "git": "https://github.com/gruntjs/grunt"
+    },
+    "tags": [ "构建工具" ]
+  },
+  {
+    "title": "Express",
+    "website": "https://expressjs.com",
+    "des": "快速极简的Web后台框架",
+    "logo": "icons/express.svg",
+    "urls": {
+      "cn": "http://expressjs.com/zh-cn/",
+      "git": "https://github.com/expressjs/express"
+    },
+    "tags": [ "框架" ]
+  },
+  {
+    "title": "Koa",
+    "website": "http://koajs.com",
+    "des": "新一代的Web后台框架",
+    "logo": "icons/koa.png",
+    "urls": {
+      "cn": "https://github.com/guo-yu/koa-guide",
+      "git": "https://github.com/koajs/koa"
+    },
+    "tags": [ "框架" ]
+  },
+  {
+    "title": "React",
+    "website": "https://reactjs.org",
+    "des": "用于构建UI的JS库",
+    "logo": "icons/react-logo.svg",
+    "urls": {
+      "cn": "https://doc.react-china.org/",
+      "git": "https://github.com/facebook/react/"
+    },
+    "tags": [ "框架", "React" ]
+  },
+  {
+    "title": "React Router",
+    "website": "https://reacttraining.com/react-router/",
+    "des": "React 路由",
+    "logo": "icons/react-route-logo.svg",
+    "urls": {
+      "cn": "http://reacttraining.cn/",
+      "git": "https://github.com/ReactTraining/react-router"
+    },
+    "tags": [ "React" ]
+  },
+  {
+    "title": "Redux",
+    "website": "https://redux.js.org/",
+    "des": "Redux 是 JavaScript 状态容器，提供可预测化的状态管理。",
+    "logo": "icons/redux-logo.svg",
+    "urls": {
+      "cn": "http://cn.redux.js.org/",
+      "git": "https://github.com/reactjs/redux"
+    },
+    "tags": [ "React" ]
+  },
+  {
+    "title": "Vue",
+    "website": "http://vuejs.org",
+    "des": "轻量mvvm框架",
+    "logo": "icons/vue.svg",
+    "urls": {
+      "cn": "https://cn.vuejs.org/",
+      "git": "https://github.com/vuejs/vue"
+    },
+    "tags": [ "框架" ]
+  },
+  {
+    "title": "Angular",
+    "website": "https://angular.io",
+    "des": "一套框架多种平台",
+    "logo": "icons/angular-icon.svg",
+    "urls": {
+      "cn": "https://angular.cn/",
+      "git": "https://github.com/angular/angular"
+    },
+    "tags": [ "框架" ]
+  },
+  {
+    "title": "Cycle.js",
+    "website": "http://cyclejs.cn/",
+    "des": "函数式和响应式的 JS 框架",
+    "logo": "icons/cyclejs.svg",
+    "urls": {
+      "cn": "http://cyclejs.cn/",
+      "git": "https://github.com/cyclejs/cyclejs"
+    },
+    "tags": [ "框架" ]
+  },
+  {
+    "title": "EditorConfig",
+    "website": "http://editorconfig.org/",
+    "des": "代码格式配置管理。",
+    "logo": "icons/editorconfig-logo.png",
+    "urls": {
+      "cn": "http://editorconfig.org/"
+    },
+    "tags": [ "工具库" ]
+  },
+  {
+    "title": "Semver",
+    "website": "http://semver.org",
+    "des": "语义化版本 2.0.0",
+    "logo": "icons/semver.svg",
+    "urls": {
+      "cn": "https://semver.org/lang/zh-CN/"
+    },
+    "tags": [ "工具库" ]
+  },
+  {
+    "title": "Git",
+    "website": "https://git-scm.com",
+    "des": "版本控制工具",
+    "logo": "icons/git-icon-logo.svg",
+    "urls": {
+      "cn": "https://git-scm.com/book/zh/v2",
+      "git": "https://github.com/git/git"
+    },
+    "tags": [ "工具库" ]
+  },
+  {
+    "title": "jQuery",
+    "website": "https://jquery.com/",
+    "des": "高效精简强大的工具库",
+    "logo": "icons/jquery.svg",
+    "urls": {
+      "cn": "https://www.jquery123.com/",
+      "git": "https://github.com/jquery/jquery"
+    },
+    "tags": [ "工具库" ]
+  },
+  {
+    "title": "Zepto",
+    "website": "http://zeptojs.com",
+    "des": "轻量级的工具库",
+    "logo": "icons/zepto.png",
+    "urls": {
+      "git": "https://github.com/jquery/jquery"
+    },
+    "tags": [ "工具库" ]
+  },
+  {
+    "title": "Require.js",
+    "website": "http://requirejs.org/",
+    "des": "一个JavaScript文件和模块加载器。",
+    "logo": "icons/require-logo.svg",
+    "urls": {
+      "git": "https://github.com/jquery/jquery"
+    },
+    "tags": [ "工具库" ]
+  },
+  {
+    "title": "ESlint",
+    "website": "https://eslint.org",
+    "des": "可组装的JS检查工具",
+    "logo": "icons/eslint-logo.svg",
+    "urls": {
+      "cn": "http://cn.eslint.org/",
+      "git": "https://github.com/eslint/eslint"
+    },
+    "tags": [ "代码质量" ]
+  },
+  {
+    "title": "StyleLint",
+    "website": "http://stylelint.io/",
+    "des": "强大的现代CSS检测器",
+    "logo": "icons/stylelint.svg",
+    "urls": {
+      "cn": "http://stylelint.cn/",
+      "git": "https://github.com/stylelint/stylelint"
+    },
+    "tags": [ "代码质量" ]
+  },
+  {
+    "title": "Jest",
+    "website": "https://facebook.github.io/jest/",
+    "des": "令人愉快的 JavaScript 测试",
+    "logo": "icons/jest.svg",
+    "urls": {
+      "cn": "http://stylelint.cn/",
+      "git": "https://facebook.github.io/jest/zh-Hans/"
+    },
+    "tags": [ "代码质量", "测试工具" ]
+  },
+  {
+    "title": "Mocha",
+    "website": "https://mochajs.org",
+    "des": "JavaScript的一种单元测试框架。",
+    "logo": "icons/mocha.svg",
+    "urls": {
+      "git": "https://github.com/mochajs/mocha"
+    },
+    "tags": [
+      "代码质量",
+      "测试工具"
+    ]
+  },
+  {
+    "title": "Chai",
+    "website": "http://chaijs.com",
+    "des": "BDD/TDD断言框架node.js和浏览器。",
+    "logo": "icons/chai.svg",
+    "urls": {
+      "git": "https://github.com/chaijs/chai"
+    },
+    "tags": [
+      "代码质量",
+      "测试工具"
+    ]
+  },
+  {
+    "title": "Sass",
+    "website": "http://sass-lang.com",
+    "des": "基于Ruby的CSS预处理器",
+    "logo": "icons/sass.svg",
+    "urls": {
+      "cn": "https://sass-guidelin.es/zh/",
+      "git": "https://github.com/sass/sass"
+    },
+    "tags": [ "CSS" ]
+  },
+  {
+    "title": "Less",
+    "website": "http://lesscss.org",
+    "des": "基于Ruby的CSS预处理器",
+    "logo": "icons/less-logo.svg",
+    "urls": {
+      "cn": "http://lesscss.cn/",
+      "git": "https://github.com/less/less.js"
+    },
+    "tags": [ "CSS" ]
+  },
+  {
+    "title": "Stylus",
+    "website": "http://stylus-lang.com/",
+    "des": "基于Node的CSS预处理器",
+    "logo": "icons/stylus.svg",
+    "urls": {
+      "cn": "http://www.zhangxinxu.com/jq/stylus/",
+      "git": "https://github.com/stylus/stylus"
+    },
+    "tags": [ "CSS" ]
+  },
+  {
+    "title": "PostCSS",
+    "website": "http://postcss.org/",
+    "des": "基于Node的CSS后处理器",
+    "logo": "icons/postcss.svg",
+    "urls": {
+      "git": "https://github.com/postcss/postcss"
+    },
+    "tags": [ "CSS" ]
+  },
+  {
+    "title": "CSS Modules",
+    "website": "https://github.com/css-modules/css-modules",
+    "des": "CSS加入了局部作用域和模块依赖",
+    "logo": "icons/css-modules-logo.png",
+    "urls": {
+      "cn": "http://graphql.cn/",
+      "git": "https://github.com/css-modules/css-modules"
+    },
+    "tags": [ "API" ]
+  },
+  {
+    "title": "Autoprefixer",
+    "website": "https://github.com/postcss/autoprefixer",
+    "des": "解析CSS并添加供应商前缀到规则",
+    "logo": "icons/autoprefixer-logo.svg",
+    "urls": {
+      "git": "https://github.com/postcss/autoprefixer"
+    },
+    "tags": [ "API" ]
+  },
+  {
+    "title": "GraphQL",
+    "website": "http://graphql.org/",
+    "des": "一种用于 API 的查询语言",
+    "logo": "icons/graphql.svg",
+    "urls": {
+      "cn": "http://graphql.cn/",
+      "git": "https://github.com/graphql"
+    },
+    "tags": [ "API" ]
+  }
+]

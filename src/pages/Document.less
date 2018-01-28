@@ -1,0 +1,107 @@
+.warpper {
+  padding: 10px;
+}
+
+.title {
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 24px;
+  color: #c1c1c1;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.lists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  li {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    min-width: 160px;
+    min-height: 80px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.07);
+    transition: all .3s;
+    &:hover {
+      box-shadow: 0 0px 5px rgba(0, 0, 0, 0.6);
+    }
+    a {
+      color: #333;
+      text-decoration: none;
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+}
+
+.itemHeader {
+  flex: 1;
+}
+
+.logo {
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  align-items: center;
+  padding: 5px;
+  h4 {
+    padding: 0 10px 0 5px;
+    margin: 0;
+    line-height: 16px;
+    height: 16px;
+    vertical-align: middle;
+    flex: 1;
+  }
+  img {
+    height: 23px;
+    min-width: 23px;
+    min-height: 23px;
+    vertical-align: middle;
+    border-radius: 3px;
+    padding: 3px;
+  }
+}
+
+.details {
+  padding: 0px 10px 5px 10px;
+  max-width: 190px;
+  color: #969696;
+}
+
+.urls {
+  padding: 0 10px;
+  margin: 0 0 5px 0;
+  svg {
+    fill: #dcdbdb;
+    transition: all .3s;
+    margin-right: 3px;
+    &:hover {
+      fill: #333;
+    }
+  }
+  img, svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+.zhHans {
+  circle, path {
+    color: #606467;
+  }
+  path {
+    fill: #fff;
+  }
+  &:hover {
+    circle {
+      fill: #D64B24;
+    }
+    path {
+      fill: #FBDC00;
+    }
+  }
+}
