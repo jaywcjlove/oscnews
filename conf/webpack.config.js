@@ -4,6 +4,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 module.exports = {
+  bail: true,
+  devtool: 'source-map',
   entry: './src/index.js',
   output: {
     filename: 'js/[hash:8].[name].js',
@@ -78,7 +80,7 @@ module.exports = {
         {
           copy: [
             { source: "./chrome-main/manifest.json", destination: "./oscnews/manifest.json" },
-            { source: "./chrome-main/chrome.background.js", destination: "./oscnews/chrome.background.js" },
+            { source: "./chrome-main/background.js", destination: "./oscnews/background.js" },
             { source: "./chrome-main/osc-logo.png", destination: "./oscnews/osc-logo.png" }
           ]
         },

@@ -9,11 +9,13 @@
     "*://*/*",
     "declarativeContent",
     "tabs",
-    "unlimitedStorage"
+    "unlimitedStorage",
+    "history",
+    "chrome://favicon/"
   ],
   "background": {
     "scripts": [
-      "chrome.background.js"
+      "background.js"
     ]
   },
   "browser_action": {

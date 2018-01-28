@@ -7,6 +7,13 @@
     position: relative;
     font-size: 18px;
     color: #c1c1c1;
+    a {
+      color: #c1c1c1;
+      text-decoration: none;
+      &:hover {
+        color: #0080d0;
+      }
+    }
   }
 }
 
@@ -93,5 +100,27 @@
         color: #586069;
       }
     }
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #d2d2d2;
+  span::after, span::before {
+    content: '';
+    display: inline-block;
+    width: 35px;
+    height: 1px;
+    background-color: #dcdcdc;
+    top: -4px;
+    position: relative;
+  }
+  span::after {
+    margin-left: 5px;
+  }
+  span::before {
+    margin-right: 5px;
   }
 }

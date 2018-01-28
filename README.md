@@ -63,7 +63,14 @@ https://clients2.google.com/service/update2/crx?response=redirect&x=id%3D<这里
 - [ ] Gitlab 登录，相关功能
 - [ ] 集成 [octotree](https://github.com/buunguyen/octotree) 部分功能
 - [ ] 插件官方网站
+- [ ] 提醒事项
+  - [ ] 记录代办事项
+  - [ ] Chrome通知
 - [ ] 设置功能
   - [ ] 是否在新标签页显示
   - [ ] 菜单配置
   - [ ] 分享应用到微博
+
+## License
+
+The MIT License (MIT)

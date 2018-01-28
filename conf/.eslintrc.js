@@ -13,8 +13,11 @@ const eslintrc = {
     "react",
     "import"
   ],
-  parserOptions: {
-    parser: 'babel-eslint',
+  "globals": {
+    "chrome": true
+  },
+  "parserOptions": {
+    "parser": 'babel-eslint',
   },
   "rules": {
     "linebreak-style": 0,

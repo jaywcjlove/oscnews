@@ -11,12 +11,37 @@
     height: 30px;
   }
   .menu {
+    span, a {
+      padding: 2px 6px;
+      transition: all .3s;
+      vertical-align: middle;
+    }
+    span {
+      cursor: pointer;
+      display: inline-block;
+    }
     a {
       display: inline-block;
-      margin: 0 5px;
       img {
         height: 18px;
       }
+    }
+  }
+}
+
+.nav {
+  display: inline-block;
+  margin-right: 15px;
+  color: #585858;
+  span {
+    margin: 0 3px;
+    padding: 2px 5px;
+  }
+  :global {
+    .active {
+      color: #fff;
+      background-color: #3c3c3c;
+      border-radius: 3px;
     }
   }
 }
