@@ -1,85 +1,56 @@
-const path = require('path');
+const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const FileManagerPlugin = require('filemanager-webpack-plugin');
-const paths = require('./paths');
+const common = require('./webpack.config');
+const webpack = require('webpack');
 
-module.exports = {
-  entry: paths.entry,
-  output: {
-    filename: 'js/[hash:8].[name].js',
-    path: paths.output,
-  },
+const shouldUseSourceMap = true
+
+module.exports = merge(common, {
+  devtool: shouldUseSourceMap ? 'source-map' : false,
   module: {
-    rules: [
-      {
-        test: /\.(js|jsx|mjs)$/,
-        exclude: [/node_modules/],
-        enforce: 'pre',
-        use: [
-          // TODO:禁用require.ensure也不是一种标准的语言特征。
-          // 我们等待https://github.com/facebookincubator/create-react-app/issues/2176。
-          // { parser: { requireEnsure: false } },
-          {
-            // 首先运行linter。
-            // 在Babel处理js之前做这一点很重要。
-            options: {
-              // formatter: eslintFormatter,
-              eslintPath: require.resolve('eslint'),
-              configFile: require.resolve('./.eslintrc.js'),
-            },
-            loader: require.resolve('eslint-loader'),
-          },
-        ],
-      },
-      {
-        // “oneOf”将遍历所有以下加载程序，直到一个符合要求。
-        // 当没有加载器匹配时，它将返回到加载程序列表末尾的“file”加载器。
-        oneOf: [
-          {
-            test: /\.(js|jsx|mjs)$/,
-            exclude: [/node_modules/, /\.(cache)/],
-            loader: require.resolve('babel-loader'),
-            options: require('./.babelrc'),
-          }, {
-            test: /\.(js|jsx|mjs)$/,
-            exclude: [/node_modules/, /\.(cache)/],
-            loader: require.resolve('babel-loader'),
-            options: require('./.babelrc'),
-          }, {
-            test: /\.(png|svg|jpg|gif)$/,
-            loader: require.resolve('file-loader')
-          }, {
-            test: /\.(css|less)$/,
-            use: [
-              require.resolve('style-loader'),
-              {
-                loader: require.resolve('css-loader'),
-                options: {
-                  modules: true,
-                  localIdentName: '[name]-[hash:base64:5]',
-                  importLoaders: 1,
-                },
-              },
-              require.resolve('less-loader'),
-            ]
-          }
-        ]
-      },
-    ]
+    strictExportPresence: true,
   },
   plugins: [
-    new CleanWebpackPlugin(['oscnews']),
-    new HtmlWebpackPlugin({
-      title: '',
-      template: './src/index.html'
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
     }),
-    new FileManagerPlugin({
-      onEnd: [
-        {
-          copy: paths.copyFile,
-        },
-      ]
-    })
+    new HtmlWebpackPlugin({
+      inject: true,
+      title: '',
+      template: './src/index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      },
+    }),
+    // Minify the code.
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        // Disabled because of an issue with Uglify breaking seemingly valid code:
+        // https://github.com/facebookincubator/create-react-app/issues/2376
+        // Pending further investigation:
+        // https://github.com/mishoo/UglifyJS2/issues/2011
+        comparisons: false,
+      },
+      mangle: {
+        safari10: true,
+      },
+      output: {
+        comments: false,
+        // Turned on because emoji and regex is not minified properly using default
+        // https://github.com/facebookincubator/create-react-app/issues/2488
+        ascii_only: true,
+      },
+      sourceMap: shouldUseSourceMap,
+    }),
   ]
-}
+});

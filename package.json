@@ -4,7 +4,7 @@
   "description": "开源中国看新闻",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config conf/webpack.config.js",
+    "build": "webpack --config conf/webpack.config.prod.js",
     "start": "webpack --config conf/webpack.config.dev.js --watch"
   },
   "repository": {
@@ -40,6 +40,7 @@
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
     "webpack": "^3.10.0"
   },
   "dependencies": {
@@ -48,6 +49,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "webpack-merge": "^4.1.1"
   }
 }
