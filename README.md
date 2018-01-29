@@ -54,11 +54,13 @@ https://clients2.google.com/service/update2/crx?response=redirect&x=id%3D<这里
 
 ## TODO
 
-- [ ] 浏览历史记录
+- [x] 浏览历史记录
+  - [ ] 浏览历史选择今天、周、全部
+- [x] 开发文档导航
+  - [ ] 开发文档导航搜索过滤
 - [ ] Linux命令检索，集成 [linux-command](https://github.com/jaywcjlove/linux-command)
-- [ ] 开源中国新闻翻页
+- [ ] 开源中国新闻下拉翻页
 - [ ] Github 趋势榜天、周、月统计切换，语言切换
-- [ ] 开发文档导航
 - [ ] 常用网站导航
 - [ ] Github 登录，浏览自己项目
 - [ ] Gitlab 登录，相关功能
@@ -71,6 +73,9 @@ https://clients2.google.com/service/update2/crx?response=redirect&x=id%3D<这里
   - [ ] 是否在新标签页显示
   - [ ] 菜单配置
   - [ ] 分享应用到微博
+- [ ] 兼容其它浏览器
+  - [ ] 兼容360急速浏览器
+  - [ ] 兼容Firefox浏览器
 
 ## License
 
