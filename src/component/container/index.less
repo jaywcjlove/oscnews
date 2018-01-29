@@ -24,13 +24,44 @@
 .oscnews {
   height: 100%;
   width: 360px;
-  overflow: auto;
+  position: relative;
+  transition: all .3s;
 }
 
 .trending {
-  float: left;
   height: 100%;
   overflow: auto;
   flex: 2;
   background-color: #f1f1f1;
+}
+
+.switchBtn {
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  margin: 10px 10px 0 0;
+  transition: all .6s;
+  line-height: 14px;
+  background-color: #717171;
+  color: #fff;
+  padding: 3px;
+  border-radius: 2px;
+  cursor: pointer;
+  &:hover {
+    background-color: #008a05;
+  }
+  &:global(.hidden) {
+    right: -28px;
+    top: 57px;
+    opacity: .7;
+    color: #fff;
+    background-color: #444;
+    width: 16px;
+    text-align: center;
+    padding: 4px 2px 4px 0px;
+    border-radius: 0 3px 3px 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
