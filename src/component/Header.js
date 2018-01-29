@@ -8,12 +8,14 @@ import apple from '../assets/apple.svg';
 // import setting from '../assets/setting.svg';
 import styles from './Header.less';
 
+const storage = chrome.storage.local;
+
 export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
       type: props.contentType || 'trending',
-      visible: JSON.parse(localStorage.getItem('osc-header')) || false,
+      visible: false,
       menus: [
         {
           title: '开发文档',
@@ -28,6 +30,13 @@ export default class Header extends Component {
       ],
     };
   }
+  componentDidMount() {
+    storage.get('oscHeader', (items) => {
+      this.setState({
+        visible: items.oscHeader,
+      });
+    })
+  }
   onChange(type) {
     const { onChange } = this.props;
     localStorage.setItem('content-type', type);
@@ -38,7 +47,7 @@ export default class Header extends Component {
     this.setState({
       visible: !this.state.visible,
     }, () => {
-      localStorage.setItem('osc-header', this.state.visible);
+      storage.set({ 'oscHeader': this.state.visible });
     });
   }
   render() {
