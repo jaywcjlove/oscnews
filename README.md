@@ -9,6 +9,7 @@
 
 <div align="center">
   <img src="./img/osc-news.png"> 
+  <img src="./img/osc-news2.png"> 
 </div>
 
 ## 商店安装
