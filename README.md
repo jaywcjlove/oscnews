@@ -68,6 +68,7 @@ https://clients2.google.com/service/update2/crx?response=redirect&x=id%3D<这里
 - [ ] Gitlab 登录，相关功能
 - [ ] 集成 [octotree](https://github.com/buunguyen/octotree) 部分功能
 - [ ] 插件官方网站
+- [ ] RSS订阅功能
 - [ ] 提醒事项
   - [ ] 记录代办事项
   - [ ] Chrome通知
