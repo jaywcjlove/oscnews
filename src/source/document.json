@@ -8,18 +8,111 @@
       "cn": "http://nodejs.cn/",
       "git": "https://github.com/nodejs/node"
     },
-    "tags": [ "服务端" ]
+    "tags": [ "服务端", "后端" ]
+  },
+  {
+    "title": "Go",
+    "website": "https://golang.org/",
+    "des": "一种开源编程语言，可以轻松构建简单，可靠和高效的软件。",
+    "logo": "icons/gopher.svg",
+    "urls": {
+      "git": "https://github.com/golang/go"
+    },
+    "tags": [ "服务端", "后端" ]
+  },
+  {
+    "title": "PHP",
+    "website": "http://php.net/",
+    "des": "一种通用开源脚本语言。",
+    "logo": "icons/php.svg",
+    "urls": {
+      "cn": "http://php.net/manual/zh/"
+    },
+    "tags": [ "服务端", "后端" ]
+  },
+  {
+    "title": "Nginx",
+    "website": "http://nginx.org/en/",
+    "des": "是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器。",
+    "logo": "icons/nginx.svg",
+    "urls": {
+      "git": "https://github.com/nginx/nginx",
+      "cn": "http://www.nginx.cn/doc/"
+    },
+    "tags": [ "服务端", "后端" ]
+  },
+  {
+    "title": "Ruby",
+    "website": "https://www.ruby-lang.org/",
+    "des": "一种简单快捷的面向对象（面向对象程序设计）脚本语言。",
+    "logo": "icons/ruby.svg",
+    "urls": {
+      "git": "https://github.com/ruby/ruby",
+      "cn": "https://www.ruby-lang.org/zh_cn/"
+    },
+    "tags": [ "服务端", "后端" ]
+  },
+  {
+    "title": "Python",
+    "website": "https://www.python.org/",
+    "des": "一种面向对象的解释型计算机程序设计语言。",
+    "logo": "icons/python.svg",
+    "urls": {
+    },
+    "tags": [ "服务端", "后端" ]
+  },
+  {
+    "title": "Swift",
+    "website": "https://swift.org/",
+    "des": "是一种新的编程语言，用于编写 iOS 和 macOS 应用。",
+    "logo": "icons/swift.svg",
+    "urls": {
+      "git": "https://github.com/apple/swift",
+      "cn": "http://swiftguide.cn/",
+      "community": "https://www.apple.com/cn/swift/"
+    },
+    "tags": [ "服务端", "后端" ]
+  },
+  {
+    "title": "JAVA",
+    "website": "https://docs.oracle.com/javase/8/docs/",
+    "des": "是一门面向对象编程语言。",
+    "logo": "icons/java.svg",
+    "urls": {
+      "cn": "http://www.oracle.com/technetwork/cn/java/index.html"
+    },
+    "tags": [ "服务端", "后端" ]
+  },
+  {
+    "title": "JavaScript",
+    "website": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "des": "是一种轻量级解释或JIT编译型的编程语言。",
+    "logo": "icons/javascript.svg",
+    "urls": {
+      "cn": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript"
+    },
+    "tags": [ "前端" ]
+  },
+  {
+    "title": "CSS",
+    "website": "https://www.w3.org/",
+    "des": "一种用来表现HTML或XML等文件样式的计算机语言。",
+    "logo": "icons/css-3.svg",
+    "urls": {
+      "cn": "http://www.chinaw3c.org/"
+    },
+    "tags": [ "前端", "CSS" ]
   },
   {
     "title": "Babel",
     "website": "https://babeljs.io/",
-    "des": "用于编写下一代JavaScript的编译器",
+    "des": "用于编写下一代 JS 的编译器",
     "logo": "icons/babel-logo.svg",
     "urls": {
       "cn": "https://babel.docschina.org/",
       "git": "https://github.com/babel/babel"
     },
-    "tags": [ "编译器" ]
+    "tags": [ "编译器", "前端" ]
   },
   {
     "title": "TypeScript",
@@ -30,7 +123,7 @@
       "cn": "https://www.tslang.cn/",
       "git": "https://github.com/Microsoft/TypeScript"
     },
-    "tags": [ "编译器" ]
+    "tags": [ "编译器", "前端" ]
   },
   {
     "title": "Webpack",
@@ -41,7 +134,7 @@
       "cn": "https://doc.webpack-china.org/",
       "git": "https://github.com/webpack/webpack"
     },
-    "tags": [ "构建工具" ]
+    "tags": [ "构建工具", "前端" ]
   },
   {
     "title": "Rollup",
@@ -52,7 +145,7 @@
       "cn": "https://rollupjs.cn/",
       "git": "https://github.com/rollup/rollup"
     },
-    "tags": [ "构建工具" ]
+    "tags": [ "构建工具", "前端" ]
   },
   {
     "title": "Gulp",
@@ -63,7 +156,7 @@
       "cn": "http://www.gulpjs.com.cn/",
       "git": "https://github.com/gulpjs/gulp"
     },
-    "tags": [ "构建工具" ]
+    "tags": [ "构建工具", "前端" ]
   },
   {
     "title": "Grunt",
@@ -74,7 +167,7 @@
       "cn": "https://grunt.docschina.org/",
       "git": "https://github.com/gruntjs/grunt"
     },
-    "tags": [ "构建工具" ]
+    "tags": [ "构建工具", "前端" ]
   },
   {
     "title": "Express",
@@ -85,7 +178,7 @@
       "cn": "http://expressjs.com/zh-cn/",
       "git": "https://github.com/expressjs/express"
     },
-    "tags": [ "框架" ]
+    "tags": [ "框架", "后端" ]
   },
   {
     "title": "Koa",
@@ -96,7 +189,7 @@
       "cn": "https://github.com/guo-yu/koa-guide",
       "git": "https://github.com/koajs/koa"
     },
-    "tags": [ "框架" ]
+    "tags": [ "框架", "后端" ]
   },
   {
     "title": "React",
@@ -107,7 +200,7 @@
       "cn": "https://doc.react-china.org/",
       "git": "https://github.com/facebook/react/"
     },
-    "tags": [ "框架", "React" ]
+    "tags": [ "框架", "React", "前端" ]
   },
   {
     "title": "React Router",
@@ -118,18 +211,18 @@
       "cn": "http://reacttraining.cn/",
       "git": "https://github.com/ReactTraining/react-router"
     },
-    "tags": [ "React" ]
+    "tags": [ "React", "前端" ]
   },
   {
     "title": "Redux",
     "website": "https://redux.js.org/",
-    "des": "Redux 是 JavaScript 状态容器，提供可预测化的状态管理。",
+    "des": "是 JS 状态容器，提供可预测化的状态管理。",
     "logo": "icons/redux-logo.svg",
     "urls": {
       "cn": "http://cn.redux.js.org/",
       "git": "https://github.com/reactjs/redux"
     },
-    "tags": [ "React" ]
+    "tags": [ "React", "前端" ]
   },
   {
     "title": "Vue",
@@ -140,7 +233,7 @@
       "cn": "https://cn.vuejs.org/",
       "git": "https://github.com/vuejs/vue"
     },
-    "tags": [ "框架" ]
+    "tags": [ "框架", "前端" ]
   },
   {
     "title": "Angular",
@@ -151,7 +244,7 @@
       "cn": "https://angular.cn/",
       "git": "https://github.com/angular/angular"
     },
-    "tags": [ "框架" ]
+    "tags": [ "框架", "前端" ]
   },
   {
     "title": "Cycle.js",
@@ -162,7 +255,7 @@
       "cn": "http://cyclejs.cn/",
       "git": "https://github.com/cyclejs/cyclejs"
     },
-    "tags": [ "框架" ]
+    "tags": [ "框架", "前端" ]
   },
   {
     "title": "EditorConfig",
@@ -172,7 +265,7 @@
     "urls": {
       "cn": "http://editorconfig.org/"
     },
-    "tags": [ "工具库" ]
+    "tags": [ "工具库", "前端" ]
   },
   {
     "title": "Semver",
@@ -204,7 +297,7 @@
       "cn": "https://www.jquery123.com/",
       "git": "https://github.com/jquery/jquery"
     },
-    "tags": [ "工具库" ]
+    "tags": [ "工具库", "前端" ]
   },
   {
     "title": "Zepto",
@@ -214,17 +307,17 @@
     "urls": {
       "git": "https://github.com/jquery/jquery"
     },
-    "tags": [ "工具库" ]
+    "tags": [ "工具库", "前端" ]
   },
   {
     "title": "Require.js",
     "website": "http://requirejs.org/",
-    "des": "一个JavaScript文件和模块加载器。",
+    "des": "一个JS文件和模块加载器。",
     "logo": "icons/require-logo.svg",
     "urls": {
       "git": "https://github.com/jquery/jquery"
     },
-    "tags": [ "工具库" ]
+    "tags": [ "工具库", "前端" ]
   },
   {
     "title": "ESlint",
@@ -235,7 +328,7 @@
       "cn": "http://cn.eslint.org/",
       "git": "https://github.com/eslint/eslint"
     },
-    "tags": [ "代码质量" ]
+    "tags": [ "代码质量", "前端" ]
   },
   {
     "title": "StyleLint",
@@ -246,7 +339,7 @@
       "cn": "http://stylelint.cn/",
       "git": "https://github.com/stylelint/stylelint"
     },
-    "tags": [ "代码质量" ]
+    "tags": [ "代码质量", "前端" ]
   },
   {
     "title": "Jest",
@@ -257,7 +350,7 @@
       "cn": "http://stylelint.cn/",
       "git": "https://facebook.github.io/jest/zh-Hans/"
     },
-    "tags": [ "代码质量", "测试工具" ]
+    "tags": [ "代码质量", "测试工具", "前端" ]
   },
   {
     "title": "Mocha",
@@ -269,7 +362,8 @@
     },
     "tags": [
       "代码质量",
-      "测试工具"
+      "测试工具",
+      "前端"
     ]
   },
   {
@@ -282,7 +376,8 @@
     },
     "tags": [
       "代码质量",
-      "测试工具"
+      "测试工具",
+      "前端"
     ]
   },
   {
@@ -292,20 +387,20 @@
     "logo": "icons/sass.svg",
     "urls": {
       "cn": "https://sass-guidelin.es/zh/",
-      "git": "https://github.com/sass/sass"
+      "git": "https://github.com/sass/node-sass"
     },
-    "tags": [ "CSS" ]
+    "tags": [ "CSS", "前端" ]
   },
   {
     "title": "Less",
     "website": "http://lesscss.org",
-    "des": "基于Ruby的CSS预处理器",
+    "des": "CSS预处理器",
     "logo": "icons/less-logo.svg",
     "urls": {
       "cn": "http://lesscss.cn/",
       "git": "https://github.com/less/less.js"
     },
-    "tags": [ "CSS" ]
+    "tags": [ "CSS", "前端" ]
   },
   {
     "title": "Stylus",
@@ -316,7 +411,7 @@
       "cn": "http://www.zhangxinxu.com/jq/stylus/",
       "git": "https://github.com/stylus/stylus"
     },
-    "tags": [ "CSS" ]
+    "tags": [ "CSS", "前端" ]
   },
   {
     "title": "PostCSS",
@@ -326,7 +421,7 @@
     "urls": {
       "git": "https://github.com/postcss/postcss"
     },
-    "tags": [ "CSS" ]
+    "tags": [ "CSS", "前端" ]
   },
   {
     "title": "CSS Modules",
@@ -337,7 +432,7 @@
       "cn": "http://graphql.cn/",
       "git": "https://github.com/css-modules/css-modules"
     },
-    "tags": [ "API" ]
+    "tags": [ "API", "前端" ]
   },
   {
     "title": "Autoprefixer",
@@ -347,7 +442,7 @@
     "urls": {
       "git": "https://github.com/postcss/autoprefixer"
     },
-    "tags": [ "API" ]
+    "tags": [ "API", "前端" ]
   },
   {
     "title": "GraphQL",
@@ -358,6 +453,6 @@
       "cn": "http://graphql.cn/",
       "git": "https://github.com/graphql"
     },
-    "tags": [ "API" ]
+    "tags": [ "API", "后端" ]
   }
 ]
