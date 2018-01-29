@@ -2,12 +2,28 @@
   padding: 10px;
 }
 
-.title {
+.header {
   padding: 15px 5px 15px;
   font-size: 24px;
   color: #c1c1c1;
   font-size: 18px;
   font-weight: 700;
+  display: flex;
+  .title {
+    flex: 1;
+  }
+  .tag {
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: normal;
+    color: #868686;
+    margin: 0 0 0 10px;
+    span {
+      display: inline-block;
+      margin: 0 3px;
+      cursor: pointer;
+    }
+  }
 }
 
 .lists {
@@ -72,11 +88,13 @@
   color: #969696;
 }
 
-.urls {
+.bottomBar {
   padding: 0 10px;
   margin: 0 0 5px 0;
+  display: flex;
   svg {
     fill: #dcdbdb;
+    fill: #e0e0e0;
     transition: all .3s;
     margin-right: 3px;
     &:hover {
@@ -86,6 +104,27 @@
   img, svg {
     width: 12px;
     height: 12px;
+  }
+  .urls {
+    flex: 1;
+  }
+  .star {
+    display: flex;
+    align-items: center;
+    &:global(.active) {
+      svg {
+        fill: #D64B24;
+        &:hover {
+          fill: #D64B24;
+        }
+      }
+    }
+    svg {
+      cursor: pointer;
+      &:hover {
+        fill: #fbb601;
+      }
+    }
   }
 }
 .zhHans {

@@ -297,7 +297,7 @@
       "cn": "https://www.jquery123.com/",
       "git": "https://github.com/jquery/jquery"
     },
-    "tags": [ "工具库", "前端" ]
+    "tags": [ "前端" ]
   },
   {
     "title": "Zepto",
@@ -307,7 +307,7 @@
     "urls": {
       "git": "https://github.com/jquery/jquery"
     },
-    "tags": [ "工具库", "前端" ]
+    "tags": [ "前端" ]
   },
   {
     "title": "Require.js",
@@ -317,7 +317,7 @@
     "urls": {
       "git": "https://github.com/jquery/jquery"
     },
-    "tags": [ "工具库", "前端" ]
+    "tags": [ "前端" ]
   },
   {
     "title": "ESlint",

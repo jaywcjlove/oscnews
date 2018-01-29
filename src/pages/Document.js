@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 import styles from './Document.less';
 import source from '../source/document.json';
 
@@ -18,11 +19,28 @@ const zhHans = (
   </svg>
 );
 
+const heart = (
+  <svg viewBox="0 0 32 32">
+    <path fillRule="nonzero" d="M22.5610847,4 C19.9798492,4 17.5795962,6.5096974 16.0001413,8.39339234 C14.4211809,6.50927346 12.0214932,4 9.43887996,4 C4.78554825,4 1,7.65183385 1,12.140469 C1,14.8183957 2.35597353,16.6970742 3.44575469,18.2065808 C6.61331986,22.5909293 14.5781408,28.0469361 14.9154473,28.2769531 C15.2403185,28.4983855 15.6205478,28.6093844 15.9995054,28.6093844 C16.3794521,28.6093844 16.7589396,28.4983855 17.0834222,28.2769531 C17.4211527,28.046936 25.3866801,22.5909293 28.5532561,18.2065808 C29.6437085,16.6971095 31,14.8183957 31,12.140469 C30.9999646,7.65179853 27.2143811,4 22.5610847,4 Z" />
+  </svg>
+);
+
 export default class Document extends Component {
   constructor(props) {
     super(props);
+    const star = JSON.parse(localStorage.getItem('osc-doc-star'));
+    const tag = JSON.parse(localStorage.getItem('osc-doc-tag'));
     this.state = {
       lists: [],
+      star: star || [],
+      tag: tag || '',
+      subMenu: [
+        { title: '我的收藏', tag: '__star__' },
+        { title: '全部', tag: '' },
+        { title: '前端', tag: '前端' },
+        { title: '后端', tag: '后端' },
+        { title: '工具', tag: '工具库' },
+      ],
     };
   }
   componentDidMount() {
@@ -34,11 +52,37 @@ export default class Document extends Component {
       lists: source,
     });
   }
+  onAddStar(title) {
+    const { star } = this.state;
+    if (star.indexOf(title) === -1) {
+      star.push(title);
+    } else {
+      star.splice(star.indexOf(title), 1);
+    }
+    this.setState({ star }, () => {
+      localStorage.setItem('osc-doc-star', JSON.stringify(star));
+    });
+  }
+  onChangeTag(tag) {
+    this.setState({ tag }, () => {
+      localStorage.setItem('osc-doc-tag', JSON.stringify(tag));
+    });
+  }
   render() {
     return (
       <div className={styles.warpper}>
-        <div className={styles.title}>开发文档</div>
+        <div className={styles.header}>
+          <span className={styles.title}>开发文档</span>
+          <div className={styles.tag}>
+            {this.state.subMenu.map((item, idx) => {
+              return (
+                <span key={idx} onClick={this.onChangeTag.bind(this, item.tag)}>{item.title}</span>
+              );
+            })}
+          </div>
+        </div>
         <ul className={styles.lists}>
+          {this.state.star.length === 0 && this.state.tag === '__star__' && <div>还没有收藏，赶紧去收藏吧</div>}
           {this.state.lists.map((item, idx) => {
             const urls = [];
             for (const i in item.urls) {
@@ -51,20 +95,38 @@ export default class Document extends Component {
                 );
               }
             }
-            return (
-              <li key={idx}>
-                <a className={styles.itemHeader} href={item.website}>
-                  <div className={styles.logo}>
-                    {item.title && <h4><span>{item.title}</span></h4>}
-                    {item.logo && <img alt={item.title} src={item.logo} />}
+
+            const { tag } = this.state;
+            const isTag = item.tags.filter(t => t === tag);
+            const isStar = this.state.star.filter(t => t === item.title);
+
+            if (tag === '' || (tag === '__star__' && isStar.length > 0) || isTag.length > 0) {
+              return (
+                <li key={idx}>
+                  <a className={styles.itemHeader} href={item.website}>
+                    <div className={styles.logo}>
+                      {item.title && <h4><span>{item.title}</span></h4>}
+                      {item.logo && <img alt={item.title} src={item.logo} />}
+                    </div>
+                    <div className={styles.details}>
+                      {item.des}
+                    </div>
+                  </a>
+                  <div className={styles.bottomBar}>
+                    <div className={styles.urls}>{urls}</div>
+                    <div
+                      className={classNames(styles.star, {
+                        active: this.state.star.indexOf(item.title) > -1,
+                      })}
+                      onClick={this.onAddStar.bind(this, item.title)}
+                    >
+                      {heart}
+                    </div>
                   </div>
-                  <div className={styles.details}>
-                    {item.des}
-                  </div>
-                </a>
-                <div className={styles.urls}> {urls} </div>
-              </li>
-            );
+                </li>
+              );
+            }
+            return null;
           })}
         </ul>
       </div>
