@@ -13,6 +13,7 @@ export default class Header extends Component {
     super(props);
     this.state = {
       type: props.contentType || 'trending',
+      visible: JSON.parse(localStorage.getItem('osc-header')) || false,
       menus: [
         {
           title: '开发文档',
@@ -33,15 +34,22 @@ export default class Header extends Component {
     this.setState({ type });
     onChange(type);
   }
+  onDropDown() {
+    this.setState({
+      visible: !this.state.visible,
+    }, () => {
+      localStorage.setItem('osc-header', this.state.visible);
+    });
+  }
   render() {
     return (
-      <div className={ styles.warpper } >
+      <div className={styles.warpper} style={{ marginTop: this.state.visible ? 0 : -50 }}>
         <div className={ styles.logo } >
           <a href="http://www.oschina.net/" rel="noopener noreferrer" target="_blank" >
             <img title="开源中国" alt="开源中国" src={ logo } />
           </a>
         </div>
-        <div className={ styles.menu } >
+        <div className={styles.menu}>
           <div className={styles.nav}>
             {this.state.menus.map((item, idx) => {
               return (
@@ -52,8 +60,9 @@ export default class Header extends Component {
           <a href="https://gitee.com/" > <img title="码云" alt="码云" src={ gitee } /></a>
           <a href="https://github.com/" > <img title="Github" alt="Github" src={ github } /></a>
           <a href="http://wangchujiang.com/awesome-mac/index.zh.html" > <img title="Mac精品软件推荐" alt="Mac精品软件推荐" src={ apple } /></a>
-          {/* <span className={styles.setting}> <img title="Mac精品软件推荐" alt="Mac精品软件推荐" src={setting} /> </span> */}
+          {/* <span className={styles.setting}> <img title="" alt="" src={setting} /> </span> */}
         </div>
+        <div onClick={this.onDropDown.bind(this)} className={styles.dropDown} />
       </div>
     );
   }

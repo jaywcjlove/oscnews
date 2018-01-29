@@ -3,7 +3,7 @@
 }
 
 .header {
-  padding: 15px 5px 15px;
+  padding: 15px 15px 25px;
   font-size: 24px;
   color: #c1c1c1;
   font-size: 18px;
@@ -20,8 +20,17 @@
     margin: 0 0 0 10px;
     span {
       display: inline-block;
-      margin: 0 3px;
+      padding: 0 3px 0 3px;
+      border-radius: 2px;
+      height: 18px;
+      line-height: 18px;
+      margin: 0 2px;
       cursor: pointer;
+      transition: background-color .3s;
+      &:hover, &:global(.active) {
+        background-color: #868686;
+        color: #fff;
+      }
     }
   }
 }
@@ -30,6 +39,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 0 15px;
   li {
     display: flex;
     flex-direction: column;
@@ -127,6 +137,7 @@
     }
   }
 }
+
 .zhHans {
   circle, path {
     color: #606467;

@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content:space-between;
+  transition: all .3s;
   img {
     height: 30px;
   }
@@ -56,5 +57,40 @@
   img {
     height: 100%;
     display: block;
+  }
+}
+
+.dropDown {
+  float: right;
+  position: absolute;
+  margin: 34px 0 0 0;
+  right: 20px;
+  width: 8px;
+  cursor: pointer;
+  &:hover {
+    &::after, &::before {
+      background-color: #009801;
+    }
+  }
+  &:active {
+    &::after, &::before {
+      background-color: #015a00;
+    }
+  }
+  &::after, &::before {
+    content: '';
+    display: block;
+    background-color: #afafaf;
+    transition: all .3s;
+  }
+  &::before {
+    height: 10px;
+    width: 2px;
+    margin: 0 0 0 3px;
+  }
+  &::after {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
   }
 }

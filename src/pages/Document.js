@@ -76,7 +76,15 @@ export default class Document extends Component {
           <div className={styles.tag}>
             {this.state.subMenu.map((item, idx) => {
               return (
-                <span key={idx} onClick={this.onChangeTag.bind(this, item.tag)}>{item.title}</span>
+                <span
+                  className={classNames({
+                    active: this.state.tag === item.tag,
+                  })}
+                  key={idx}
+                  onClick={this.onChangeTag.bind(this, item.tag)}
+                >
+                  {item.title}
+                </span>
               );
             })}
           </div>
