@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import cheerio from 'cheerio';
 import { fetchs } from '../utils/';
+import Footer from '../component/Footer';
 import styles from './Github.less';
 
 const githublist = localStorage.getItem('github-list');
@@ -54,7 +55,7 @@ export default class Github extends Component {
       <div className={styles.warpper}>
         <h1 className={styles.title}><a target="_blank" rel="noopener noreferrer" href="http://github.com/trending">Github Trending</a></h1>
         <div className={styles.list} dangerouslySetInnerHTML={{ __html: this.state.content }} />
-        {githublist && <div className={styles.footer}><span>已显示全部内容</span></div>}
+        {githublist && <Footer>已显示全部内容</Footer>}
       </div>
     );
   }

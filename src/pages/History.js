@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import Footer from '../component/Footer';
 import styles from './History.less';
 
 export default class History extends PureComponent {
@@ -41,6 +42,7 @@ export default class History extends PureComponent {
             );
           })}
         </ul>
+        <Footer>已显示全部内容</Footer>
       </div>
     );
   }

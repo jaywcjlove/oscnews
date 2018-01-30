@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import Footer from '../component/Footer';
 import styles from './Document.less';
 import source from '../source/document.json';
 
@@ -89,8 +90,8 @@ export default class Document extends Component {
             })}
           </div>
         </div>
+        {this.state.star.length === 0 && this.state.tag === '__star__' && <div className={styles.noFind}>还没有收藏，赶紧去收藏吧</div>}
         <ul className={styles.lists}>
-          {this.state.star.length === 0 && this.state.tag === '__star__' && <div>还没有收藏，赶紧去收藏吧</div>}
           {this.state.lists.map((item, idx) => {
             const urls = [];
             for (const i in item.urls) {
@@ -137,6 +138,7 @@ export default class Document extends Component {
             return null;
           })}
         </ul>
+        <Footer>Copyright © 2018</Footer>
       </div>
     );
   }
