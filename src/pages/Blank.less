@@ -1,0 +1,37 @@
+
+
+.warpper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.calendar {
+  font-size: 48px;
+  color: #a0a0a0;
+  margin-left: 200px;
+  font-weight: 100;
+  text-align: left;
+  .minutes {
+    &::before, &::after {
+      content: ':';
+      display: inline-block;
+      position: relative;
+      top: -3px;
+      padding: 0 3px;
+    }
+    &::after {
+      font-size: 30px;
+      font-weight: 200;
+      top: -5px;
+    }
+  }
+  .seconds {
+    font-size: 30px;
+    position: relative;
+    top: -3px;
+  }
+  .date {
+    font-size: 24px;
+  }
+}

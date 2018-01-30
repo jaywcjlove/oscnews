@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Container from './component/container';
+import Blank from './pages/Blank';
 import Github from './pages/Github';
 import History from './pages/History';
 import Document from './pages/Document';
@@ -12,6 +13,7 @@ export default class Root extends Component {
   render() {
     return (
       <Container>
+        <Blank />
         <History />
         <Github />
         <Document />

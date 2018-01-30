@@ -68,6 +68,8 @@ https://clients2.google.com/service/update2/crx?response=redirect&x=id%3D<这里
 - [ ] Gitlab 登录，相关功能
 - [ ] 集成 [octotree](https://github.com/buunguyen/octotree) 部分功能
 - [ ] 插件官方网站
+- [ ] 密码管理器
+- [ ] 空页面，天气日期展示
 - [ ] RSS订阅功能
 - [ ] 提醒事项
   - [ ] 记录代办事项
@@ -75,6 +77,7 @@ https://clients2.google.com/service/update2/crx?response=redirect&x=id%3D<这里
 - [ ] 设置功能
   - [ ] 是否在新标签页显示
   - [ ] 菜单配置
+  - [ ] 清空历史
   - [ ] 分享应用到微博
 - [ ] 兼容其它浏览器
   - [ ] 兼容360急速浏览器

@@ -18,6 +18,9 @@ export default class Header extends Component {
       visible: false,
       menus: [
         {
+          title: '空白页',
+          type: 'blank',
+        }, {
           title: '开发文档',
           type: 'document',
         }, {
@@ -35,10 +38,11 @@ export default class Header extends Component {
       this.setState({
         visible: items.oscHeader,
       });
-    })
+    });
   }
   onChange(type) {
     const { onChange } = this.props;
+    storage.set({ contentType: type });
     localStorage.setItem('content-type', type);
     this.setState({ type });
     onChange(type);
@@ -47,7 +51,7 @@ export default class Header extends Component {
     this.setState({
       visible: !this.state.visible,
     }, () => {
-      storage.set({ 'oscHeader': this.state.visible });
+      storage.set({ oscHeader: this.state.visible });
     });
   }
   render() {
