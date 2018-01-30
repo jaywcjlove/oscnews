@@ -89,7 +89,8 @@
     "des": "是一种轻量级解释或JIT编译型的编程语言。",
     "logo": "icons/javascript.svg",
     "urls": {
-      "cn": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript"
+      "cn": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript",
+      "es6": "http://es6.ruanyifeng.com/"
     },
     "tags": [ "前端" ]
   },
@@ -199,6 +200,17 @@
     "urls": {
       "cn": "https://doc.react-china.org/",
       "git": "https://github.com/facebook/react/"
+    },
+    "tags": [ "框架", "React", "前端" ]
+  },
+  {
+    "title": "React Native",
+    "website": "http://facebook.github.io/react-native/",
+    "des": "使用JS和React构建原生移动应用程序",
+    "logo": "icons/react-logo.svg",
+    "urls": {
+      "git": "https://github.com/facebook/react-native",
+      "cn": "https://reactnative.cn"
     },
     "tags": [ "框架", "React", "前端" ]
   },
@@ -360,11 +372,7 @@
     "urls": {
       "git": "https://github.com/mochajs/mocha"
     },
-    "tags": [
-      "代码质量",
-      "测试工具",
-      "前端"
-    ]
+    "tags": [ "代码质量", "测试工具", "前端" ]
   },
   {
     "title": "Chai",
@@ -374,11 +382,17 @@
     "urls": {
       "git": "https://github.com/chaijs/chai"
     },
-    "tags": [
-      "代码质量",
-      "测试工具",
-      "前端"
-    ]
+    "tags": [ "代码质量", "测试工具", "前端" ]
+  },
+  {
+    "title": "Chrome Extensions",
+    "website": "https://developer.chrome.com/extensions",
+    "des": "Chrome插件开发文档。",
+    "logo": "icons/chrome.svg",
+    "urls": {
+      "cn": "http://open.chrome.360.cn/html/dev_manifest.html"
+    },
+    "tags": [ "代码质量", "测试工具", "前端" ]
   },
   {
     "title": "Sass",
@@ -454,5 +468,16 @@
       "git": "https://github.com/graphql"
     },
     "tags": [ "API", "后端" ]
+  },
+  {
+    "title": "Sequelize",
+    "website": "http://docs.sequelizejs.com/",
+    "des": "一个基于 promise 的 Node.js ORM",
+    "logo": "icons/sequelize.svg",
+    "urls": {
+      "git": "https://github.com/sequelize/sequelize",
+      "cn": "https://demopark.github.io/sequelize-docs-Zh-CN/"
+    },
+    "tags": [ "后端" ]
   }
 ]
