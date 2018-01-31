@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import styles from './Blank.less';
 
+// 搜索地点
+// http://toy1.weather.com.cn/search?cityname=%E5%8C%97%E4%BA%AC
+// 根据id查询天气
+// http://www.weather.com.cn/data/sk/101010300.html
+
 const time = () => {
   const hours = new Date().getHours();
   const minutes = new Date().getMinutes();
@@ -19,8 +24,8 @@ const date = () => {
     <div className={styles.date}>
       {`${new Date().getMonth() + 1}月${new Date().getDate()}日  ${['周日', '周一', '周二', '周三', '周四', '周五', '周六'][new Date().getDay()]}`}
     </div>
-  )
-}
+  );
+};
 
 export default class Blank extends Component {
   constructor(props) {
