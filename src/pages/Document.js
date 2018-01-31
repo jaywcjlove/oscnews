@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import Footer from '../component/Footer';
 import styles from './Document.less';
-import source from '../source/document.json';
+import source from '../dev-site/document.json';
 
 if (!localStorage.getItem('osc-doc')) {
   localStorage.setItem('osc-doc', JSON.stringify(source));

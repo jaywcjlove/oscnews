@@ -11,6 +11,6 @@ module.exports = {
     { source: "./chrome-main/manifest.json", destination: "./oscnews/manifest.json" },
     { source: "./chrome-main/background.js", destination: "./oscnews/background.js" },
     { source: "./chrome-main/osc-logo.png", destination: "./oscnews/osc-logo.png" },
-    { source: "./src/source/icons", destination: "./oscnews/icons" },
+    { source: "./src/dev-site/icons", destination: "./oscnews/icons" },
   ]
 }

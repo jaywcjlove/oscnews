@@ -1,0 +1,3 @@
+[submodule "src/dev-site"]
+	path = src/dev-site
+	url = https://github.com/jaywcjlove/dev-site.git
