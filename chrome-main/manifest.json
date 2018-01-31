@@ -1,7 +1,7 @@
 {
   "name": "oscnews",
-  "version": "1.1.0",
-  "description": "开源中国新闻",
+  "version": "1.2.0",
+  "description": "开源中国新闻，Github趋势榜，开发文档导航。",
   "icons": {
     "128": "osc-logo.png"
   },
