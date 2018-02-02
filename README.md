@@ -25,9 +25,9 @@
 下载源文件
 
 ```bash
-git clone https://github.com/jaywcjlove/oscnews.git --depth=1
+git clone https://github.com/jaywcjlove/oscnews.git --depth=1 --recurse-submodules
 # 开源中国仓库
-git clone https://gitee.com/jaywcjlove/oscnews.git --depth=1
+git clone https://gitee.com/jaywcjlove/oscnews.git --depth=1 --recurse-submodules
 ```
 
 安装依赖
