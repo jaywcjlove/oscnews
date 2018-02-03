@@ -6,7 +6,6 @@
 
 [开源中国](http://www.oschina.net/) Chrome 插件，查看开源中国[软件更新资讯](http://www.oschina.net/news/project)，在每次 Chrome 浏览器新选项卡页面，展示该内容，同时还展示 GitHub [趋势榜](http://github.com/trending)。
 
-
 <div align="center">
   <img src="./img/osc-news.png"> 
   <img src="./img/osc-news2.png"> 
@@ -16,6 +15,9 @@
 ## 商店安装
 
 [Chrome 网上商店](https://chrome.google.com/webstore/detail/oscnews/iheapfheanfjcemgneblljhaebonakbg) 搜索 `oscnews` 安装，或者直接下载 [crx 文件](https://github.com/jaywcjlove/oscnews/releases) 安装，打开 [chrome://extensions](chrome://extensions/) 将 crx 拖拽到扩展列表中安装。
+
+[![](http://jaywcjlove.github.io/sb/download/white-chrome-web-store.svg)](https://chrome.google.com/webstore/detail/oscnews/iheapfheanfjcemgneblljhaebonakbg)
+
 
 > [开源中国下载 oscnews.crx 文件](https://gitee.com/jaywcjlove/oscnews/releases)  
 > [Github下载 oscnews.crx 文件](https://github.com/jaywcjlove/oscnews/releases)  
