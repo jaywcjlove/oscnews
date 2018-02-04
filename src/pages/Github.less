@@ -30,7 +30,7 @@
 }
 
 .list {
-  padding: 0 15px;
+  padding: 0 10px;
   a {
     text-decoration: none;
   }
@@ -44,9 +44,13 @@
   li {
     background-color: #fff;
     margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     padding: 10px;
     border-radius: 3px;
     transition: all .3s;
+    width: calc(~"50% - 10px");
+    display: inline-block;
     &:hover {
       background-color: #f9f9f9;
     }
@@ -63,6 +67,10 @@
     }
   }
   :global {
+    .repo-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
     .repo-language-color {
       position: relative;
       top: 1px;
@@ -112,6 +120,18 @@
       a {
         color: #586069;
       }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .list {
+    li {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }

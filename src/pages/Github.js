@@ -3,6 +3,7 @@ import cheerio from 'cheerio';
 import { fetchInterval, fetchTimely } from '../utils/';
 import Footer from '../component/Footer';
 import Select from '../component/Select';
+import Loading from '../component/Loading';
 import styles from './Github.less';
 import optionLang from '../source/trending.json';
 
@@ -12,6 +13,7 @@ export default class Github extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading: false,
       content: githublist,
       option: [
         {
@@ -45,11 +47,12 @@ export default class Github extends Component {
     return url;
   }
   getTrending(type) {
-    // const { content } = this.state;
     const localContent = localStorage.getItem('github-list');
     if (!localContent) type = 'select';
+    this.setState({ loading: true });
     const getDate = type === 'select' ? fetchTimely(this.getURL()) : fetchInterval(this.getURL(), 3, 'github-trending');
     getDate.then((response) => {
+      this.setState({ loading: false });
       response.replace(/<body\b[^>]*>([\s\S]*?)<\/body>/gi, (node, body) => {
         response = body;
         return node;
@@ -71,6 +74,7 @@ export default class Github extends Component {
         content: _html,
       });
     }).catch(() => {
+      this.setState({ loading: false });
       if (!this.mounted) return;
       this.setState({
         content: githublist || '请求错误，请检查网路，或者重新刷新请求数据！',
@@ -78,6 +82,7 @@ export default class Github extends Component {
     });
   }
   onSelect(type, item) {
+    this.setState({ loading: false });
     if (!type) return;
     this.setState({
       [`${type}`]: item.value,
@@ -92,6 +97,7 @@ export default class Github extends Component {
         <div className={styles.header}>
           <span className={styles.title}><a target="_blank" rel="noopener noreferrer" href="http://github.com/trending">Github Trending</a></span>
           <div className={styles.select}>
+            <Loading visible={this.state.loading} />
             <Select onSelect={this.onSelect.bind(this, 'since')} value={this.state.since} option={this.state.option} />
             <Select onSelect={this.onSelect.bind(this, 'lang')} showSearch value={this.state.lang} option={this.state.optionLang} />
           </div>
