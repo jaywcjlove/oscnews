@@ -28,6 +28,7 @@ export default class Github extends Component {
         },
       ],
       optionLang,
+      suggest: ['css', 'go', 'html', 'javascript', 'objective-c', 'python', 'swift'],
       since: localStorage.getItem('github-since') || '',
       lang: localStorage.getItem('github-lang') || '',
     };
@@ -99,7 +100,7 @@ export default class Github extends Component {
           <div className={styles.select}>
             <Loading visible={this.state.loading} />
             <Select onSelect={this.onSelect.bind(this, 'since')} value={this.state.since} option={this.state.option} />
-            <Select onSelect={this.onSelect.bind(this, 'lang')} showSearch value={this.state.lang} option={this.state.optionLang} />
+            <Select suggest={this.state.suggest} onSelect={this.onSelect.bind(this, 'lang')} showSearch value={this.state.lang} option={this.state.optionLang} />
           </div>
         </div>
         <div className={styles.list} dangerouslySetInnerHTML={{ __html: this.state.content || 'loading...' }} />

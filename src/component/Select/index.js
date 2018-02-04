@@ -34,10 +34,26 @@ export default class Select extends Component {
       option: value.length > 0 ? filterData : this.props.option,
     });
   }
+  renderItems(items, value) {
+    return items.map((item, idx) => {
+      return (
+        <div
+          key={idx}
+          className={classNames('item', {
+            selected: item.value === value,
+          })}
+          onClick={this.onSelect.bind(this, item)}
+        >
+          {item.label}
+        </div>
+      );
+    });
+  }
   render() {
-    const { showSearch, className, ...resetProps } = this.props;
+    const { showSearch, className, suggest, ...resetProps } = this.props;
     const { visible, value, option } = this.state;
     const title = this.props.option.filter(item => item.value === value);
+    const suggestItems = this.props.option.filter(item => suggest.includes(item.value));
     delete resetProps.option;
     delete resetProps.onSelect;
     return (
@@ -57,19 +73,9 @@ export default class Select extends Component {
             </div>
           )}
           <div className={styles.optionList}>
-            {option.map((item, idx) => {
-              return (
-                <div
-                  key={idx}
-                  className={classNames('item', {
-                    selected: item.value === value,
-                  })}
-                  onClick={this.onSelect.bind(this, item)}
-                >
-                  {item.label}
-                </div>
-              );
-            })}
+            {this.renderItems(suggestItems, value)}
+            {suggestItems.length > 0 && <div className={styles.divider} />}
+            {this.renderItems(option, value)}
           </div>
         </div>
       </div>
@@ -80,12 +86,14 @@ export default class Select extends Component {
 Select.propsTypes = {
   value: PropTypes.string,
   option: PropTypes.array,
+  suggest: PropTypes.array,
   showSearch: PropTypes.bool,
   onSelect: PropTypes.func,
 };
 
 Select.defaultProps = {
   option: [],
+  suggest: [],
   value: '',
   showSearch: false,
   onSelect() {},
