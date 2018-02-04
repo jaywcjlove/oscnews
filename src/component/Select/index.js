@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './index.less';
@@ -11,6 +12,23 @@ export default class Select extends Component {
       option: props.option,
       value: props.value,
     };
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+  }
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickOutside, true);
+  }
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside, true);
+  }
+  handleClickOutside(e) {
+    // Ignore clicks on the component it self
+    // https://codepen.io/graubnla/pen/EgdgZm
+    // Detect a click outside of a React Component
+    // https://www.dhariri.com/posts/57c724e4d1befa66e5b8e056
+    const domNode = ReactDOM.findDOMNode(this);
+    if ((!domNode || !domNode.contains(e.target))) {
+      this.setState({ visible: false });
+    }
   }
   onClick() {
     this.setState({
