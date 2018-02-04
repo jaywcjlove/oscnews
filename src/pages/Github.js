@@ -12,7 +12,7 @@ export default class Github extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: githublist || 'loading...',
+      content: githublist,
       option: [
         {
           label: '今天',
@@ -45,9 +45,11 @@ export default class Github extends Component {
     return url;
   }
   getTrending(type) {
+    // const { content } = this.state;
+    const localContent = localStorage.getItem('github-list');
+    if (!localContent) type = 'select';
     const getDate = type === 'select' ? fetchTimely(this.getURL()) : fetchInterval(this.getURL(), 3, 'github-trending');
     getDate.then((response) => {
-      if (!this.mounted) return;
       response.replace(/<body\b[^>]*>([\s\S]*?)<\/body>/gi, (node, body) => {
         response = body;
         return node;
@@ -62,15 +64,16 @@ export default class Github extends Component {
       // 清除头像，避免被和谐
       $('.f6 .mr-3').not('.mr-3:first-child').empty();
       const _html = $('div.explore-content').html();
+      if (!_html) return;
+      localStorage.setItem('github-list', _html);
+      if (!this.mounted) return;
       this.setState({
         content: _html,
-      }, () => {
-        localStorage.setItem('github-list', _html);
       });
     }).catch(() => {
       if (!this.mounted) return;
       this.setState({
-        content: githublist || '请求错误，请检查网路！',
+        content: githublist || '请求错误，请检查网路，或者重新刷新请求数据！',
       });
     });
   }
@@ -92,7 +95,7 @@ export default class Github extends Component {
             <Select onSelect={this.onSelect.bind(this, 'lang')} value={this.state.lang} option={this.state.optionLang} />
           </div>
         </div>
-        <div className={styles.list} dangerouslySetInnerHTML={{ __html: this.state.content }} />
+        <div className={styles.list} dangerouslySetInnerHTML={{ __html: this.state.content || 'loading...' }} />
         {githublist && <Footer>已显示全部内容</Footer>}
       </div>
     );
