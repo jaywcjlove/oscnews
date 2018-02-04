@@ -66,7 +66,7 @@ npm run build
   - [x] 文档分类前端（前端、后端、工具）
 - [ ] Linux命令检索，集成 [linux-command](https://github.com/jaywcjlove/linux-command)
 - [ ] 开源中国新闻下拉翻页
-- [ ] Github 趋势榜天、周、月统计切换，语言切换
+- [x] Github 趋势榜天、周、月统计切换，语言切换
 - [ ] 常用网站导航
 - [ ] Github 登录，浏览自己项目
 - [ ] Gitlab 登录，相关功能
@@ -86,6 +86,7 @@ npm run build
 - [ ] 兼容其它浏览器
   - [ ] 兼容360急速浏览器
   - [ ] 兼容Firefox浏览器
+- [ ] 配置存储使用 [chrome.storage](https://developer.chrome.com/apps/storage) 替代
 
 ## License
 
