@@ -78,6 +78,7 @@ export default class Github extends Component {
     });
   }
   onSelect(type, item) {
+    if (!type) return;
     this.setState({
       [`${type}`]: item.value,
     }, () => {
@@ -92,7 +93,7 @@ export default class Github extends Component {
           <span className={styles.title}><a target="_blank" rel="noopener noreferrer" href="http://github.com/trending">Github Trending</a></span>
           <div className={styles.select}>
             <Select onSelect={this.onSelect.bind(this, 'since')} value={this.state.since} option={this.state.option} />
-            <Select onSelect={this.onSelect.bind(this, 'lang')} value={this.state.lang} option={this.state.optionLang} />
+            <Select onSelect={this.onSelect.bind(this, 'lang')} showSearch value={this.state.lang} option={this.state.optionLang} />
           </div>
         </div>
         <div className={styles.list} dangerouslySetInnerHTML={{ __html: this.state.content || 'loading...' }} />

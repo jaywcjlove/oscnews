@@ -8,6 +8,7 @@ export default class Select extends Component {
     super(props);
     this.state = {
       visible: false,
+      option: props.option,
       value: props.value,
     };
   }
@@ -25,13 +26,23 @@ export default class Select extends Component {
       onSelect(item, item.value);
     });
   }
+  onFilterLang(e) {
+    const { value } = e.target;
+    const { option } = this.state;
+    const filterData = option.filter(item => item.value.toLowerCase().indexOf(value) > -1);
+    this.setState({
+      option: value.length > 0 ? filterData : this.props.option,
+    });
+  }
   render() {
-    const { option, ...resetProps } = this.props;
-    const { visible, value } = this.state;
-    const title = option.filter(item => item.value === value);
+    const { showSearch, className, ...resetProps } = this.props;
+    const { visible, value, option } = this.state;
+    const title = this.props.option.filter(item => item.value === value);
+    delete resetProps.option;
+    delete resetProps.onSelect;
     return (
       <div
-        className={classNames(styles.select, {
+        className={classNames(styles.select, className, {
           visible, hide: !visible,
         })}
         {...resetProps}
@@ -40,19 +51,26 @@ export default class Select extends Component {
           {title && title.length > 0 && title[0].label}
         </div>
         <div className={styles.option} >
-          {option.map((item, idx) => {
-            return (
-              <div
-                key={idx}
-                className={classNames('item', {
-                  selected: item.value === value,
-                })}
-                onClick={this.onSelect.bind(this, item)}
-              >
-                {item.label}
-              </div>
-            );
-          })}
+          {showSearch && (
+            <div className={styles.search}>
+              <input type="text" placeholder="过滤语言" onChange={this.onFilterLang.bind(this)} />
+            </div>
+          )}
+          <div className={styles.optionList}>
+            {option.map((item, idx) => {
+              return (
+                <div
+                  key={idx}
+                  className={classNames('item', {
+                    selected: item.value === value,
+                  })}
+                  onClick={this.onSelect.bind(this, item)}
+                >
+                  {item.label}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );
@@ -62,10 +80,13 @@ export default class Select extends Component {
 Select.propsTypes = {
   value: PropTypes.string,
   option: PropTypes.array,
+  showSearch: PropTypes.bool,
   onSelect: PropTypes.func,
 };
 
 Select.defaultProps = {
   option: [],
+  value: '',
+  showSearch: false,
   onSelect() {},
 };
