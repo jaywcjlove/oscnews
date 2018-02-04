@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
-import fetchs from '../utils/fetch';
+import { fetchInterval } from '../utils/';
 import styles from './OSCNews.less';
 
 const osctype = localStorage.getItem('osc-type');
@@ -44,7 +44,7 @@ export default class OSCNews extends PureComponent {
   getNewsList() {
     const { newType, newPage } = this.state;
     localStorage.setItem('osc-type', newType);
-    fetchs(`http://www.oschina.net/action/ajax/get_more_news_list?newsType=${newType}&p=${newPage}`, 1).then((response) => {
+    fetchInterval(`http://www.oschina.net/action/ajax/get_more_news_list?newsType=${newType}&p=${newPage}`, 1).then((response) => {
       if (!this.mounted) return;
       response = response.replace(/<a\b[^>]+\bhref="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (node, url, text) => {
         if (/^\//.test(url)) {

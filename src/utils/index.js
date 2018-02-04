@@ -1,7 +1,8 @@
-import fetch from './fetch';
+import { fetchInterval, fetchTimely } from './fetch';
 import BlockFetch from './BlockFetch';
 
 export {
-  fetch as fetchs,
+  fetchInterval,
+  fetchTimely,
   BlockFetch,
 };

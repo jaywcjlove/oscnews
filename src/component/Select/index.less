@@ -1,0 +1,93 @@
+
+
+.select {
+  position: relative;
+  display: inline-block;
+  & + .select {
+    margin: 0 0 0 10px;
+  }
+  &:global(.hide) {
+    .option {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+  &:global(.visible) {
+    .title {
+      border-color: rgba(27,31,35,0.35);
+      box-shadow: inset 0 0.15em 0.3em rgba(27,31,35,0.15);
+      &::after {
+        transform: rotate(180deg)
+      }
+    }
+    .option {
+      opacity: 1;
+      z-index: 9;
+    }
+  }
+  :global {
+    .selected {
+      &::before {
+        content: '';
+        display: block;
+        float: left;
+        height: 6px;
+        width: 3px;
+        border-bottom: 1px solid #333;
+        border-right: 1px solid #333;
+        transform: rotate(30deg);
+        position: absolute;
+        left: 5px;
+        top: 8px;
+      }
+    }
+  }
+}
+
+.title {
+  background-color: #dedede;
+  padding: 0 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  &::after {
+    content: '';
+    display: inline-block;
+    transition: all .3s;
+    width: 0;
+    height: 0;
+    border-top: 4px solid #333;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    margin-left: 5px;
+    margin-top: -2px;
+    vertical-align: middle;
+  }
+}
+
+.option {
+  right: 0;
+  position: absolute;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  max-height: 230px;
+  overflow: auto;
+  font-size: 12px;
+  color: #586069;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(27,31,35,0.15);
+  border-radius: 3px;
+  box-shadow: 0 3px 12px rgba(27,31,35,0.15);
+  transition: all .3s;
+  :global {
+    .item {
+      white-space:nowrap;
+      padding: 0 10px 0 15px;
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        background-color: #e8e8e8;
+      }
+    }
+  }
+}
