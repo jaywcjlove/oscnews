@@ -1,6 +1,3 @@
 node_modules
 package-lock.json
-oscnews
-oscnews.crx
-oscnews.pem
-oscnews.zip
+oscnews*
