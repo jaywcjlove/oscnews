@@ -8,18 +8,19 @@ import apple from '../assets/apple.svg';
 // import setting from '../assets/setting.svg';
 import styles from './Header.less';
 
-const storage = chrome.storage.local;
-
 export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      type: props.contentType || 'trending',
-      visible: false,
+      type: props.conf.pageType,
+      visible: props.visible.header,
       menus: [
         {
           title: '空白页',
           type: 'blank',
+        }, {
+          title: '命令大全',
+          type: 'linux',
         }, {
           title: '开发文档',
           type: 'document',
@@ -33,25 +34,18 @@ export default class Header extends Component {
       ],
     };
   }
-  componentDidMount() {
-    storage.get('oscHeader', (items) => {
-      this.setState({
-        visible: items.oscHeader,
-      });
-    });
-  }
   onChange(type) {
     const { onChange } = this.props;
-    storage.set({ contentType: type });
-    localStorage.setItem('content-type', type);
     this.setState({ type });
     onChange(type);
   }
   onDropDown() {
+    const { storage, visible } = this.props;
     this.setState({
       visible: !this.state.visible,
     }, () => {
-      storage.set({ oscHeader: this.state.visible });
+      visible.header = this.state.visible;
+      storage.set({ visible });
     });
   }
   render() {
@@ -70,8 +64,8 @@ export default class Header extends Component {
               );
             })}
           </div>
-          <a href="https://gitee.com/" > <img title="码云" alt="码云" src={ gitee } /></a>
-          <a href="https://github.com/" > <img title="Github" alt="Github" src={ github } /></a>
+          <a href="https://gitee.com/jaywcjlove/oscnews" > <img title="码云" alt="码云" src={ gitee } /></a>
+          <a href="https://github.com/jaywcjlove/oscnews" > <img title="Github" alt="Github" src={ github } /></a>
           <a href="http://wangchujiang.com/awesome-mac/index.zh.html" > <img title="Mac精品软件推荐" alt="Mac精品软件推荐" src={ apple } /></a>
           {/* <span className={styles.setting}> <img title="" alt="" src={setting} /> </span> */}
         </div>

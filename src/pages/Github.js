@@ -29,8 +29,8 @@ export default class Github extends Component {
       ],
       optionLang,
       suggest: ['css', 'go', 'html', 'javascript', 'objective-c', 'python', 'swift'],
-      since: localStorage.getItem('github-since') || '',
-      lang: localStorage.getItem('github-lang') || '',
+      since: props.conf.githubSince,
+      lang: props.conf.githubLang,
     };
   }
   componentWillUnmount() {
@@ -49,11 +49,10 @@ export default class Github extends Component {
   }
   getTrending(type) {
     const localContent = localStorage.getItem('github-list');
-    if (!localContent) type = 'select';
+    if (!localContent) type = 'select'; // 判断是否直接选择
     this.setState({ loading: true });
     const getDate = type === 'select' ? fetchTimely(this.getURL()) : fetchInterval(this.getURL(), 3, 'github-trending');
     getDate.then((response) => {
-      this.setState({ loading: false });
       response.replace(/<body\b[^>]*>([\s\S]*?)<\/body>/gi, (node, body) => {
         response = body;
         return node;
@@ -72,6 +71,7 @@ export default class Github extends Component {
       localStorage.setItem('github-list', _html);
       if (!this.mounted) return;
       this.setState({
+        loading: false,
         content: _html,
       });
     }).catch(() => {
@@ -83,13 +83,16 @@ export default class Github extends Component {
     });
   }
   onSelect(type, item) {
+    const { storage, conf } = this.props;
     this.setState({ loading: false });
     if (!type) return;
     this.setState({
       [`${type}`]: item.value,
     }, () => {
-      localStorage.setItem(`github-${type}`, item.value);
-      this.getTrending('select');
+      conf[type === 'since' ? 'githubSince' : 'githubLang'] = item.value;
+      storage.set({ conf }, () => {
+        this.getTrending('select');
+      });
     });
   }
   render() {

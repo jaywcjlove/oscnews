@@ -4,42 +4,54 @@ import Header from '../Header';
 import OSCNews from '../OSCNews';
 import styles from './index.less';
 
-const contentType = localStorage.getItem('content-type');
-
 export default class Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      type: contentType || 'document',
-      visible: localStorage.getItem('oscnew-bar') === 'true' || false,
+      type: props.config.conf.pageType,
+      visible: props.config.visible.newBar,
     };
   }
   onSwitchBtn() {
-    localStorage.setItem('oscnew-bar', !this.state.visible);
-    this.setState({
-      visible: !this.state.visible,
+    const { storage, visible } = this.props.config;
+    visible.newBar = !this.state.visible;
+    storage.set({ visible }, () => {
+      this.setState({
+        visible: !this.state.visible,
+      });
     });
   }
   render() {
-    const { children } = this.props;
+    const { children, config } = this.props;
     const { visible } = this.state;
     return (
       <div className={styles.warpper}>
         <div className={styles.header}>
-          <Header contentType={this.state.type} onChange={(type) => { this.setState({ type }); }} />
+          <Header
+            {...config}
+            pageType={this.state.type}
+            onChange={(type) => {
+              const { conf, storage } = config;
+              conf.pageType = type;
+              storage.set({ conf }, () => {
+                this.setState({ type });
+              });
+            }}
+          />
         </div>
         <div className={styles.content}>
           <div className={styles.oscnews} style={{ marginLeft: visible ? 0 : -360 }}>
             <div className={classNames(styles.switchBtn, { show: visible, hidden: !visible })} onClick={this.onSwitchBtn.bind(this)}>
               {visible ? '隐藏' : '显示新闻'}
             </div>
-            <OSCNews />
+            <OSCNews {...config} />
           </div>
           <div className={styles.trending}>
             {React.Children.map(children, (Child) => {
               if (!Child || Child.type.typeName !== this.state.type) return null;
               return React.cloneElement(Child, {
                 contentType: this.state.type,
+                ...config,
               });
             })}
           </div>

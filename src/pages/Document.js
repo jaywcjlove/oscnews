@@ -32,15 +32,13 @@ const website = (
   </svg>
 );
 
-export default class Document extends Component {
+export default class DevDocument extends Component {
   constructor(props) {
     super(props);
-    const star = JSON.parse(localStorage.getItem('osc-doc-star'));
-    const tag = JSON.parse(localStorage.getItem('osc-doc-tag'));
     this.state = {
       lists: [],
-      star: star || [],
-      tag: tag || '',
+      star: props.conf.docStar,
+      tag: props.conf.docTag,
       subMenu: [
         { title: '我的收藏', tag: '__star__' },
         { title: '全部', tag: '' },
@@ -61,18 +59,22 @@ export default class Document extends Component {
   }
   onAddStar(title) {
     const { star } = this.state;
+    const { storage, conf } = this.props;
     if (star.indexOf(title) === -1) {
       star.push(title);
     } else {
       star.splice(star.indexOf(title), 1);
     }
-    this.setState({ star }, () => {
-      localStorage.setItem('osc-doc-star', JSON.stringify(star));
+    conf.docStar = star;
+    storage.set({ conf }, () => {
+      this.setState({ star });
     });
   }
   onChangeTag(tag) {
+    const { storage, conf } = this.props;
+    conf.docTag = tag;
     this.setState({ tag }, () => {
-      localStorage.setItem('osc-doc-tag', JSON.stringify(tag));
+      storage.set({ conf });
     });
   }
   render() {
@@ -151,4 +153,4 @@ export default class Document extends Component {
   }
 }
 
-Document.typeName = 'document';
+DevDocument.typeName = 'document';

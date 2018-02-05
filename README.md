@@ -65,11 +65,14 @@ npm run build
   - [ ] 开发文档导航搜索过滤
   - [x] ~~添加删除文档？~~
   - [x] 文档分类前端（前端、后端、工具）
-- [ ] Linux命令检索，集成 [linux-command](https://github.com/jaywcjlove/linux-command)
+- [x] Linux命令检索，集成 [linux-command](https://github.com/jaywcjlove/linux-command)
 - [ ] 开源中国新闻下拉翻页
+- [ ] 添加搜索引擎页面
 - [x] Github 趋势榜天、周、月统计切换，语言切换
 - [ ] 常用网站导航
-- [ ] Github 登录，浏览自己项目
+- [ ] Github
+  - [ ] Github 登录，浏览自己项目
+  - [ ] Github Start 管理
 - [ ] Gitlab 登录，相关功能
 - [ ] 集成 [octotree](https://github.com/buunguyen/octotree) 部分功能
 - [ ] 插件官方网站
@@ -80,14 +83,15 @@ npm run build
   - [ ] 记录代办事项
   - [ ] Chrome通知
 - [ ] 设置功能
-  - [ ] 是否在新标签页显示
+  - [ ] 设置是否替换新标签页显示
+  - [ ] 设置URL是否在新的标签页打开，
   - [ ] 菜单配置
   - [ ] 清空历史
   - [ ] 分享应用到微博
 - [ ] 兼容其它浏览器
   - [ ] 兼容360急速浏览器
   - [ ] 兼容Firefox浏览器
-- [ ] 配置存储使用 [chrome.storage](https://developer.chrome.com/apps/storage) 替代
+- [x] 配置存储使用 [chrome.storage](https://developer.chrome.com/apps/storage) 替代
 
 ## License
 

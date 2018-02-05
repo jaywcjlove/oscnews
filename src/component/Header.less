@@ -13,7 +13,7 @@
   }
   .menu {
     span, a {
-      padding: 2px 6px;
+      padding: 1px 4px;
       transition: all .3s;
       vertical-align: middle;
     }
@@ -38,12 +38,19 @@
   span {
     margin: 0 3px;
     padding: 2px 5px;
+    border-radius: 3px;
+    &:hover {
+      background-color: #e2e2e2;
+      &:global(.active) {
+        color: #fff;
+        background-color: #3c3c3c;
+      }
+    }
   }
   :global {
     .active {
       color: #fff;
       background-color: #3c3c3c;
-      border-radius: 3px;
     }
   }
 }
