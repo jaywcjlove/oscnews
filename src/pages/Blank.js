@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { theWeek } from '../utils';
 import styles from './Blank.less';
 
 // 搜索地点
@@ -22,7 +23,8 @@ const time = () => {
 const date = () => {
   return (
     <div className={styles.date}>
-      {`${new Date().getMonth() + 1}月${new Date().getDate()}日  ${['周日', '周一', '周二', '周三', '周四', '周五', '周六'][new Date().getDay()]}`}
+      {`${new Date().getMonth() + 1}月${new Date().getDate()}日  ${['周日', '周一', '周二', '周三', '周四', '周五', '周六'][new Date().getDay()]} `}
+      <sup>{`第${theWeek() + 1}周`}</sup>
     </div>
   );
 };
