@@ -64,8 +64,8 @@ export default class Header extends Component {
               );
             })}
           </div>
-          <a href="https://gitee.com/jaywcjlove/oscnews" > <img title="码云" alt="码云" src={ gitee } /></a>
-          <a href="https://github.com/jaywcjlove/oscnews" > <img title="Github" alt="Github" src={ github } /></a>
+          <a href="https://gitee.com/jaywcjlove/oscnews" rel="noopener noreferrer" target="_blank"> <img title="码云" alt="码云" src={ gitee } /></a>
+          <a href="https://github.com/jaywcjlove/oscnews" rel="noopener noreferrer" target="_blank"> <img title="Github" alt="Github" src={ github } /></a>
           <a href="http://wangchujiang.com/awesome-mac/index.zh.html" > <img title="Mac精品软件推荐" alt="Mac精品软件推荐" src={ apple } /></a>
           {/* <span className={styles.setting}> <img title="" alt="" src={setting} /> </span> */}
         </div>
