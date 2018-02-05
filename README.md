@@ -10,6 +10,7 @@
   <img src="./img/osc-news.png"> 
   <img src="./img/osc-news2.png"> 
   <img src="./img/osc-news3.png"> 
+  <img src="./img/osc-news4.png"> 
 </div>
 
 ## 商店安装
