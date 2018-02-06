@@ -1,6 +1,6 @@
 {
   "name": "oscnews",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "开源中国新闻，查看开源中国软件更新资讯，文档导航，GitHub 趋势榜，和时钟页面。",
   "main": "index.js",
   "scripts": {

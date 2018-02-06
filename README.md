@@ -11,6 +11,7 @@
   <img src="./img/osc-news2.png"> 
   <img src="./img/osc-news3.png"> 
   <img src="./img/osc-news4.png"> 
+  <img src="./img/osc-news5.png"> 
 </div>
 
 ## 商店安装

@@ -16,9 +16,6 @@ export default class Root extends Component {
           title: '空白页',
           type: 'blank',
         }, {
-          title: '搜索',
-          type: 'search',
-        }, {
           title: '命令大全',
           type: 'linux',
         }, {
