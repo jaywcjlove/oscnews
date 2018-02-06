@@ -14,24 +14,7 @@ export default class Header extends Component {
     this.state = {
       type: props.conf.pageType,
       visible: props.visible.header,
-      menus: [
-        {
-          title: '空白页',
-          type: 'blank',
-        }, {
-          title: '命令大全',
-          type: 'linux',
-        }, {
-          title: '开发文档',
-          type: 'document',
-        }, {
-          title: '趋势榜',
-          type: 'trending',
-        }, {
-          title: '历史记录',
-          type: 'history',
-        },
-      ],
+      menus: props.menus,
     };
   }
   onChange(type) {

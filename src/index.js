@@ -14,10 +14,16 @@ storage.get(['oscconfig', 'visible', 'conf'], (items) => {
 
   // 默认选中的栏目
   if (!items.conf) items.conf = {};
+  // 默认展示页面
   if (!items.conf.pageType) items.conf.pageType = 'document';
+  // 默认新闻展示tab类型
   if (!items.conf.oscType) items.conf.oscType = '';
+  // 默认新闻展示宽度设置
+  if (!items.conf.siderBarWidth) items.conf.siderBarWidth = 360;
+  // 开发文档导航设置
   if (!items.conf.docTag) items.conf.docTag = '';
   if (!items.conf.docStar) items.conf.docStar = [];
+  // GitHub趋势榜设置
   if (!items.conf.githubSince) items.conf.githubSince = '';
   if (!items.conf.githubLang) items.conf.githubLang = '';
 
