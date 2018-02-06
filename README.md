@@ -4,7 +4,7 @@
   </a>
 </p>
 
-[开源中国](http://www.oschina.net/) Chrome 插件，查看开源中国[软件更新资讯](http://www.oschina.net/news/project)，在每次 Chrome 浏览器新选项卡页面，展示该内容，同时还展示 GitHub [趋势榜](http://github.com/trending)。
+这是一个Chrome插件，在新标签页查看开源中国[软件更新资讯](http://www.oschina.net/news/project)，GitHub 趋势榜、linux 命令索引，浏览历史记录，时钟页面。
 
 <div align="center">
   <img src="./img/osc-news.png"> 
