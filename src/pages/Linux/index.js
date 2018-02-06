@@ -15,7 +15,7 @@ export default class Linux extends Component {
   }
   onChange(e) {
     if (!e.target) return;
-    this.setState({ query: e.target.value, active: !e.target.value ? 0 : null });
+    this.setState({ query: e.target.value, active: !e.target.value ? null : 0 });
   }
   openURL() {
     const { query, active } = this.state;
@@ -24,7 +24,7 @@ export default class Linux extends Component {
     if ((active || active === 0) && ContentData[active]) {
       queryStr = ContentData[active].n;
     }
-    if ((active || active === 0) && queryStr) {
+    if ((active || active === 0 || query === queryStr) && queryStr && query) {
       window.open(`https://jaywcjlove.github.io/linux-command/c/${queryStr}.html`);
       // window.location.href = `https://jaywcjlove.github.io/linux-command/c/${queryStr}.html`;
     } else {
