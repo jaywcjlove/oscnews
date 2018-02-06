@@ -67,8 +67,8 @@ npm run build
   - [x] 文档分类前端（前端、后端、工具）
 - [x] Linux命令检索，集成 [linux-command](https://github.com/jaywcjlove/linux-command)
 - [ ] 开源中国新闻
-  - [ ] 宽度拖拽设置
-  - [x] 下拉翻页
+  - [x] 宽度拖拽设置
+  - [ ] 下拉翻页
 - [ ] 添加搜索引擎页面
 - [x] Github 趋势榜天、周、月统计切换，语言切换
 - [ ] 常用网站导航
