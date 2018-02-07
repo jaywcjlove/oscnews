@@ -33,6 +33,7 @@ const website = (
 );
 
 export default class DevDocument extends Component {
+  static typeName = 'document'
   constructor(props) {
     super(props);
     this.state = {
@@ -152,5 +153,3 @@ export default class DevDocument extends Component {
     );
   }
 }
-
-DevDocument.typeName = 'document';

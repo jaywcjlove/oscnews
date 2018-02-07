@@ -3,13 +3,12 @@ import Footer from '../component/Footer';
 import styles from './History.less';
 
 export default class History extends PureComponent {
+  static typeName = 'history'
   constructor(props) {
     super(props);
     this.state = {
       list: [],
     };
-  }
-  componentWillMount() {
     this.getHistory();
   }
   componentDidMount() {
@@ -47,5 +46,3 @@ export default class History extends PureComponent {
     );
   }
 }
-
-History.typeName = 'history';

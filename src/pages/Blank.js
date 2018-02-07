@@ -30,6 +30,7 @@ const date = () => {
 };
 
 export default class Blank extends Component {
+  static typeName = 'blank'
   constructor(props) {
     super(props);
     this.state = {
@@ -59,5 +60,3 @@ export default class Blank extends Component {
     );
   }
 }
-
-Blank.typeName = 'blank';

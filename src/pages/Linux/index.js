@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import command from 'linux-command';
 import classNames from 'classnames';
 import styles from './index.less';
+import Search from '../../component/Search';
 import Footer from '../../component/Footer';
 import logo from '../../assets/linux-logo.svg';
 
 export default class Linux extends Component {
+  static typeName = 'linux'
   constructor(props) {
     super(props);
     this.state = {
@@ -26,10 +28,8 @@ export default class Linux extends Component {
     }
     if ((active || active === 0 || query === queryStr) && queryStr && query) {
       window.open(`https://jaywcjlove.github.io/linux-command/c/${queryStr}.html`);
-      // window.location.href = `https://jaywcjlove.github.io/linux-command/c/${queryStr}.html`;
     } else {
       window.open(`https://jaywcjlove.github.io/linux-command/list.html#!kw=${queryStr}`);
-      // window.location.href = `https://jaywcjlove.github.io/linux-command/list.html#!kw=${queryStr}`;
     }
   }
   onSearch() {
@@ -87,12 +87,7 @@ export default class Linux extends Component {
         <div className={styles.header}>
           <a href="https://github.com/jaywcjlove/linux-command" rel="noopener noreferrer" target="_blank" title="Linux命令搜索工具"><img alt="linux-command logo" src={logo} /></a>
         </div>
-        <div className={styles.search}>
-          <input value={this.state.query} onChange={this.onChange.bind(this)} onKeyUp={this.onKeyUp.bind(this)} />
-          <div className={styles.searchBtn}>
-            <button onClick={this.onSearch.bind(this)}>搜索</button>
-          </div>
-        </div>
+        <Search style={{ width: 430 }} onChange={this.onChange.bind(this)} onKeyUp={this.onKeyUp.bind(this)} onClick={this.onSearch.bind(this)} />
         <div className={styles.list}>
           {Object.keys(command).length > 0 && (
             <div className={styles.infoTotal}>
@@ -107,5 +102,3 @@ export default class Linux extends Component {
     );
   }
 }
-
-Linux.typeName = 'linux';

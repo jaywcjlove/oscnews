@@ -10,6 +10,7 @@ import optionLang from '../source/trending.json';
 const githublist = localStorage.getItem('github-list');
 
 export default class Github extends Component {
+  static typeName = 'trending'
   constructor(props) {
     super(props);
     this.state = {
@@ -112,5 +113,3 @@ export default class Github extends Component {
     );
   }
 }
-
-Github.typeName = 'trending';

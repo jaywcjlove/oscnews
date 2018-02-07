@@ -1,47 +1,24 @@
 import React, { Component } from 'react';
 import Container from './component/container';
-import Blank from './pages/Blank';
-import Github from './pages/Github';
-import History from './pages/History';
-import Document from './pages/Document';
-import Linux from './pages/Linux';
-import Search from './pages/Search';
+import { getNavData } from './Route';
 
 export default class Root extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      menu: [
-        {
-          title: '空白页',
-          type: 'blank',
-        }, {
-          title: '命令大全',
-          type: 'linux',
-        }, {
-          title: '开发文档',
-          type: 'document',
-        }, {
-          title: '趋势榜',
-          type: 'trending',
-        }, {
-          title: '历史记录',
-          type: 'history',
-        },
-      ],
-    };
+    this.state = { };
   }
   render() {
     const { config } = this.props;
-    config.menus = this.state.menu;
+    config.menus = getNavData().filter((item) => {
+      return { title: item.title, type: item.type };
+    });
     return (
       <Container config={config} >
-        <Blank />
-        <History />
-        <Github />
-        <Document />
-        <Linux />
-        <Search />
+        {getNavData().map((item, idx) => {
+          if (!item.component) return null;
+          const Comp = item.component.default || item.component;
+          return Comp ? <Comp key={idx} /> : null;
+        })}
       </Container>
     );
   }
