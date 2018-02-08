@@ -1,0 +1,38 @@
+[
+  {
+    "label": "网页",
+    "value": "web",
+    "children": [
+      {
+        "label": "谷歌",
+        "value": "google",
+        "url": "https://www.google.com/search?q={{kw}}"
+      },
+      {
+        "label": "百度",
+        "value": "baidu",
+        "url": "https://www.baidu.com/s?wd={{kw}}"
+      }
+    ]
+  },{
+    "label": "字典翻译",
+    "value": "dict",
+    "children": [
+      {
+        "label": "有道",
+        "value": "youdao",
+        "url": "http://dict.youdao.com/search?q={{kw}}"
+      },
+      {
+        "label": "词霸",
+        "value": "iciba",
+        "url": "http://www.iciba.com/search?s={{kw}}"
+      },
+      {
+        "label": "百度",
+        "value": "baidu",
+        "url": "http://dict.baidu.com/s?wd={{kw}}"
+      }
+    ]
+  }
+]

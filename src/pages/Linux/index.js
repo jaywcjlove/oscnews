@@ -26,10 +26,10 @@ export default class Linux extends Component {
     if ((active || active === 0) && ContentData[active]) {
       queryStr = ContentData[active].n;
     }
-    if ((active || active === 0 || query === queryStr) && queryStr && query) {
+    if ((active || (active === 0 && query === queryStr) || query === queryStr) && queryStr && query) {
       window.open(`https://jaywcjlove.github.io/linux-command/c/${queryStr}.html`);
     } else {
-      window.open(`https://jaywcjlove.github.io/linux-command/list.html#!kw=${queryStr}`);
+      window.open(`https://jaywcjlove.github.io/linux-command/list.html#!kw=${query}`);
     }
   }
   onSearch() {
@@ -71,6 +71,7 @@ export default class Linux extends Component {
         name = name.replace(reg, `<i class="kw">$1</i>`); // eslint-disable-line
         des = des.replace(reg, `<i class="kw">$1</i>`); // eslint-disable-line
       }
+      if (idx > 10) return null;
       return (
         <div title={idx} className={classNames(styles.item, { active: active || active === 0 ? idx === active : item.n === query })} key={idx}>
           <a
@@ -87,7 +88,7 @@ export default class Linux extends Component {
         <div className={styles.header}>
           <a href="https://github.com/jaywcjlove/linux-command" rel="noopener noreferrer" target="_blank" title="Linux命令搜索工具"><img alt="linux-command logo" src={logo} /></a>
         </div>
-        <Search style={{ width: 430 }} onChange={this.onChange.bind(this)} onKeyUp={this.onKeyUp.bind(this)} onClick={this.onSearch.bind(this)} />
+        <Search style={{ width: 430 }} onChange={this.onChange.bind(this)} onKeyUp={this.onKeyUp.bind(this)} onSearch={this.onSearch.bind(this)} />
         <div className={styles.list}>
           {Object.keys(command).length > 0 && (
             <div className={styles.infoTotal}>

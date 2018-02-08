@@ -15,6 +15,12 @@ export default class Select extends Component {
     this.handleClickOutside = this.handleClickOutside.bind(this);
   }
   componentDidMount() {
+    const { value, option } = this.state;
+    if (!value && option && option.length > 0) {
+      this.setState({
+        value: option[0].value || '',
+      });
+    }
     document.addEventListener('mousedown', this.handleClickOutside, true);
   }
   componentWillUnmount() {
@@ -76,12 +82,12 @@ export default class Select extends Component {
     delete resetProps.onSelect;
     return (
       <div
-        className={classNames(styles.select, className, {
+        className={classNames('select', styles.select, className, {
           visible, hide: !visible,
         })}
         {...resetProps}
       >
-        <div className={styles.title} onClick={this.onClick.bind(this)}>
+        <div className={classNames('title', styles.title)} onClick={this.onClick.bind(this)}>
           {title && title.length > 0 && title[0].label}
         </div>
         <div className={styles.option} >

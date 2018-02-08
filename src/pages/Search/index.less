@@ -16,7 +16,35 @@
   left: 10px;
   div {
     display: inline-block;
-    margin-right: 10px;
     color: #868686;
+    cursor: pointer;
+  }
+  div + div {
+    margin-left: 10px;
+  }
+  :global {
+    .active {
+      display: inline-block;
+      padding: 1px 4px 0 4px;
+      border-radius: 2px;
+      line-height: 18px;
+      margin: 0 2px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      background-color: #868686;
+      color: #fff;
+    }
+  }
+}
+
+.searchSelect {
+  top: -33px;
+  left: 7px;
+  position: relative;
+  z-index: 9;
+  &:global {
+    &.select .title{
+      background: #efefef;
+    }
   }
 }
