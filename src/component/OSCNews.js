@@ -10,6 +10,7 @@ export default class OSCNews extends PureComponent {
     super(props);
     this.state = {
       newList: 'loading...',
+      visible: props.visible.newBar,
       newType: props.conf.oscType, // '' | ndustry | project
       newPage: 1,
       newTabs: [
@@ -41,8 +42,10 @@ export default class OSCNews extends PureComponent {
     return localStorage.getItem(`osc-list${newType}`);
   }
   getNewsList() {
-    const { newType, newPage } = this.state;
+    const { newType, newPage, visible } = this.state;
     const { storage, conf } = this.props;
+    const newList = this.getNewListStore();
+    if (!visible && newList) return;
     conf.oscType = newType;
     storage.set({ conf });
     fetchInterval(`http://www.oschina.net/action/ajax/get_more_news_list?newsType=${newType}&p=${newPage}`, 1).then((response) => {

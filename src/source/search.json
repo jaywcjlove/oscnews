@@ -4,34 +4,338 @@
     "value": "web",
     "children": [
       {
-        "label": "谷歌",
-        "value": "google",
-        "url": "https://www.google.com/search?q={{kw}}"
-      },
-      {
         "label": "百度",
         "value": "baidu",
         "url": "https://www.baidu.com/s?wd={{kw}}"
+      }, {
+        "label": "谷歌",
+        "value": "google",
+        "iframe": false,
+        "url": "https://www.google.com/search?q={{kw}}"
+      }, {
+        "label": "360",
+        "value": "so",
+        "url": "https://www.so.com/s?q={{kw}}"
+      }, {
+        "label": "搜狗",
+        "value": "sogou",
+        "url": "https://www.sogou.com/web?query={{kw}}"
+      }, {
+        "label": "必应",
+        "value": "bing",
+        "url": "https://cn.bing.com/search?q={{kw}}"
       }
     ]
-  },{
-    "label": "字典翻译",
-    "value": "dict",
+  }, {
+    "label": "技术",
+    "value": "dev",
     "children": [
+      {
+        "label": "MDN",
+        "value": "mozilla",
+        "url": "https://developer.mozilla.org/zh-CN/search?q={{kw}}"
+      }, {
+        "label": "GitHub",
+        "value": "github",
+        "url": "https://github.com/search?q={{kw}}"
+      }, {
+        "label": "Gitee",
+        "value": "gitee",
+        "url": "https://gitee.com/search?search={{kw}}"
+      }, {
+        "label": "npm",
+        "value": "npmjs",
+        "url": "https://www.npmjs.com/search?q={{kw}}"
+      }, {
+        "label": "开源中国",
+        "value": "oschina",
+        "url": "https://www.oschina.net/search?scope=all&q={{kw}}"
+      }, {
+        "label": "CSDN",
+        "value": "csdn",
+        "url": "http://so.csdn.net/so/search/s.do?q={{kw}}"
+      }, {
+        "label": "掘金",
+        "value": "juejin",
+        "url": "https://juejin.im/search?query={{kw}}"
+      }, {
+        "label": "SegmentFault",
+        "value": "segmentfault",
+        "url": "https://segmentfault.com/search?q={{kw}}"
+      }, {
+        "label": "StackOverflow",
+        "value": "stackoverflow",
+        "url": "https://stackoverflow.com/search?q={{kw}}"
+      },
+      {
+        "label": "Linux命令",
+        "value": "linuxcommand",
+        "url": "http://jaywcjlove.github.io/linux-command/list.html#!kw={{kw}}"
+      }
+    ]
+  },
+  {
+    "label": "翻译",
+    "value": "translate",
+    "reveal": "tab",
+    "children": [
+      {
+        "label": "百度",
+        "value": "baidu",
+        "url": "http://fanyi.baidu.com/"
+      },
       {
         "label": "有道",
         "value": "youdao",
-        "url": "http://dict.youdao.com/search?q={{kw}}"
+        "url": "http://fanyi.youdao.com/"
+      },
+      {
+        "label": "搜狗",
+        "value": "sogou",
+        "url": "http://fanyi.sogou.com/"
+      },
+      {
+        "label": "360",
+        "value": "so",
+        "url": "http://fanyi.so.com/"
       },
       {
         "label": "词霸",
         "value": "iciba",
-        "url": "http://www.iciba.com/search?s={{kw}}"
+        "url": "http://fy.iciba.com/"
+      },
+      {
+        "label": "谷歌",
+        "value": "google",
+        "target": "_blank",
+        "url": "https://translate.google.cn/"
+      }
+    ]
+  }, {
+    "label": "字典",
+    "value": "dict",
+    "reveal": "tab",
+    "children": [
+      {
+        "label": "新华字典",
+        "value": "5156edu",
+        "url": "http://xh.5156edu.com/"
+      }, {
+        "label": "汉典",
+        "value": "zdic",
+        "url": "http://www.zdic.net/"
+      }, {
+        "label": "词典",
+        "value": "cidianwang",
+        "url": "http://www.cidianwang.com/"
+      }, {
+        "label": "古文献",
+        "value": "fanren8",
+        "url": "http://wenxian.fanren8.com/"
+      }, {
+        "label": "象形文字",
+        "value": "vividict",
+        "url": "http://www.vividict.com/"
+      }, {
+        "label": "国学",
+        "value": "guoxuedashi",
+        "url": "http://www.guoxuedashi.com/"
+      },
+      {
+        "label": "世图",
+        "value": "chongbuluo",
+        "url": "http://mx.wdl.org/zh/"
+      }, {
+        "label": "姓氏家谱",
+        "value": "mobileinto",
+        "url": "http://weijp.library.sh.cn/mobileinto.html"
+      }
+    ]
+  },
+  {
+    "label": "地图",
+    "value": "map",
+    "reveal": "tab",
+    "children": [
+      {
+        "label": "高德",
+        "value": "amap",
+        "url": "http://ditu.amap.com/"
       },
       {
         "label": "百度",
         "value": "baidu",
-        "url": "http://dict.baidu.com/s?wd={{kw}}"
+        "url": "http://map.baidu.com/"
+      },
+      {
+        "label": "谷歌",
+        "value": "google",
+        "target": "_blank",
+        "url": "https://www.google.com/maps"
+      },
+      {
+        "label": "腾讯",
+        "value": "qq",
+        "url": "http://map.qq.com/"
+      },
+      {
+        "label": "搜狗",
+        "value": "sogou",
+        "url": "http://map.sogou.com"
+      }
+    ]
+  },
+  {
+    "label": "图片",
+    "value": "image",
+    "children": [
+      {
+        "label": "百度",
+        "value": "baidu",
+        "url": "http://image.baidu.com/search/index?tn=baiduimage&ie=gbk&word={{kw}}"
+      },
+      {
+        "label": "360",
+        "value": "so",
+        "url": "http://image.so.com/i?q={{kw}}"
+      },
+      {
+        "label": "搜狗",
+        "value": "soso",
+        "url": "http://image.soso.com/pics?query={{kw}}"
+      },
+      {
+        "label": "必应",
+        "value": "bing",
+        "url": "https://cn.bing.com/images/search?q={{kw}}"
+      },
+      {
+        "label": "昵图",
+        "value": "nipic",
+        "url": "http://soso.nipic.com/search.aspx?t=tk&q={{kw}}"
+      },
+      {
+        "label": "谷歌",
+        "value": "google",
+        "url": "https://www.google.com/search?safe=strict&tbm=isch&source=hp&q={{kw}}"
+      }
+    ]
+  },
+  {
+    "label": "视频",
+    "value": "move",
+    "children": [
+      {
+        "label": "时光网",
+        "value": "mtime",
+        "url": "http://search.mtime.com/search/?q={{kw}}"
+      }, {
+        "label": "搜库",
+        "value": "soku",
+        "url": "http://www.soku.com/nt/search/q_{{kw}}"
+      },
+      {
+        "label": "腾讯视频",
+        "value": "qq",
+        "url": "https://v.qq.com/x/search/?q={{kw}}"
+      },
+      {
+        "label": "爱奇艺",
+        "value": "iqiyi",
+        "url": "http://so.iqiyi.com/so/q_{{kw}}"
+      },
+      {
+        "label": "哔哩哔哩",
+        "value": "bilibili",
+        "url": "http://search.bilibili.com/all?keyword={{kw}}"
+      },
+      {
+        "label": "射手网(伪)",
+        "value": "assrt",
+        "url": "http://assrt.net/sub/?searchword={{kw}}"
+      }
+    ]
+  },
+  {
+    "label": "购物",
+    "value": "shopping",
+    "children": [
+      {
+        "label": "京东",
+        "value": "jd",
+        "url": "https://search.jd.com/Search?keyword={{kw}}"
+      },
+      {
+        "label": "当当",
+        "value": "dangdang",
+        "url": "http://search.dangdang.com/?key={{kw}}"
+      },
+      {
+        "label": "亚马逊",
+        "value": "amazon",
+        "url": "https://www.amazon.cn/s/field-keywords={{kw}}"
+      },
+      {
+        "label": "天猫",
+        "value": "tmall",
+        "url": "https://list.tmall.com/search_product.htm?q={{kw}}"
+      },
+      {
+        "label": "淘宝",
+        "value": "taobao",
+        "url": "https://s.taobao.com/search?q={{kw}}"
+      },
+      {
+        "label": "苏宁",
+        "value": "taobao",
+        "url": "https://search.suning.com/{{kw}}/"
+      },
+      {
+        "label": "美丽说",
+        "value": "meilishuo",
+        "url": "http://www.meilishuo.com/search/goods/?searchKey={{kw}}"
+      }
+    ]
+  },
+  {
+    "label": "知识",
+    "value": "know",
+    "children": [
+      {
+        "label": "百度百科",
+        "value": "baidu",
+        "url": "http://baike.baidu.com/search/word?word={{kw}}"
+      },
+      {
+        "label": "互动百科",
+        "value": "baike",
+        "url": "http://www.baike.com/wiki/{{kw}}"
+      },
+      {
+        "label": "360百科",
+        "value": "haosou",
+        "url": "http://baike.haosou.com/search?q={{kw}}"
+      },
+      {
+        "label": "维基百科",
+        "value": "wikipedia",
+        "url": "https://zh.wikipedia.org/wiki/{{kw}}"
+      }
+    ]
+  },
+  {
+    "label": "图标",
+    "value": "icon",
+    "children": [
+      {
+        "label": "FindIcons",
+        "value": "findicons",
+        "url": "https://findicons.com/search/{{kw}}"
+      }, {
+        "label": "iconfont",
+        "value": "iconfont",
+        "iframe": false,
+        "url": "http://www.iconfont.cn/"
       }
     ]
   }

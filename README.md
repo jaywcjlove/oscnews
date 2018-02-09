@@ -62,16 +62,22 @@ npm run build
 
 - [x] 浏览历史记录
   - [ ] 浏览历史选择今天、周、全部
+  - [ ] 清空历史记录
 - [x] 开发文档导航
   - [ ] 开发文档导航搜索过滤
   - [x] ~~添加删除文档？~~
   - [x] 文档分类前端（前端、后端、工具）
 - [x] Linux命令检索，集成 [linux-command](https://github.com/jaywcjlove/linux-command)
-- [ ] 开源中国新闻
+- [x] Github 趋势榜天、周、月统计切换，语言切换
+- [x] 配置存储使用 [chrome.storage](https://developer.chrome.com/apps/storage) 替代
+- [x] 开源中国新闻
   - [x] 宽度拖拽设置
   - [ ] 下拉翻页
+- [x] 空页面
+  - [ ] 天气日期展示
+  - [ ] 更换背景色
+- [ ] 书签管理页面
 - [ ] 添加搜索引擎页面
-- [x] Github 趋势榜天、周、月统计切换，语言切换
 - [ ] 常用网站导航
 - [ ] Github
   - [ ] Github 登录，浏览自己项目
@@ -80,9 +86,7 @@ npm run build
 - [ ] 集成 [octotree](https://github.com/buunguyen/octotree) 部分功能
 - [ ] 插件官方网站
 - [ ] 密码管理器
-- [ ] 空页面，天气日期展示
 - [ ] RSS订阅功能
-- [ ] 书签管理页面
 - [ ] 提醒事项
   - [ ] 记录代办事项
   - [ ] Chrome通知
@@ -93,9 +97,9 @@ npm run build
   - [ ] 清空历史
   - [ ] 分享应用到微博
 - [ ] 兼容其它浏览器
+  - [x] 兼容QQ浏览器，已测试下载crx文件安装直接可以用
   - [ ] 兼容360急速浏览器
   - [ ] 兼容Firefox浏览器
-- [x] 配置存储使用 [chrome.storage](https://developer.chrome.com/apps/storage) 替代
 
 ## License
 

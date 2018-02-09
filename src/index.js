@@ -26,6 +26,9 @@ storage.get(['oscconfig', 'visible', 'conf'], (items) => {
   // GitHub趋势榜设置
   if (!items.conf.githubSince) items.conf.githubSince = '';
   if (!items.conf.githubLang) items.conf.githubLang = '';
+  // 搜索默认选中设置
+  if (!items.conf.selectType) items.conf.selectType = 'web';
+  if (!items.conf.selectSubType) items.conf.selectSubType = ''; // 为空默认数组第一个
 
   items.storage = storage;
 

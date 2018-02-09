@@ -15,16 +15,27 @@ export default class Select extends Component {
     this.handleClickOutside = this.handleClickOutside.bind(this);
   }
   componentDidMount() {
+    this.setDefaultValue();
+    document.addEventListener('mousedown', this.handleClickOutside, true);
+  }
+  setDefaultValue() {
     const { value, option } = this.state;
     if (!value && option && option.length > 0) {
       this.setState({
         value: option[0].value || '',
       });
     }
-    document.addEventListener('mousedown', this.handleClickOutside, true);
   }
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleClickOutside, true);
+  }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.option !== this.props.option) {
+      this.setState({ option: nextProps.option });
+    }
+    if (nextProps.value !== this.props.value) {
+      this.setState({ value: nextProps.value });
+    }
   }
   handleClickOutside(e) {
     // Ignore clicks on the component it self
@@ -74,7 +85,7 @@ export default class Select extends Component {
     });
   }
   render() {
-    const { showSearch, className, suggest, ...resetProps } = this.props;
+    const { showSearch, className, suggest, placeholder, ...resetProps } = this.props;
     const { visible, value, option } = this.state;
     const title = this.props.option.filter(item => item.value === value);
     const suggestItems = this.props.option.filter(item => suggest.includes(item.value));
@@ -90,10 +101,10 @@ export default class Select extends Component {
         <div className={classNames('title', styles.title)} onClick={this.onClick.bind(this)}>
           {title && title.length > 0 && title[0].label}
         </div>
-        <div className={styles.option} >
+        <div className={styles.option}>
           {showSearch && (
             <div className={styles.search}>
-              <input type="text" placeholder="过滤语言" onChange={this.onFilterLang.bind(this)} />
+              <input type="text" placeholder={placeholder} autoComplete="off" onChange={this.onFilterLang.bind(this)} />
             </div>
           )}
           <div className={styles.optionList}>
@@ -109,6 +120,7 @@ export default class Select extends Component {
 
 Select.propsTypes = {
   value: PropTypes.string,
+  placeholder: PropTypes.string,
   option: PropTypes.array,
   suggest: PropTypes.array,
   showSearch: PropTypes.bool,
@@ -119,6 +131,7 @@ Select.defaultProps = {
   option: [],
   suggest: [],
   value: '',
+  placeholder: '请输入文本',
   showSearch: false,
   onSelect() {},
 };

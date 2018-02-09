@@ -88,7 +88,7 @@ export default class Linux extends Component {
         <div className={styles.header}>
           <a href="https://github.com/jaywcjlove/linux-command" rel="noopener noreferrer" target="_blank" title="Linux命令搜索工具"><img alt="linux-command logo" src={logo} /></a>
         </div>
-        <Search style={{ width: 430 }} onChange={this.onChange.bind(this)} onKeyUp={this.onKeyUp.bind(this)} onSearch={this.onSearch.bind(this)} />
+        <Search placeholder="请输入命令" style={{ width: 430 }} onChange={this.onChange.bind(this)} onKeyUp={this.onKeyUp.bind(this)} onSearch={this.onSearch.bind(this)} />
         <div className={styles.list}>
           {Object.keys(command).length > 0 && (
             <div className={styles.infoTotal}>
