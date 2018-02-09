@@ -104,7 +104,7 @@ export default class Github extends Component {
           <div className={styles.select}>
             <Loading visible={this.state.loading} />
             <Select onSelect={this.onSelect.bind(this, 'since')} value={this.state.since} option={this.state.option} />
-            <Select suggest={this.state.suggest} onSelect={this.onSelect.bind(this, 'lang')} showSearch value={this.state.lang} option={this.state.optionLang} />
+            <Select suggest={this.state.suggest} onSelect={this.onSelect.bind(this, 'lang')} optionStyle={{right:0}} showSearch value={this.state.lang} option={this.state.optionLang} />
           </div>
         </div>
         <div className={styles.list} dangerouslySetInnerHTML={{ __html: this.state.content || 'loading...' }} />

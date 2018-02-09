@@ -85,7 +85,7 @@ export default class Select extends Component {
     });
   }
   render() {
-    const { showSearch, className, suggest, placeholder, ...resetProps } = this.props;
+    const { showSearch, className, suggest, optionStyle, placeholder, ...resetProps } = this.props;
     const { visible, value, option } = this.state;
     const title = this.props.option.filter(item => item.value === value);
     const suggestItems = this.props.option.filter(item => suggest.includes(item.value));
@@ -101,7 +101,7 @@ export default class Select extends Component {
         <div className={classNames('title', styles.title)} onClick={this.onClick.bind(this)}>
           {title && title.length > 0 && title[0].label}
         </div>
-        <div className={styles.option}>
+        <div className={styles.option} style={optionStyle}>
           {showSearch && (
             <div className={styles.search}>
               <input type="text" placeholder={placeholder} autoComplete="off" onChange={this.onFilterLang.bind(this)} />

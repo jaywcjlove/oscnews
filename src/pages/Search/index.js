@@ -12,7 +12,8 @@ export default class SearchView extends Component {
       searchNav: searchdb || [],
       select: props.conf.selectType,
       value: props.conf.selectSubType,
-      iframe: true,
+      iframe: false,
+      iframeUrl: '',
       query: '',
     };
   }
@@ -20,7 +21,7 @@ export default class SearchView extends Component {
     const { storage, conf } = this.props;
     conf.selectType = item.value;
     storage.set({ conf });
-    this.setState({ select: item.value }, () => {
+    this.setState({ select: item.value, iframeUrl: '' }, () => {
       if (item.children && item.children.length > 0) {
         const value = item.children[0].value;
         conf.selectSubType = value;
@@ -46,19 +47,42 @@ export default class SearchView extends Component {
     }
     return [];
   }
+  onSearch(item) {
+    this.isSreach = false;
+    // const { query } = this.state;
+    const { query } = this.state;
+    const iframeUrl = item.url.replace(/\{\{.*\}\}/, query);
+    // console.log('===>', iframeUrl);
+    if (item.iframe === false) {
+      return window.open(iframeUrl);
+    }
+    this.setState({ iframe: true, iframeUrl });
+  }
+  onChange(e) {
+    this.isSreach = true;
+    this.setState({ query: e.target.value });
+  }
   onSelect(item) {
     const { query } = this.state;
     if (item.target === '_blank') {
       item.url = item.url.replace(/\{\{.*\}\}/, query);
       return window.open(item.url);
     }
+
     const { storage, conf } = this.props;
     conf.selectSubType = item.value;
     storage.set({ conf });
+
+    if (item.iframe === false) {
+      this.isSreach = true;
+      this.setState({
+        iframeUrl: '',
+      });
+    }
     this.setState({ value: item.value });
   }
   render() {
-    const { select, value, query, searchNav, iframe } = this.state;
+    const { select, value, query, searchNav, iframe, iframeUrl } = this.state;
     const option = this.getSubNavData();
     const optionMenu = searchNav.filter(item => item.value === select)[0] || {};
     const optionItem = option.filter(item => item.value === value)[0] || option[0];
@@ -72,7 +96,7 @@ export default class SearchView extends Component {
       </div>
     );
     return (
-      <div className={classNames(styles.warpper, { [`${styles.warpperFrame}`]: ((optionItem.iframe !== false && query) || optionMenu.reveal === 'tab') })}>
+      <div className={classNames(styles.warpper, { [`${styles.warpperFrame}`]: ((optionItem.iframe !== false && query && !this.isSreach) || iframeUrl || optionMenu.reveal === 'tab') })}>
         <div className={styles.topNav}>
           {searchNav.map((item, idx) => (
             <div className={classNames({ active: item.value === select })} key={idx} onClick={this.onClick.bind(this, item)}>
@@ -86,6 +110,9 @@ export default class SearchView extends Component {
             <Search
               autoFocus
               placeholder="请输入文字"
+              query={query}
+              onChange={this.onChange.bind(this)}
+              onSearch={this.onSearch.bind(this, optionItem)}
               select={{
                 option,
                 value,
@@ -94,9 +121,9 @@ export default class SearchView extends Component {
             />
           </div>
         )}
-        {((optionItem.iframe !== false && query) || optionMenu.reveal === 'tab') && (
+        {((optionItem.iframe !== false && query && !this.isSreach) || iframeUrl || optionMenu.reveal === 'tab') && (
           <div className={styles.iframe}>
-            <iframe title={optionItem.label} name="ifrm" src={url} framespacing="0" frameBorder="NO" scrolling="yes" width="100%" height="100%" noresize="" />
+            <iframe title={optionItem.label} name="ifrm" src={iframeUrl || url} framespacing="0" frameBorder="NO" scrolling="yes" width="100%" height="100%" noresize="" />
           </div>
         )}
       </div>
