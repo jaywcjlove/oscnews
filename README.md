@@ -64,7 +64,7 @@ npm run build
   - [ ] 浏览历史选择今天、周、全部
   - [ ] 清空历史记录
 - [x] 开发文档导航
-  - [ ] 开发文档导航搜索过滤
+  - [x] 开发文档导航搜索过滤
   - [x] ~~添加删除文档？~~
   - [x] 文档分类前端（前端、后端、工具）
 - [x] Linux命令检索，集成 [linux-command](https://github.com/jaywcjlove/linux-command)
