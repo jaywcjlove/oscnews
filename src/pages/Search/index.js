@@ -29,14 +29,14 @@ export default class SearchView extends Component {
     const optionMenu = searchNav.filter(item => item.value === select)[0] || {};
     const isTab = optionMenu && optionMenu.reveal && optionMenu.reveal === 'tab';
     if ((optionItem.iframe !== false && query && !this.isSreach) || iframeUrl || isTab) {
-      this.setState({ loading: true })
+      this.setState({ loading: true });
     }
   }
   onClick(item) {
     const { storage, conf } = this.props;
     conf.selectType = item.value;
     storage.set({ conf });
-    this.setState({ select: item.value, iframeUrl: '', loading: false}, () => {
+    this.setState({ select: item.value, iframeUrl: '', loading: false }, () => {
       if (item.children && item.children.length > 0) {
         const value = item.children[0].value;
         conf.selectSubType = value;
@@ -98,6 +98,13 @@ export default class SearchView extends Component {
   onFrameLoad() {
     this.setState({ loading: false });
   }
+  onKeyUp(optionItem, e) {
+    const key = e.keyCode || e.which || e.charCode;
+    if (key === 13) { // 摁Enter
+      // this.openURL();
+      this.onSearch(optionItem);
+    }
+  }
   render() {
     const { select, value, query, searchNav, iframe, iframeUrl } = this.state;
     const option = this.getSubNavData();
@@ -131,6 +138,7 @@ export default class SearchView extends Component {
               query={query}
               onChange={this.onChange.bind(this)}
               onSearch={this.onSearch.bind(this, optionItem)}
+              onKeyUp={this.onKeyUp.bind(this, optionItem)}
               select={{
                 option,
                 value,
