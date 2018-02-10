@@ -101,7 +101,6 @@ export default class SearchView extends Component {
   onKeyUp(optionItem, e) {
     const key = e.keyCode || e.which || e.charCode;
     if (key === 13) { // 摁Enter
-      // this.openURL();
       this.onSearch(optionItem);
     }
   }

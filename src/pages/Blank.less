@@ -4,11 +4,11 @@
   display: flex;
   align-items: center;
   height: 100%;
+  color: #6d6d6d;
 }
 
 .calendar {
   font-size: 48px;
-  color: #a0a0a0;
   margin-left: 200px;
   font-weight: 100;
   text-align: left;
@@ -36,9 +36,74 @@
     margin: 10px 0 0 0;
     sup {
       font-size: 12px;
-      background-color: #dedede;
+      background-color: #00000030;
       padding: 1px 3px;
       border-radius: 2px;
     }
+  }
+}
+
+
+.setting {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  .panel {
+    height: 79px;
+    width: 142px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 3px;
+    box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15);
+    transition: all .3s;
+    .item {
+      height: 32px;
+      width: 32px;
+      text-align: center;
+      color: #fff;
+    }
+    &:global {
+      &.hiden {
+        display: none;
+      }
+      &.show {
+        display: flex;
+      }
+    }
+  }
+  .btn {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      fill: #00000040;
+    }
+    &:hover svg{
+      fill: #00000080;
+    }
+  }
+}
+
+.warpper {
+  &:global {
+    &.wet-asphalt { background-color: #34495e;color: #fff;}
+    &.emerald { background-color: #2ecc71;color: #fff;}
+    &.turquoise { background-color: #1abc9c;color: #fff;}
+    &.sun-flower { background-color: #f1c40f;color: #fff;}
+    &.alizarin { background-color: #e74c3c;color: #fff;}
+    &.clouds { background-color: #ecf0f1;}
+    &.peter-river { background-color: #3498db;color: #fff;}
+    &.amethyst { background-color: #9b59b6;color: #fff;}
   }
 }

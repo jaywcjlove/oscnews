@@ -23,6 +23,8 @@ storage.get(['oscconfig', 'visible', 'conf'], (items) => {
   // 开发文档导航设置
   if (!items.conf.docTag) items.conf.docTag = '';
   if (!items.conf.docStar) items.conf.docStar = [];
+  // 空白页背景颜色
+  if (!items.conf.BlankColor) items.conf.BlankColor = 'clouds';
   // GitHub趋势榜设置
   if (!items.conf.githubSince) items.conf.githubSince = '';
   if (!items.conf.githubLang) items.conf.githubLang = '';
