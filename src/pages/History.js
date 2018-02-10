@@ -26,10 +26,22 @@ export default class History extends PureComponent {
       });
     });
   }
+  onClickClean() {
+    chrome.history.deleteAll((item) => {
+      this.setState({
+        list: [],
+      });
+    })
+  }
   render() {
     return (
       <div className={styles.warpper}>
-        <h1 className={styles.title}>历史记录</h1>
+        <div className={styles.header}>
+          <span className={styles.title}>历史记录</span>
+          <div className={styles.setting}>
+            <span onClick={this.onClickClean.bind(this)}>清空所有</span>
+          </div>
+        </div>
         <ul className={styles.list}>
           {this.state.list.length === 0 && <li>没有历史记录！</li>}
           {this.state.list.map((item, idx) => {

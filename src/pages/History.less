@@ -2,6 +2,39 @@
   padding: 10px;
 }
 
+.header {
+  padding: 15px 25px 25px;
+  font-size: 24px;
+  color: #c1c1c1;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  .title {
+    flex: 1;
+  }
+  .setting {
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: normal;
+    color: #868686;
+    margin: 0 0 0 10px;
+    span {
+      display: inline-block;
+      padding: 0 3px 0 3px;
+      border-radius: 2px;
+      height: 18px;
+      line-height: 18px;
+      margin: 0 2px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    span:hover {
+      background-color: #868686;
+      color: #fff;
+    }
+  }
+}
+
 .list {
   line-height: 32px;
   padding: 5px 0;
@@ -37,13 +70,4 @@
   width: 16px;
   height: 16px;
   margin-right: 10px;
-}
-
-.title {
-  margin: 0;
-  padding: 15px 15px 25px;
-  font-size: 24px;
-  color: #c1c1c1;
-  font-size: 18px;
-  font-weight: 700;
 }
