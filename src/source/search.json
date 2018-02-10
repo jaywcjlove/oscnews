@@ -235,6 +235,11 @@
         "url": "https://findicons.com/search/{{kw}}"
       },
       {
+        "label": "Icons8",
+        "value": "icons8",
+        "url": "https://icons8.cn/icon/set/{{kw}}/all"
+      },
+      {
         "label": "IconFinder",
         "value": "iconfinder",
         "iframe": false,
@@ -265,6 +270,11 @@
         "label": "设计宝图标",
         "value": "ooopic",
         "url": "http://ico.ooopic.com/index.php/search/{{kw}}.html"
+      },
+      {
+        "label": "IconArchive",
+        "value": "iconarchive",
+        "url": "http://www.iconarchive.com/search?q={{kw}}"
       },
       {
         "label": "Fontello",
