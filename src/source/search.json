@@ -226,6 +226,124 @@
     ]
   },
   {
+    "label": "图标",
+    "value": "icon",
+    "children": [
+      {
+        "label": "FindIcons",
+        "value": "findicons",
+        "url": "https://findicons.com/search/{{kw}}"
+      },
+      {
+        "label": "IconFinder",
+        "value": "iconfinder",
+        "iframe": false,
+        "url": "https://www.iconfinder.com/search/?q={{kw}}"
+      },
+      {
+        "label": "iconfont",
+        "value": "iconfont",
+        "iframe": false,
+        "url": "http://www.iconfont.cn/search/index?q={{kw}}"
+      },
+      {
+        "label": "EasyIcon",
+        "value": "easyicon",
+        "url": "https://www.easyicon.net/iconsearch/{{kw}}/"
+      },
+      {
+        "label": "IconPng",
+        "value": "iconpng",
+        "url": "http://www.iconpng.com/search/icon={{kw}}/"
+      },
+      {
+        "label": "图标宝",
+        "value": "58pic",
+        "url": "http://ico.58pic.com/search/{{kw}}.html"
+      },
+      {
+        "label": "设计宝图标",
+        "value": "ooopic",
+        "url": "http://ico.ooopic.com/index.php/search/{{kw}}.html"
+      },
+      {
+        "label": "Fontello",
+        "value": "fontello",
+        "iframe": false,
+        "url": "http://fontello.com/#search={{kw}}"
+      }
+    ]
+  },
+  {
+    "label": "设计",
+    "value": "design",
+    "children": [
+      {
+        "label": "站酷Zcool",
+        "value": "zcool",
+        "url": "http://www.zcool.com.cn/search/content?&word={{kw}}"
+      }, {
+        "label": "DeviantArt",
+        "value": "deviantart",
+        "url": "https://www.deviantart.com/?section=&q={{kw}}"
+      }, {
+        "label": "UI中国",
+        "value": "uicn",
+        "iframe": false,
+        "url": "http://s.ui.cn/index.html?keywords={{kw}}"
+      }, {
+        "label": "Dribbble",
+        "value": "dribbble",
+        "iframe": false,
+        "url": "https://dribbble.com/search?q={{kw}}"
+      }, {
+        "label": "500px",
+        "value": "500px",
+        "iframe": false,
+        "url": "https://500px.com/search?q={{kw}}"
+      }, {
+        "label": "7mx",
+        "value": "7mx",
+        "url": "http://7mx.com/search/{{kw}}/0/1"
+      }, {
+        "label": "Behance",
+        "value": "Behance",
+        "iframe": false,
+        "url": "https://www.behance.net/search?search={{kw}}"
+      }, {
+        "label": "Pexels",
+        "value": "pexels",
+        "url": "https://www.pexels.com/search/{{kw}}/"
+      }, {
+        "label": "Pixabay",
+        "value": "pixabay",
+        "iframe": false,
+        "url": "https://pixabay.com/zh/photos/?q={{kw}}"
+      }, {
+        "label": "Unsplash",
+        "value": "unsplash",
+        "iframe": false,
+        "url": "https://unsplash.com/search/photos/{{kw}}"
+      }, {
+        "label": "wallhaven",
+        "value": "wallhaven",
+        "url": "https://alpha.wallhaven.cc/search?q={{kw}}"
+      }, {
+        "label": "123RF图库",
+        "value": "123rf",
+        "url": "http://www.123rf.com.cn/search.php?keyword={{kw}}"
+      }, {
+        "label": "ClipartKorea",
+        "value": "clipartkorea",
+        "url": "http://www.clipartkorea.co.kr/xsearch/?keyword={{kw}}"
+      }, {
+        "label": "拍信",
+        "value": "paixin",
+        "url": "http://www.paixin.com/media/photo/free/{{kw}}/2"
+      }
+    ]
+  },
+  {
     "label": "视频",
     "value": "move",
     "children": [
@@ -267,7 +385,7 @@
       {
         "label": "京东",
         "value": "jd",
-        "url": "https://search.jd.com/Search?keyword={{kw}}"
+        "url": "https://search.jd.com/Search?keyword={{kw}}&enc=utf-8"
       },
       {
         "label": "当当",
@@ -277,6 +395,7 @@
       {
         "label": "亚马逊",
         "value": "amazon",
+        "iframe": false,
         "url": "https://www.amazon.cn/s/field-keywords={{kw}}"
       },
       {
@@ -291,12 +410,14 @@
       },
       {
         "label": "苏宁",
-        "value": "taobao",
+        "value": "suning",
+        "iframe": false,
         "url": "https://search.suning.com/{{kw}}/"
       },
       {
         "label": "美丽说",
         "value": "meilishuo",
+        "iframe": false,
         "url": "http://www.meilishuo.com/search/goods/?searchKey={{kw}}"
       }
     ]
@@ -324,22 +445,6 @@
         "label": "维基百科",
         "value": "wikipedia",
         "url": "https://zh.wikipedia.org/wiki/{{kw}}"
-      }
-    ]
-  },
-  {
-    "label": "图标",
-    "value": "icon",
-    "children": [
-      {
-        "label": "FindIcons",
-        "value": "findicons",
-        "url": "https://findicons.com/search/{{kw}}"
-      }, {
-        "label": "iconfont",
-        "value": "iconfont",
-        "iframe": false,
-        "url": "http://www.iconfont.cn/"
       }
     ]
   }
