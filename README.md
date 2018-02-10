@@ -70,6 +70,7 @@ npm run build
 - [x] Linux命令检索，集成 [linux-command](https://github.com/jaywcjlove/linux-command)
 - [x] Github 趋势榜天、周、月统计切换，语言切换
 - [x] 配置存储使用 [chrome.storage](https://developer.chrome.com/apps/storage) 替代
+- [x] 添加搜索引擎页面
 - [x] 开源中国新闻
   - [x] 宽度拖拽设置
   - [ ] 下拉翻页
@@ -77,7 +78,6 @@ npm run build
   - [ ] 天气日期展示
   - [ ] 更换背景色
 - [ ] 书签管理页面
-- [ ] 添加搜索引擎页面
 - [ ] 常用网站导航
 - [ ] Github
   - [ ] Github 登录，浏览自己项目
