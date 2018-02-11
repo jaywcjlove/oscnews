@@ -44,7 +44,7 @@ export default class SearchView extends Component {
         this.setState({ value });
         this.setStateLoading();
       }
-      if (this.search.input) {
+      if (this.search && this.search.input) {
         this.search.input.focus();
       }
     });
