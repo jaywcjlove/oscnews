@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import { theWeek } from '../utils';
 import styles from './Blank.less';
+import Clock from '../component/Clock';
 
 // 搜索地点
 // http://toy1.weather.com.cn/search?cityname=%E5%8C%97%E4%BA%AC
@@ -97,6 +98,7 @@ export default class Blank extends Component {
     return (
       <div className={classNames(styles.warpper, bgName)}>
         <div className={styles.calendar}>
+          <Clock />
           {this.state.time}
           {this.state.date}
         </div>

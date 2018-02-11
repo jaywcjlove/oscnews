@@ -1,0 +1,60 @@
+:root {
+  --color-primary: #212121;
+  --color-accent: #F44336;
+  --color-background: #FFF;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+* {
+  transform-origin: inherit;
+}
+
+
+.clock {
+  width: 140px;
+  height: 140px;
+  color: var(--color-primary);
+  fill: currentColor;
+  transform-origin: 50px 50px;
+  animation-name: fade-in;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.clock line {
+  stroke: currentColor;
+  stroke-linecap: round;
+}
+.marks {
+  opacity: 0.7;
+  stroke-width: 0.5px;
+  line {
+    stroke: currentColor;
+    stroke-linecap: round;
+  }
+}
+.mark1 { transform: rotate(30deg); }
+.mark2 { transform: rotate(60deg); }
+.mark3 { transform: rotate(90deg); }
+.mark4 { transform: rotate(120deg); }
+.mark5 { transform: rotate(150deg); }
+.mark6 { transform: rotate(180deg); }
+.mark7 { transform: rotate(210deg); }
+.mark8 { transform: rotate(240deg); }
+.mark9 { transform: rotate(270deg); }
+.mark10 { transform: rotate(300deg); }
+.mark11 { transform: rotate(330deg); }
+.mark12 { transform: rotate(360deg); }
+
+.hand {
+  stroke-width: 1.5px;
+  transition: transform 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.handSecond {
+  color: var(--color-accent);
+  stroke-width: 1px;
+}
