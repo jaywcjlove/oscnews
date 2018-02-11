@@ -50,7 +50,7 @@ export default class Blank extends Component {
         { color: '#1abc9c', lable: 'turquoise', value: 'turquoise' },
         { color: '#f1c40f', lable: 'sun flower', value: 'sun-flower' },
         { color: '#e74c3c', lable: 'alizarin', value: 'alizarin' },
-        { color: '#ecf0f1', lable: 'clouds', value: 'clouds' },
+        { color: '#f1f1f1', lable: 'clouds', value: 'clouds' },
         { color: '#3498db', lable: 'peter river', value: 'peter-river' },
         { color: '#9b59b6', lable: 'amethyst', value: 'amethyst' },
       ],
