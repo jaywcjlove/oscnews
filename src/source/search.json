@@ -293,6 +293,10 @@
         "value": "deviantart",
         "url": "https://www.deviantart.com/?section=&q={{kw}}"
       }, {
+        "label": "花瓣",
+        "value": "huaban",
+        "url": "http://huaban.com/search/?q={{kw}}"
+      }, {
         "label": "UI中国",
         "value": "uicn",
         "url": "http://s.ui.cn/index.html?keywords={{kw}}"
@@ -388,9 +392,9 @@
         "url": "https://search.jd.com/Search?keyword={{kw}}&enc=utf-8"
       },
       {
-        "label": "当当",
-        "value": "dangdang",
-        "url": "http://search.dangdang.com/?key={{kw}}"
+        "label": "淘宝",
+        "value": "taobao",
+        "url": "https://s.taobao.com/search?q={{kw}}"
       },
       {
         "label": "亚马逊",
@@ -398,14 +402,34 @@
         "url": "https://www.amazon.cn/s/field-keywords={{kw}}"
       },
       {
+        "label": "当当",
+        "value": "dangdang",
+        "url": "http://search.dangdang.com/?key={{kw}}"
+      },
+      {
+        "label": "唯品会",
+        "value": "vip",
+        "url": "https://category.vip.com/suggest.php?keyword={{kw}}"
+      },
+      {
         "label": "天猫",
         "value": "tmall",
         "url": "https://list.tmall.com/search_product.htm?q={{kw}}"
       },
       {
-        "label": "淘宝",
-        "value": "taobao",
-        "url": "https://s.taobao.com/search?q={{kw}}"
+        "label": "一号店",
+        "value": "yhd",
+        "url": "http://search.yhd.com/c0-0/k{{kw}}/"
+      },
+      {
+        "label": "聚美优品",
+        "value": "jumei",
+        "url": "http://search.jumei.com/?search={{kw}}"
+      },
+      {
+        "label": "蘑菇街",
+        "value": "mogujie",
+        "url": "http://list.mogujie.com/s?q={{kw}}"
       },
       {
         "label": "苏宁",
@@ -416,6 +440,11 @@
         "label": "美丽说",
         "value": "meilishuo",
         "url": "http://www.meilishuo.com/search/goods/?searchKey={{kw}}"
+      },
+      {
+        "label": "国美",
+        "value": "gome",
+        "url": "https://search.gome.com.cn/search?question={{kw}}"
       }
     ]
   },
@@ -553,6 +582,52 @@
         "label": "爱美剧",
         "value": "22v",
         "url": "https://22v.net/search/{{kw}}/"
+      }
+    ]
+  },
+  {
+    "label": "招聘",
+    "value": "jobOffers",
+    "children": [
+      {
+        "label": "前程无忧",
+        "value": "51job",
+        "url": "http://search.51job.com/jobsearch/search_result.php?keyword={{kw}}"
+      },
+      {
+        "label": "智联招聘",
+        "value": "zhaopin",
+        "url": "http://sou.zhaopin.com/jobs/searchresult.ashx?kw={{kw}}"
+      },
+      {
+        "label": "拉钩",
+        "value": "lagou",
+        "url": "https://www.lagou.com/jobs/list_{{kw}}?city=全国"
+      },
+      {
+        "label": "58招聘",
+        "value": "58",
+        "url": "http://sh.58.com/job/?key={{kw}}"
+      },
+      {
+        "label": "猎聘",
+        "value": "liepin",
+        "url": "https://www.liepin.com/zhaopin/?key={{kw}}"
+      },
+      {
+        "label": "中华英才网",
+        "value": "chinahr",
+        "url": "http://www.chinahr.com/sou/?keyword={{kw}}"
+      },
+      {
+        "label": "桌博人才",
+        "value": "jobcn",
+        "url": "http://www.jobcn.com/search/result.xhtml?p.keyword={{kw}}"
+      },
+      {
+        "label": "中国人才热线",
+        "value": "cjol",
+        "url": "http://s.cjol.com/kw-{{kw}}"
       }
     ]
   }

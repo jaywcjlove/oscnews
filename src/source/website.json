@@ -1,0 +1,148 @@
+[
+  {
+    "label": "办公",
+    "value": "office",
+    "children": [
+      {
+        "label": "Microsoft Office",
+        "value": "https://www.office.com/"
+      },
+      {
+        "label": "OfficePLUS",
+        "value": "http://www.officeplus.cn"
+      },
+      {
+        "label": "印象笔记",
+        "value": "https://www.yinxiang.com/"
+      }
+    ]
+  },
+  {
+    "label": "视频音乐",
+    "value": "video-music",
+    "children": [
+      {
+        "label": "腾讯视频",
+        "value": "https://v.qq.com/"
+      },
+      {
+        "label": "网易音乐",
+        "value": "http://music.163.com/"
+      }
+    ]
+  },
+  {
+    "label": "购物生活",
+    "value": "shopping-life",
+    "children": [
+      {
+        "label": "淘宝",
+        "value": "https://www.taobao.com/"
+      },
+      {
+        "label": "京东",
+        "value": "https://www.jd.com/"
+      },
+      {
+        "label": "亚马逊",
+        "value": "https://www.amazon.cn/"
+      }
+    ]
+  },
+  {
+    "label": "社区",
+    "value": "community",
+    "children": [
+      {
+        "label": "豆瓣",
+        "value": "https://www.douban.com/"
+      },
+      {
+        "label": "知乎",
+        "value": "https://www.zhihu.com/"
+      },
+      {
+        "label": "威锋网",
+        "value": "http://www.feng.com/"
+      }
+    ]
+  },
+  {
+    "label": "媒体",
+    "value": "media",
+    "children": [
+      {
+        "label": "一席",
+        "value": "http://yixi.tv/"
+      },
+      {
+        "label": "cnBeta",
+        "value": "http://www.cnbeta.com/"
+      },
+      {
+        "label": "36氪",
+        "value": "http://36kr.com/"
+      }
+    ]
+  },
+  {
+    "label": "财经",
+    "value": "finance",
+    "children": [
+      {
+        "label": "自选股",
+        "value": "http://gu.qq.com/i/"
+      },
+      {
+        "label": "东方财富网",
+        "value": "http://www.eastmoney.com/"
+      },
+      {
+        "label": "富途证券",
+        "value": "https://www.futu5.com/"
+      }
+    ]
+  },
+  {
+    "label": "商旅",
+    "value": "business-trip",
+    "children": [
+      {
+        "label": "携程",
+        "value": "http://www.ctrip.com/"
+      },
+      {
+        "label": "Airbnb",
+        "value": "https://www.airbnbchina.cn/"
+      }
+    ]
+  },
+  {
+    "label": "设计",
+    "value": "design",
+    "children": [
+      {
+        "label": "500px",
+        "value": "https://500px.com/"
+      },
+      {
+        "label": "Behance",
+        "value": "https://www.airbnbchina.cn/"
+      }
+    ]
+  },
+  {
+    "label": "开发",
+    "value": "development",
+    "children": [
+      {
+        "label": "GitHub",
+        "value": "https://github.com/"
+      },
+      {
+        "label": "Stack Overflow",
+        "value": "http://stackoverflow.com/"
+      }
+    ]
+  }
+]
