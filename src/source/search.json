@@ -10,7 +10,6 @@
       }, {
         "label": "谷歌",
         "value": "google",
-        "iframe": false,
         "url": "https://www.google.com/search?q={{kw}}"
       }, {
         "label": "360",
@@ -33,17 +32,14 @@
       {
         "label": "MDN",
         "value": "mozilla",
-        "iframe": false,
         "url": "https://developer.mozilla.org/zh-CN/search?q={{kw}}"
       }, {
         "label": "GitHub",
         "value": "github",
-        "iframe": false,
         "url": "https://github.com/search?q={{kw}}"
       }, {
         "label": "Gitee",
         "value": "gitee",
-        "iframe": false,
         "url": "https://gitee.com/search?search={{kw}}"
       }, {
         "label": "npm",
@@ -68,7 +64,6 @@
       }, {
         "label": "StackOverflow",
         "value": "stackoverflow",
-        "iframe": false,
         "url": "https://stackoverflow.com/search?q={{kw}}"
       },
       {
@@ -89,6 +84,11 @@
         "url": "http://fanyi.baidu.com/"
       },
       {
+        "label": "谷歌",
+        "value": "google",
+        "url": "https://translate.google.cn/"
+      },
+      {
         "label": "有道",
         "value": "youdao",
         "url": "http://fanyi.youdao.com/"
@@ -107,12 +107,6 @@
         "label": "词霸",
         "value": "iciba",
         "url": "http://fy.iciba.com/"
-      },
-      {
-        "label": "谷歌",
-        "value": "google",
-        "target": "_blank",
-        "url": "https://translate.google.cn/"
       },
       {
         "label": "丁香通",
@@ -247,13 +241,11 @@
       {
         "label": "IconFinder",
         "value": "iconfinder",
-        "iframe": false,
         "url": "https://www.iconfinder.com/search/?q={{kw}}"
       },
       {
         "label": "iconfont",
         "value": "iconfont",
-        "iframe": false,
         "url": "http://www.iconfont.cn/search/index?q={{kw}}"
       },
       {
@@ -284,7 +276,6 @@
       {
         "label": "Fontello",
         "value": "fontello",
-        "iframe": false,
         "url": "http://fontello.com/#search={{kw}}"
       }
     ]
@@ -304,17 +295,14 @@
       }, {
         "label": "UI中国",
         "value": "uicn",
-        "iframe": false,
         "url": "http://s.ui.cn/index.html?keywords={{kw}}"
       }, {
         "label": "Dribbble",
         "value": "dribbble",
-        "iframe": false,
         "url": "https://dribbble.com/search?q={{kw}}"
       }, {
         "label": "500px",
         "value": "500px",
-        "iframe": false,
         "url": "https://500px.com/search?q={{kw}}"
       }, {
         "label": "7mx",
@@ -323,7 +311,6 @@
       }, {
         "label": "Behance",
         "value": "Behance",
-        "iframe": false,
         "url": "https://www.behance.net/search?search={{kw}}"
       }, {
         "label": "Pexels",
@@ -332,12 +319,10 @@
       }, {
         "label": "Pixabay",
         "value": "pixabay",
-        "iframe": false,
         "url": "https://pixabay.com/zh/photos/?q={{kw}}"
       }, {
         "label": "Unsplash",
         "value": "unsplash",
-        "iframe": false,
         "url": "https://unsplash.com/search/photos/{{kw}}"
       }, {
         "label": "wallhaven",
@@ -410,7 +395,6 @@
       {
         "label": "亚马逊",
         "value": "amazon",
-        "iframe": false,
         "url": "https://www.amazon.cn/s/field-keywords={{kw}}"
       },
       {
@@ -426,13 +410,11 @@
       {
         "label": "苏宁",
         "value": "suning",
-        "iframe": false,
         "url": "https://search.suning.com/{{kw}}/"
       },
       {
         "label": "美丽说",
         "value": "meilishuo",
-        "iframe": false,
         "url": "http://www.meilishuo.com/search/goods/?searchKey={{kw}}"
       }
     ]
