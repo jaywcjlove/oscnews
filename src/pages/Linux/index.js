@@ -73,7 +73,7 @@ export default class Linux extends Component {
       }
       if (idx > 10) return null;
       return (
-        <div title={idx} className={classNames(styles.item, { active: active || active === 0 ? idx === active : item.n === query })} key={idx}>
+        <div title={`${item.n} - ${item.d}`} className={classNames(styles.item, { active: active || active === 0 ? idx === active : item.n === query })} key={idx}>
           <a
             className={styles.title}
             href={`https://jaywcjlove.github.io/linux-command/c/${item.n}.html`}
