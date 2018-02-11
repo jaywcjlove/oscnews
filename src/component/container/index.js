@@ -26,6 +26,7 @@ export default class Container extends Component {
   }
   onDragEnd() {
     const { storage, conf } = this.props.config;
+    document.body.style.userSelect = 'text';
     conf.siderBarWidth = this.siderBar.clientWidth;
     storage.set({ conf }, () => {
       this.setState({
@@ -38,13 +39,16 @@ export default class Container extends Component {
   onDragging(e) {
     const currentX = e.clientX;
     if (this.siderBar && this.barWidth) {
-      this.siderBar.style.width = `${this.barWidth + (currentX - this.startX)}px`;
+      let width = this.barWidth + (currentX - this.startX);
+      if (width < 200) width = 200;
+      this.siderBar.style.width = `${width}px`;
     }
   }
   onMouseDown(event) {
     this.startX = event.clientX;
     this.startY = event.clientY;
     this.barWidth = this.siderBar.clientWidth;
+    document.body.style.userSelect = 'none';
     window.addEventListener('mousemove', this.onDragging, true);
     window.addEventListener('mouseup', this.onDragEnd, true);
   }
