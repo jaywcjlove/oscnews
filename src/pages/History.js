@@ -27,11 +27,11 @@ export default class History extends PureComponent {
     });
   }
   onClickClean() {
-    chrome.history.deleteAll((item) => {
+    chrome.history.deleteAll(() => {
       this.setState({
         list: [],
       });
-    })
+    });
   }
   render() {
     return (
