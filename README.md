@@ -4,15 +4,11 @@
   </a>
 </p>
 
-这是一个Chrome插件，在新标签页查看开源中国[软件更新资讯](http://www.oschina.net/news/project)，GitHub 趋势榜、linux 命令索引，浏览历史记录，时钟页面。
+这是一个Chrome插件，在新标签页查看开源中国[软件更新资讯](http://www.oschina.net/news/project)，搜索页面、GitHub 趋势榜、linux 命令索引，浏览历史记录，时钟页面。
 
-<div align="center">
-  <img src="./img/osc-news.png"> 
-  <img src="./img/osc-news2.png"> 
-  <img src="./img/osc-news3.png"> 
-  <img src="./img/osc-news4.png"> 
-  <img src="./img/osc-news5.png"> 
-</div>
+<p align="center">
+  <img width="600px" src="./img/newtab.gif"> 
+</p>
 
 ## 商店安装
 
@@ -22,7 +18,15 @@
 
 
 > [开源中国下载 oscnews.crx 文件](https://gitee.com/jaywcjlove/oscnews/releases)  
-> [Github下载 oscnews.crx 文件](https://github.com/jaywcjlove/oscnews/releases)  
+> [Github下载 oscnews.crx 文件](https://github.com/jaywcjlove/oscnews/releases) 
+
+<div align="center">
+  <img width="430px" src="./img/osc-news.png"> 
+  <img width="430px" src="./img/osc-news2.png"> 
+  <img width="430px" src="./img/osc-news3.png"> 
+  <img width="430px" src="./img/osc-news4.png"> 
+  <img width="430px" src="./img/osc-news5.png"> 
+</div>
 
 ## 开发模式安装
 
