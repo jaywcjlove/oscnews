@@ -559,8 +559,18 @@
       },
       {
         "label": "ACG 搜索",
-        "value": "assrt",
+        "value": "acgsou",
         "url": "http://www.acgsou.com/search.php?keyword={{kw}}"
+      },
+      {
+        "label": "爱看电影",
+        "value": "mrhso",
+        "url": "http://www.mrhso.com/movie/msearch?keyword={{kw}}"
+      },
+      {
+        "label": "爱美剧",
+        "value": "22v",
+        "url": "https://22v.net/search/{{kw}}/"
       }
     ]
   }
