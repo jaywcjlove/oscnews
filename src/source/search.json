@@ -113,6 +113,11 @@
         "value": "google",
         "target": "_blank",
         "url": "https://translate.google.cn/"
+      },
+      {
+        "label": "丁香通",
+        "value": "biomart",
+        "url": "http://dict.biomart.cn/"
       }
     ]
   }, {
@@ -455,6 +460,107 @@
         "label": "维基百科",
         "value": "wikipedia",
         "url": "https://zh.wikipedia.org/wiki/{{kw}}"
+      }
+    ]
+  }, {
+    "label": "学术",
+    "value": "academic",
+    "children": [
+      {
+        "label": "世界数字图书馆",
+        "value": "wdl",
+        "url": "https://www.wdl.org/zh/search/?q={{kw}}"
+      },
+      {
+        "label": "AMiner",
+        "value": "aminer",
+        "url": "https://www.aminer.cn/search?q={{kw}}"
+      },
+      {
+        "label": "必应学术",
+        "value": "bing",
+        "url": "https://cn.bing.com/academic/search?q={{kw}}"
+      },
+      {
+        "label": "百度学术",
+        "value": "baidu",
+        "url": "http://xueshu.baidu.com/s?wd={{kw}}"
+      },
+      {
+        "label": "OALib",
+        "value": "oalib",
+        "url": "http://www.oalib.com/search?kw={{kw}}"
+      },
+      {
+        "label": "丁香通",
+        "value": "pubmed",
+        "url": "http://pubmed.cn/search?q={{kw}}"
+      },
+      {
+        "label": "CNKI学术",
+        "value": "cnki",
+        "url": "http://scholar.cnki.net/result.aspx?q={{kw}}"
+      },
+      {
+        "label": "中国学术",
+        "value": "sciinfo",
+        "url": "http://www.sciinfo.cn/Result.aspx?c=1&q={{kw}}"
+      }
+    ]
+  },
+  {
+    "label": "下载",
+    "value": "download",
+    "children": [
+      {
+        "label": "磁力猫",
+        "value": "cilimao",
+        "url": "http://www.cilimao.me/search?word={{kw}}"
+      },
+      {
+        "label": "网盘115",
+        "value": "pan115",
+        "url": "http://www.pan115.com/search?key={{kw}}"
+      },
+      {
+        "label": "茶杯狐",
+        "value": "cupfox",
+        "url": "https://www.cupfox.com/?key={{kw}}"
+      },
+      {
+        "label": "资源猫",
+        "value": "ziyuanmao",
+        "url": "https://www.ziyuanmao.com/#/result/{{kw}}"
+      },
+      {
+        "label": "胖次",
+        "value": "panc",
+        "url": "https://www.panc.cc/s/{{kw}}"
+      },
+      {
+        "label": "56网盘",
+        "value": "56wangpan",
+        "url": "http://www.56wangpan.com/search/kw{{kw}}"
+      },
+      {
+        "label": "史莱姆搜索",
+        "value": "slimego",
+        "url": "http://www.slimego.cn/search.html?q={{kw}}"
+      },
+      {
+        "label": "西林街",
+        "value": "xilinjie",
+        "url": "http://www.xilinjie.com/s?q={{kw}}"
+      },
+      {
+        "label": "射手网(伪)",
+        "value": "assrt",
+        "url": "http://assrt.net/sub/?searchword={{kw}}"
+      },
+      {
+        "label": "ACG 搜索",
+        "value": "assrt",
+        "url": "http://www.acgsou.com/search.php?keyword={{kw}}"
       }
     ]
   }
