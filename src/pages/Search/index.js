@@ -44,6 +44,9 @@ export default class SearchView extends Component {
         this.setState({ value });
         this.setStateLoading();
       }
+      if (this.search.input) {
+        this.search.input.focus();
+      }
     });
   }
   onClickSubTab(item) {
@@ -133,6 +136,7 @@ export default class SearchView extends Component {
           <div className={classNames(styles.content)}>
             <Search
               autoFocus
+              ref={searchCom => this.search = searchCom}
               placeholder="请输入文字"
               query={query}
               onChange={this.onChange.bind(this)}
