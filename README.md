@@ -72,7 +72,7 @@ cd ~/Library/Application\ Support/Google/Chrome/Default/Extensions
 ## TODO
 
 - [x] 浏览历史记录
-  - [ ] 浏览历史选择今天、周、全部
+  - [x] 浏览历史选择今天、周、全部
   - [x] 清空历史记录
 - [x] 开发文档导航
   - [x] 开发文档导航搜索过滤

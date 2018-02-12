@@ -2,7 +2,7 @@
 chrome.browserAction.onClicked.addListener(function () {
   chrome.management.getSelf(function (res) {
     chrome.tabs.create({ url: 'chrome-extension://' + res.id + '/index.html#normal' });
-  })
+  });
   // chrome.tabs.create({ url: 'chrome://newtab' });
 });
 
@@ -17,24 +17,14 @@ chrome.webRequest.onHeadersReceived.addListener(details => {
       // csp = csp.replace('style-src', `style-src ${hosts}`)
       // csp = csp.replace('frame-src', `frame-src ${iframeHosts}`)
       // csp = csp.replace('child-src', `child-src ${hosts}`)
-      csp = csp.replace(/frame-ancestors (.*?);/ig, "")
-      // console.log('csp::', csp);
-      header.value = csp;
+      csp = csp.replace(/frame-ancestors (.*?);/ig, "");
+      // header.value = csp;
+      header.value = csp + 'sandbox;';
     } else if (isFrameHeader) {
       header.value = 'ALLOWALL';
     }
     return header
   });
-  // var headers = responseHeaders;
-  // for (var i = headers.length - 1; i >= 0; --i) {
-  //   var header = headers[i].name.toLowerCase();
-  //   if (header === 'x-frame-options' || header === 'frame-options') {
-  //     headers.splice(i, 1); // Remove header
-  //   }
-  //   // Refused to display 'https://github.com/search?q=chrome.tabs.create' in a frame because an ancestor violates the following 
-  //   // Content Security Policy directive: "frame-ancestors 'none'".
-  // }
-  // console.log('headers:', headers)
   return { responseHeaders };
 },
   {

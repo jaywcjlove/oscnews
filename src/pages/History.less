@@ -20,17 +20,23 @@
     margin: 0 0 0 10px;
     span {
       display: inline-block;
-      padding: 0 3px 0 3px;
+      color: #868686;
+      padding: 1px 4px 0 4px;
       border-radius: 2px;
-      height: 18px;
       line-height: 18px;
       margin: 0 2px;
-      cursor: pointer;
       transition: background-color 0.3s;
+      cursor: pointer;
     }
     span:hover {
       background-color: #868686;
       color: #fff;
+    }
+    :global {
+      .active {
+        background-color: #868686;
+        color: #fff;
+      }
     }
   }
 }
@@ -70,4 +76,18 @@
   width: 16px;
   height: 16px;
   margin-right: 10px;
+}
+
+.hours {
+  color: #a5a5a5;
+}
+.minutes {
+  color: #a5a5a5;
+  &::before {
+    content: ':';
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    padding: 0 1px;
+  }
 }
