@@ -66,7 +66,7 @@ npm run build
 Mac系统下扩展的源码目录
 
 ```bash
-cd /Users/kenny/Library/Application Support/Google/Chrome/Default/Extensions
+cd ~/Library/Application\ Support/Google/Chrome/Default/Extensions
 ```
 
 ## TODO
