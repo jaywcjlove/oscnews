@@ -21,11 +21,12 @@
 > [Github下载 oscnews.crx 文件](https://github.com/jaywcjlove/oscnews/releases) 
 
 <div align="center">
-  <img width="430px" src="./img/osc-news.png"> 
+  <img width="430px" src="./img/osc-news1.png"> 
   <img width="430px" src="./img/osc-news2.png"> 
   <img width="430px" src="./img/osc-news3.png"> 
   <img width="430px" src="./img/osc-news4.png"> 
   <img width="430px" src="./img/osc-news5.png"> 
+  <img width="430px" src="./img/osc-news6.png"> 
 </div>
 
 ## 开发模式安装
