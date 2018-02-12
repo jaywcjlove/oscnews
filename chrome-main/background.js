@@ -1,6 +1,9 @@
 
 chrome.browserAction.onClicked.addListener(function () {
-  chrome.tabs.create({ url: 'chrome://newtab' });
+  chrome.management.getSelf(function (res) {
+    chrome.tabs.create({ url: 'chrome-extension://' + res.id + '/index.html#normal' });
+  })
+  // chrome.tabs.create({ url: 'chrome://newtab' });
 });
 
 chrome.webRequest.onHeadersReceived.addListener(

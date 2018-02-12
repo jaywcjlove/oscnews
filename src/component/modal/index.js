@@ -6,9 +6,7 @@ export default class Modal extends Component {
     return (
       <div>
         <div className={styles.mask}>
-
         </div>
-
       </div>
     )
   }

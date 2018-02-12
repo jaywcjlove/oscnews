@@ -14,6 +14,8 @@ storage.get(['oscconfig', 'visible', 'conf'], (items) => {
 
   // 默认选中的栏目
   if (!items.conf) items.conf = {};
+  // 默认是否在新标签页显示
+  if (items.conf.isNewTab === undefined) items.conf.isNewTab = true;
   // 默认展示页面
   if (!items.conf.pageType) items.conf.pageType = 'document';
   // 默认新闻展示tab类型
@@ -33,9 +35,12 @@ storage.get(['oscconfig', 'visible', 'conf'], (items) => {
   if (!items.conf.selectSubType) items.conf.selectSubType = ''; // 为空默认数组第一个
 
   items.storage = storage;
-
-  ReactDOM.render(
-    <Root config={items} />,
-    document.getElementById('root')
-  );
+  if (!/#normal$/.test(location.hash) && items.conf.isNewTab === false) {
+    chrome.tabs.update({ url: 'chrome-search://local-ntp/local-ntp.html' });
+  } else {
+    ReactDOM.render(
+      <Root config={items} />,
+      document.getElementById('root')
+    );
+  }
 });

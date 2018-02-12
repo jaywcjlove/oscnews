@@ -1,6 +1,5 @@
 .warpper {
   padding: 0 10px;
-  // box-shadow: 0 2px 8px #f0f1f2;
   background-color: #f9f9f9;
   border-bottom: 1px solid #d8d7d7;
   height: 50px;
@@ -13,59 +12,66 @@
   img {
     height: 30px;
   }
-  .menu {
-    span, a {
-      padding: 1px 4px;
-      transition: all .3s;
-      vertical-align: middle;
-    }
-    span {
-      cursor: pointer;
-      display: inline-block;
-    }
-    a {
-      display: inline-block;
-      img {
-        height: 18px;
-        display: block;
-      }
-    }
-  }
 }
 
 .nav {
   display: inline-block;
-  // margin-right: 15px;
   color: #585858;
-  span {
-    margin: 0 3px;
-    padding: 2px 5px;
-    border-radius: 3px;
-    &:hover {
-      background-color: #e2e2e2;
-      &:global(.active) {
-        color: #fff;
-        background-color: #3c3c3c;
-      }
+  user-select: none;
+  :global {
+    .active, span.active:hover {
+      color: #fff;
+      background-color: #555;
     }
   }
-  :global {
-    .active {
+  span, a {
+    padding: 1px 4px;
+    transition: all .3s;
+    vertical-align: middle;
+    border-radius: 3px;
+    margin: 0 2px;
+    transition: all .3s;
+    &:hover {
+      background-color: #e0e0e0;
+    }
+    &:active {
+      background-color: #555;
       color: #fff;
-      background-color: #3c3c3c;
+    }
+  }
+  span {
+    cursor: pointer;
+    display: inline-block;
+  }
+  a {
+    display: inline-block;
+    img {
+      height: 18px;
+      display: block;
     }
   }
 }
 
 .setting {
-  height: 18px;
   display: inline-block;
   vertical-align: middle;
   padding: 2px 6px;
-  display: none;
   img {
     height: 100%;
     display: block;
+  }
+  svg {
+    fill: #bbb;
+    transition: fill .3s;
+    &:hover {
+      fill: #333;
+    }
+  }
+  .switchItem {
+    cursor: pointer;
+  }
+  .switch {
+    margin-left: 20px;
   }
 }
 

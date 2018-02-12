@@ -62,6 +62,12 @@ npm run build
 + https://clients2.google.com/service/update2/crx?response=redirect&x=id%3Diheapfheanfjcemgneblljhaebonakbg%26uc&prodversion=32
 ```
 
+Mac系统下扩展的源码目录
+
+```bash
+cd /Users/kenny/Library/Application Support/Google/Chrome/Default/Extensions
+```
+
 ## TODO
 
 - [x] 浏览历史记录
@@ -95,8 +101,8 @@ npm run build
 - [ ] 提醒事项
   - [ ] 记录代办事项
   - [ ] Chrome通知
-- [ ] 设置功能
-  - [ ] 设置是否替换新标签页显示
+- [x] 设置功能
+  - [x] 设置是否替换新标签页显示
   - [ ] 设置URL是否在新的标签页打开，
   - [ ] 菜单配置
   - [ ] 清空历史
