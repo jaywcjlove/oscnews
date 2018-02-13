@@ -4,8 +4,9 @@ import classNames from 'classnames';
 import Dropdown from '../component/Dropdown';
 import Switch from '../component/Switch';
 import logo from '../assets/oschina.svg';
+import chromeApp from '../assets/chrome-app.svg';
 // import gitee from '../assets/gitee.svg';
-// import github from '../assets/github.svg';
+import github from '../assets/github.svg';
 // import apple from '../assets/apple.svg';
 import styles from './Header.less';
 
@@ -19,7 +20,7 @@ export default class Header extends Component {
       isNewTab: props.conf.isNewTab,
       option: [
         {
-          title: 'Chrome Apps',
+          title: <span><img alt="" src={chromeApp} /> Chrome Apps</span>,
           onClick: this.openChromeApps.bind(this),
         },
         {
@@ -46,7 +47,7 @@ export default class Header extends Component {
           target: '_blank',
         },
         {
-          title: '收集【Star】',
+          title: <span><img alt="" src={github} /> 收集【Star】</span>,
           url: 'https://github.com/jaywcjlove/oscnews/stargazers',
           target: '_blank',
         },
