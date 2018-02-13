@@ -4,7 +4,7 @@
   </a>
 </p>
 
-这是一个Chrome插件，在新标签页查看开源中国[软件更新资讯](http://www.oschina.net/news/project)，搜索页面、GitHub 趋势榜、linux 命令索引，浏览历史记录，时钟页面。
+这是一个Chrome插件，在新标签页查看开源中国[软件更新资讯](http://www.oschina.net/news/project)，搜索页面、GitHub 趋势榜、linux 命令索引，技术文档导航([web版](http://jaywcjlove.github.io/dev-site/))，浏览历史记录，时钟页面。
 
 <p align="center">
   <img width="600px" src="./img/newtab.gif"> 
