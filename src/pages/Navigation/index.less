@@ -1,0 +1,94 @@
+.nav {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  .navBox {
+    flex: 1;
+    align-items: center;
+    display: flex;
+  }
+}
+
+.navContent {
+  overflow: hidden;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  transform: translate(-50%,0);
+  a {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0 38px;
+    top: 0;
+    left: 0;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+    & > p {
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #333;
+    }
+    &:hover > img {
+      filter:brightness(0.96);
+    }
+    &:active > img {
+      filter:brightness(0.66);
+    }
+    &.addIcon {
+      & > img {
+        box-shadow: 0 0 0 0;
+      }
+    }
+  }
+  img {
+    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+    margin-top: 8%;
+    border-radius: 8px;
+    width: 100%;
+    display: block;
+    filter: brightness(0.99);
+    transition: filter .3s;
+  }
+  .keyDown {
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15);
+    top: -5px;
+    right: 0;
+    // top: 9px;
+    // left: 3px;
+    &::before, &::after {
+      content: '';
+      display:  block;
+      background-color: #333;
+      position: absolute;
+      border-radius: 3px;
+      height: 2px;
+      width: 60%;
+      top: 10px;
+      left: 4px;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}

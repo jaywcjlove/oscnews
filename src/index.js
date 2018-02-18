@@ -6,11 +6,15 @@ import './index.less';
 
 const storage = chrome.storage.sync;
 
-storage.get(['oscconfig', 'visible', 'conf'], (items) => {
+storage.get(['oscconfig', 'visible', 'conf', 'dbs'], (items) => {
   // 默认顶部菜单，和新闻是否展示判断
   if (!items.visible) items.visible = {};
   if (items.visible.header === undefined) items.visible.header = true;
   if (items.visible.newBar === undefined) items.visible.newBar = true;
+
+  // 数据存储
+  if (!items.dbs) items.dbs = {};
+  if (items.dbs.nav === undefined) items.dbs.nav = [];
 
   // 默认选中的栏目
   if (!items.conf) items.conf = {};

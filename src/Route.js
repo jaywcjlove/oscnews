@@ -3,6 +3,7 @@ import Blank from './pages/Blank';
 import Github from './pages/Github';
 import Historys from './pages/History';
 import Documents from './pages/Document';
+import Navigation from './pages/Navigation';
 import Linux from './pages/Linux';
 import Search from './pages/Search';
 
@@ -11,6 +12,10 @@ export const getNavData = () => [
     title: '空白页',
     type: 'blank',
     component: Blank,
+  }, {
+    title: '导航',
+    type: 'navigation',
+    component: Navigation,
   }, {
     title: '搜索',
     type: 'search',

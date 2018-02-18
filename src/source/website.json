@@ -5,15 +5,28 @@
     "children": [
       {
         "label": "Microsoft Office",
-        "value": "https://www.office.com/"
-      },
-      {
-        "label": "OfficePLUS",
-        "value": "http://www.officeplus.cn"
+        "value": "https://www.office.com/",
+        "icon": "https://jaywcjlove.github.io/logo/office.png"
       },
       {
         "label": "印象笔记",
-        "value": "https://www.yinxiang.com/"
+        "value": "https://www.yinxiang.com/",
+        "icon": "https://jaywcjlove.github.io/logo/yinxiang.png"
+      },
+      {
+        "label": "Slack",
+        "value": "https://slack.com/",
+        "icon": "https://jaywcjlove.github.io/logo/slack.png"
+      },
+      {
+        "label": "QQ邮箱",
+        "value": "https://mail.qq.com/",
+        "icon": "https://jaywcjlove.github.io/logo/mailqq.png"
+      },
+      {
+        "label": "ProcessOn",
+        "value": "http://www.processon.com/",
+        "icon": "https://jaywcjlove.github.io/logo/processon.png"
       }
     ]
   },
@@ -23,11 +36,13 @@
     "children": [
       {
         "label": "腾讯视频",
-        "value": "https://v.qq.com/"
+        "value": "https://v.qq.com/",
+        "icon": "https://jaywcjlove.github.io/logo/vqq.png"
       },
       {
         "label": "网易音乐",
-        "value": "http://music.163.com/"
+        "value": "http://music.163.com/",
+        "icon": "https://jaywcjlove.github.io/logo/music163.png"
       }
     ]
   },
@@ -37,15 +52,18 @@
     "children": [
       {
         "label": "淘宝",
-        "value": "https://www.taobao.com/"
+        "value": "https://www.taobao.com/",
+        "icon": "https://jaywcjlove.github.io/logo/taobao.png"
       },
       {
         "label": "京东",
-        "value": "https://www.jd.com/"
+        "value": "https://www.jd.com/",
+        "icon": "https://jaywcjlove.github.io/logo/jindong.png"
       },
       {
         "label": "亚马逊",
-        "value": "https://www.amazon.cn/"
+        "value": "https://www.amazon.cn/",
+        "icon": "https://jaywcjlove.github.io/logo/amazon.png"
       }
     ]
   },
@@ -55,15 +73,18 @@
     "children": [
       {
         "label": "豆瓣",
-        "value": "https://www.douban.com/"
+        "value": "https://www.douban.com/",
+        "icon": "https://jaywcjlove.github.io/logo/douban.png"
       },
       {
         "label": "知乎",
-        "value": "https://www.zhihu.com/"
+        "value": "https://www.zhihu.com/",
+        "icon": "https://jaywcjlove.github.io/logo/zhihu.png"
       },
       {
         "label": "威锋网",
-        "value": "http://www.feng.com/"
+        "value": "http://www.feng.com/",
+        "icon": "https://jaywcjlove.github.io/logo/feng.png"
       }
     ]
   },
@@ -73,15 +94,18 @@
     "children": [
       {
         "label": "一席",
-        "value": "http://yixi.tv/"
+        "value": "http://yixi.tv/",
+        "icon": "https://jaywcjlove.github.io/logo/yixi.png"
       },
       {
         "label": "cnBeta",
-        "value": "http://www.cnbeta.com/"
+        "value": "http://www.cnbeta.com/",
+        "icon": "https://jaywcjlove.github.io/logo/cnbeta.png"
       },
       {
         "label": "36氪",
-        "value": "http://36kr.com/"
+        "value": "http://36kr.com/",
+        "icon": "https://jaywcjlove.github.io/logo/36kr.png"
       }
     ]
   },
@@ -91,15 +115,18 @@
     "children": [
       {
         "label": "自选股",
-        "value": "http://gu.qq.com/i/"
+        "value": "http://gu.qq.com/i/",
+        "icon": "https://jaywcjlove.github.io/logo/guqq.png"
       },
       {
         "label": "东方财富网",
-        "value": "http://www.eastmoney.com/"
+        "value": "http://www.eastmoney.com/",
+        "icon": "https://jaywcjlove.github.io/logo/eastmoney.png"
       },
       {
         "label": "富途证券",
-        "value": "https://www.futu5.com/"
+        "value": "https://www.futu5.com/",
+        "icon": "https://jaywcjlove.github.io/logo/futu5.png"
       }
     ]
   },
@@ -109,11 +136,13 @@
     "children": [
       {
         "label": "携程",
-        "value": "http://www.ctrip.com/"
+        "value": "http://www.ctrip.com/",
+        "icon": "https://jaywcjlove.github.io/logo/ctrip.png"
       },
       {
         "label": "Airbnb",
-        "value": "https://www.airbnbchina.cn/"
+        "value": "https://www.airbnbchina.cn/",
+        "icon": "https://jaywcjlove.github.io/logo/airbnbchina.png"
       }
     ]
   },
@@ -123,11 +152,23 @@
     "children": [
       {
         "label": "500px",
-        "value": "https://500px.com/"
+        "value": "https://500px.com/",
+        "icon": "https://jaywcjlove.github.io/logo/500px.png"
       },
       {
         "label": "Behance",
-        "value": "https://www.airbnbchina.cn/"
+        "value": "https://www.behance.net/",
+        "icon": "https://jaywcjlove.github.io/logo/behance.png"
+      },
+      {
+        "label": "Dribbble",
+        "value": "https://dribbble.com/",
+        "icon": "https://jaywcjlove.github.io/logo/dribbble.png"
+      },
+      {
+        "label": "花瓣网",
+        "value": "http://huaban.com/",
+        "icon": "https://jaywcjlove.github.io/logo/huaban.png"
       }
     ]
   },
@@ -137,11 +178,23 @@
     "children": [
       {
         "label": "GitHub",
-        "value": "https://github.com/"
+        "value": "https://github.com/",
+        "icon": "https://jaywcjlove.github.io/logo/github.png"
       },
       {
         "label": "Stack Overflow",
-        "value": "http://stackoverflow.com/"
+        "value": "http://stackoverflow.com/",
+        "icon": "https://jaywcjlove.github.io/logo/stackoverflow.png"
+      },
+      {
+        "label": "Apple Developer",
+        "value": "https://developer.apple.com/",
+        "icon": "https://jaywcjlove.github.io/logo/developerApple.png"
+      },
+      {
+        "label": "SegmentFault",
+        "value": "https://segmentfault.com/",
+        "icon": "https://jaywcjlove.github.io/logo/segmentfault.png"
       }
     ]
   }

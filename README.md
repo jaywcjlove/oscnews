@@ -89,8 +89,8 @@ cd ~/Library/Application\ Support/Google/Chrome/Default/Extensions
   - [ ] 天气日期展示
   - [x] 更换背景色
   - [x] 添加时钟效果
+- [x] 常用网站导航
 - [ ] 书签管理页面
-- [ ] 常用网站导航
 - [ ] Github
   - [ ] Github 登录，浏览自己项目
   - [ ] Github Start 管理
