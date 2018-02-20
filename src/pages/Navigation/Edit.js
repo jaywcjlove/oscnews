@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import styles from './Edit.less';
+import websiteIcon from '../../assets/website.svg';
 import website from '../../source/website.json';
 import addIcon from '../../assets/add-icon.png';
 
@@ -78,7 +79,7 @@ export default class Edit extends Component {
     return (
       <div className={styles.navEdit} ref={node => this.warpper = node}>
         <div className={styles.edit}>
-          <img alt="" src={edit.icon} />
+          <img alt="" onError={e => e.target.src = websiteIcon} src={edit.icon} />
           <span className={styles.title}>{edit.label}</span>
           <input className={styles.url} onChange={this.onChangeEdit.bind(this)} value={edit.value} type="text" placeholder="输入网址" />
           <button className={styles.save} onClick={this.onClickAdd.bind(this, edit)}>确定</button>
@@ -105,7 +106,7 @@ export default class Edit extends Component {
               >
                 {item.children.map((_item, _idx) => (
                   <span key={_idx} onClick={this.handleAddNav.bind(this, _item)}>
-                    <img alt={_item.label} src={_item.icon} />
+                    <img alt={_item.label} onError={e => e.target.src = websiteIcon} src={_item.icon} />
                     <p>{_item.label}</p>
                   </span>
                 ))}

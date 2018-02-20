@@ -75,9 +75,19 @@
         "icon": "https://jaywcjlove.github.io/logo/yqq.png"
       },
       {
+        "label": "音悦Tai",
+        "value": "http://www.yinyuetai.com/",
+        "icon": "https://jaywcjlove.github.io/logo/yinyuetai.jpg"
+      },
+      {
         "label": "豆瓣FM",
         "value": "https://douban.fm/",
         "icon": "https://jaywcjlove.github.io/logo/doubanfm.png"
+      },
+      {
+        "label": "喜马拉雅FM",
+        "value": "http://www.ximalaya.com/",
+        "icon": "https://jaywcjlove.github.io/logo/ximalaya.jpg"
       },
       {
         "label": "蜻蜓FM",

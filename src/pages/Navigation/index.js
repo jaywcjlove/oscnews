@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './index.less';
 import addIcon from '../../assets/add-icon.png';
+import website from '../../assets/website.svg';
 import Edit from './Edit';
 // import Contextmenu from "../../component/Contextmenu";
 
@@ -107,7 +108,7 @@ export default class Navigation extends Component {
             {navContent.map((item, idx) => {
               return (
                 <a key={idx} href={item.value} target="_top">
-                  <img alt={item.label} src={item.icon} />
+                  <img alt={item.label} onError={e => e.target.src = website} src={item.icon} />
                   <p>{item.label}</p>
                   {optionDown && <i onClick={this.onKeyDownOption.bind(this, item)} className={styles.keyDown} />}
                 </a>
