@@ -89,6 +89,10 @@
       align-content: flex-start;
       padding: 30px 0;
       min-height: 280px;
+      display: none;
+      &:global(.show) {
+        display: flex;
+      }
       span {
         display: inline-block;
         margin: 0 10px;
@@ -103,7 +107,7 @@
       }
       img {
         border-radius: 2px;
-        display: inline-block;
+        display: block;
         background-color: #ffffff2b;
         width: 62px;
         height: 62px;

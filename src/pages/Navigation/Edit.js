@@ -8,7 +8,6 @@ export default class Edit extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      list: [],
       active: '',
       edit: {
         label: '添加网址',
@@ -59,14 +58,23 @@ export default class Edit extends Component {
     this.warpper.style.marginBottom = `-${this.warpper.clientHeight}px`;
   }
   onChangeEdit(e) {
-    const { edit } = this.state;
-    edit.icon = '';
-    edit.value = e.target.value;
-    edit.label = e.target.value;
-    this.setState({ edit });
+    const value = e.target.value;
+    const wb = {};
+    wb.icon = '';
+    wb.value = value;
+    wb.label = value;
+    website.forEach((item) => {
+      item.children.forEach((itemChild) => {
+        if (value.indexOf(itemChild.value) > -1) {
+          wb.icon = itemChild.icon;
+          // wb.label = itemChild.label;
+        }
+      });
+    });
+    this.setState({ edit: wb });
   }
   render() {
-    const { list, active, edit } = this.state;
+    const { active, edit } = this.state;
     return (
       <div className={styles.navEdit} ref={node => this.warpper = node}>
         <div className={styles.edit}>
@@ -87,16 +95,23 @@ export default class Edit extends Component {
               );
             })}
           </div>
-          <div className={styles.list}>
-            {list.map((item, idx) => {
-              return (
-                <span key={idx} onClick={this.handleAddNav.bind(this, item)}>
-                  <img alt={item.label} src={item.icon} />
-                  <p>{item.label}</p>
-                </span>
-              );
-            })}
-          </div>
+          {website.map((item, idx) => {
+            return (
+              <div
+                key={idx}
+                className={classNames(styles.list, {
+                  show: item.value === active || (active === '' && idx === 0),
+                })}
+              >
+                {item.children.map((_item, _idx) => (
+                  <span key={_idx} onClick={this.handleAddNav.bind(this, _item)}>
+                    <img alt={_item.label} src={_item.icon} />
+                    <p>{_item.label}</p>
+                  </span>
+                ))}
+              </div>
+            );
+          })}
         </div>
         <div className={styles.closeBtn} onClick={this.onHideEdit.bind(this)} />
       </div>
