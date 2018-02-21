@@ -4,6 +4,11 @@
     "value": "office",
     "children": [
       {
+        "label": "Teambition",
+        "value": "https://www.teambition.com/",
+        "icon": "https://jaywcjlove.github.io/logo/teambition.jpg"
+      },
+      {
         "label": "Microsoft Office",
         "value": "https://www.office.com/",
         "icon": "https://jaywcjlove.github.io/logo/office.png"
@@ -17,6 +22,11 @@
         "label": "Slack",
         "value": "https://slack.com/",
         "icon": "https://jaywcjlove.github.io/logo/slack.png"
+      },
+      {
+        "label": "Gitter",
+        "value": "https://gitter.im/",
+        "icon": "https://jaywcjlove.github.io/logo/gitter.png"
       },
       {
         "label": "QQ邮箱",
@@ -38,6 +48,16 @@
         "label": "腾讯视频",
         "value": "https://v.qq.com/",
         "icon": "https://jaywcjlove.github.io/logo/vqq.png"
+      },
+      {
+        "label": "熊猫直播",
+        "value": "https://www.panda.tv/",
+        "icon": "https://jaywcjlove.github.io/logo/panda.jpg"
+      },
+      {
+        "label": "YouTube",
+        "value": "https://www.youtube.com/",
+        "icon": "https://jaywcjlove.github.io/logo/youtube.jpg"
       },
       {
         "label": "网易音乐",
@@ -157,6 +177,11 @@
         "icon": "https://jaywcjlove.github.io/logo/zhihu.png"
       },
       {
+        "label": "果壳网",
+        "value": "https://www.guokr.com/",
+        "icon": "https://jaywcjlove.github.io/logo/guokr.jpg"
+      },
+      {
         "label": "威锋网",
         "value": "http://www.feng.com/",
         "icon": "https://jaywcjlove.github.io/logo/feng.png"
@@ -165,6 +190,11 @@
         "label": "V2EX",
         "value": "https://www.v2ex.com/",
         "icon": "https://jaywcjlove.github.io/logo/v2ex.png"
+      },
+      {
+        "label": "科学公园",
+        "value": "http://www.ikexue.org/",
+        "icon": "https://jaywcjlove.github.io/logo/ikexue.jpg"
       },
       {
         "label": "简书",
@@ -178,9 +208,14 @@
     "value": "media",
     "children": [
       {
-        "label": "一席",
-        "value": "http://yixi.tv/",
-        "icon": "https://jaywcjlove.github.io/logo/yixi.png"
+        "label": "36氪",
+        "value": "http://36kr.com/",
+        "icon": "https://jaywcjlove.github.io/logo/36kr.png"
+      },
+      {
+        "label": "Engadget",
+        "value": "https://cn.engadget.com/",
+        "icon": "https://jaywcjlove.github.io/logo/engadget.jpg"
       },
       {
         "label": "cnBeta",
@@ -188,14 +223,44 @@
         "icon": "https://jaywcjlove.github.io/logo/cnbeta.png"
       },
       {
+        "label": "爱范儿",
+        "value": "http://www.ifanr.com/",
+        "icon": "https://jaywcjlove.github.io/logo/ifanr.png"
+      },
+      {
+        "label": "虎嗅网",
+        "value": "https://www.huxiu.com/",
+        "icon": "https://jaywcjlove.github.io/logo/huxiu.png"
+      },
+      {
+        "label": "极客公园",
+        "value": "http://www.geekpark.net/",
+        "icon": "https://jaywcjlove.github.io/logo/geekpark.png"
+      },
+      {
+        "label": "一席",
+        "value": "http://yixi.tv/",
+        "icon": "https://jaywcjlove.github.io/logo/yixi.png"
+      },
+      {
         "label": "雷锋网",
         "value": "http://www.leiphone.com/",
         "icon": "https://jaywcjlove.github.io/logo/leiphone.png"
       },
       {
-        "label": "36氪",
-        "value": "http://36kr.com/",
-        "icon": "https://jaywcjlove.github.io/logo/36kr.png"
+        "label": "PingWest品玩",
+        "value": "http://www.pingwest.com/",
+        "icon": "https://jaywcjlove.github.io/logo/pingwest.jpg"
+      },
+      {
+        "label": "TechCrunch",
+        "value": "http://techcrunch.cn/",
+        "icon": "https://jaywcjlove.github.io/logo/techcrunch.jpg"
+      },
+      {
+        "label": "VICE中国",
+        "value": "http://www.vice.cn/",
+        "icon": "https://jaywcjlove.github.io/logo/vice.png"
       }
     ]
   },
@@ -204,14 +269,29 @@
     "value": "finance",
     "children": [
       {
-        "label": "自选股",
-        "value": "http://gu.qq.com/i/",
-        "icon": "https://jaywcjlove.github.io/logo/guqq.png"
+        "label": "和讯",
+        "value": "http://www.hexun.com/",
+        "icon": "https://jaywcjlove.github.io/logo/hexun.png"
       },
       {
         "label": "东方财富网",
         "value": "http://www.eastmoney.com/",
         "icon": "https://jaywcjlove.github.io/logo/eastmoney.png"
+      },
+      {
+        "label": "雪球",
+        "value": "https://xueqiu.com/",
+        "icon": "https://jaywcjlove.github.io/logo/xueqiu.png"
+      },
+      {
+        "label": "自选股",
+        "value": "http://gu.qq.com/i/",
+        "icon": "https://jaywcjlove.github.io/logo/guqq.png"
+      },
+      {
+        "label": "FT中文网",
+        "value": "http://www.ftchinese.com/",
+        "icon": "https://jaywcjlove.github.io/logo/ftchinese.png"
       },
       {
         "label": "富途证券",
@@ -225,19 +305,44 @@
     "value": "business-trip",
     "children": [
       {
+        "label": "蚂蜂窝",
+        "value": "http://www.mafengwo.cn/",
+        "icon": "https://jaywcjlove.github.io/logo/mafengwo.png"
+      },
+      {
         "label": "携程",
         "value": "http://www.ctrip.com/",
         "icon": "https://jaywcjlove.github.io/logo/ctrip.png"
       },
       {
-        "label": "Airbnb",
+        "label": "缤客",
+        "value": "http://www.booking.com/",
+        "icon": "https://jaywcjlove.github.io/logo/booking.png"
+      },
+      {
+        "label": "Airbnb爱彼迎",
         "value": "https://www.airbnbchina.cn/",
         "icon": "https://jaywcjlove.github.io/logo/airbnbchina.png"
+      },
+      {
+        "label": "猫途鹰",
+        "value": "https://www.tripadvisor.cn/",
+        "icon": "https://jaywcjlove.github.io/logo/tripadvisor.png"
       },
       {
         "label": "穷游网",
         "value": "http://www.qyer.com/",
         "icon": "https://jaywcjlove.github.io/logo/qyer.png"
+      },
+      {
+        "label": "天巡网",
+        "value": "https://www.tianxun.com/",
+        "icon": "https://jaywcjlove.github.io/logo/tianxun.jpg"
+      },
+      {
+        "label": "去哪儿网",
+        "value": "http://www.qunar.com/",
+        "icon": "https://jaywcjlove.github.io/logo/qunar.png"
       }
     ]
   },
@@ -317,6 +422,11 @@
         "icon": "https://jaywcjlove.github.io/logo/developerApple.png"
       },
       {
+        "label": "Can I use",
+        "value": "https://caniuse.com/",
+        "icon": "https://jaywcjlove.github.io/logo/caniuse.png"
+      },
+      {
         "label": "掘金",
         "value": "https://juejin.im",
         "icon": "https://jaywcjlove.github.io/logo/juejin.png"
@@ -337,9 +447,50 @@
         "icon": "https://jaywcjlove.github.io/logo/segmentfault.png"
       },
       {
+        "label": "博客园",
+        "value": "https://www.cnblogs.com/",
+        "icon": "https://jaywcjlove.github.io/logo/cnblogs.jpg"
+      },
+      {
         "label": "开源中国",
         "value": "http://www.oschina.net/",
         "icon": "https://jaywcjlove.github.io/logo/oschina.png"
+      }
+    ]
+  },
+  {
+    "label": "软件下载",
+    "value": "download",
+    "children": [
+      {
+        "label": "MacUpdate",
+        "value": "https://www.macupdate.com/",
+        "icon": "https://jaywcjlove.github.io/logo/macupdate.jpg"
+      },
+      {
+        "label": "Mac程序推荐",
+        "value": "http://jaywcjlove.github.io/awesome-mac/index.zh.html",
+        "icon": "https://jaywcjlove.github.io/logo/developerApple.png"
+      },
+      {
+        "label": "MacX 麦克叉",
+        "value": "https://www.macx.cn/",
+        "icon": "https://jaywcjlove.github.io/logo/macx.png"
+      },
+      {
+        "label": "绿色软件联盟",
+        "value": "http://www.xdowns.com/",
+        "icon": "https://jaywcjlove.github.io/logo/xdowns.jpg"
+      },
+      {
+        "label": "pc6下载站",
+        "value": "http://www.pc6.com/",
+        "icon": "https://jaywcjlove.github.io/logo/pc6.jpg"
+      },
+      {
+        "label": "下载吧",
+        "value": "http://www.xiazaiba.com/",
+        "icon": "https://jaywcjlove.github.io/logo/xiazaiba.jpg"
       }
     ]
   }

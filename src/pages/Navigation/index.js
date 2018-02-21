@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styles from './index.less';
 import addIcon from '../../assets/add-icon.png';
-import website from '../../assets/website.svg';
+import websiteIcon from '../../assets/website.svg';
+import website from '../../source/website.json';
 import Edit from './Edit';
 // import Contextmenu from "../../component/Contextmenu";
 
@@ -32,6 +33,18 @@ export default class Navigation extends Component {
     window.addEventListener('resize', this.handleResize, true);
     document.addEventListener('keydown', this.handleClickOption, true);
     document.addEventListener('keyup', this.handleClickOptionUp, true);
+    const { navContent } = this.state;
+    const { storage, dbs } = this.props;
+    if (navContent.length === 0) {
+      for (let i = 0; i < website.length; i += 1) {
+        if (website[i].children && website[i].children[0]) {
+          navContent.push(website[i].children[0]);
+          dbs.nav = navContent;
+          storage.set({ dbs });
+          this.setState({ navContent });
+        }
+      }
+    }
   }
   handleClickOption(e) {
     const key = e.keyCode || e.which || e.charCode;
@@ -108,7 +121,7 @@ export default class Navigation extends Component {
             {navContent.map((item, idx) => {
               return (
                 <a key={idx} href={item.value} target="_top">
-                  <img alt={item.label} onError={e => e.target.src = website} src={item.icon} />
+                  <img alt={item.label} onError={e => e.target.src = websiteIcon} src={item.icon} />
                   <p>{item.label}</p>
                   {optionDown && <i onClick={this.onKeyDownOption.bind(this, item)} className={styles.keyDown} />}
                 </a>

@@ -65,6 +65,14 @@
         "label": "StackOverflow",
         "value": "stackoverflow",
         "url": "https://stackoverflow.com/search?q={{kw}}"
+      }, {
+        "label": "React.parts",
+        "value": "react-parts",
+        "url": "https://react.parts/?search={{kw}}"
+      }, {
+        "label": "JS.coach",
+        "value": "JS.coach",
+        "url": "https://js.coach/?search={{kw}}"
       },
       {
         "label": "Linux命令",
