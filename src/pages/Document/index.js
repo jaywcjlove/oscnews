@@ -54,7 +54,7 @@ export default class DevDocument extends Component {
   onChangeTag(tag) {
     const { storage, conf } = this.props;
     conf.docTag = tag;
-    this.setState({ tag }, () => {
+    this.setState({ tag, query: '' }, () => {
       storage.set({ conf });
     });
   }
