@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const shouldUseSourceMap = true
 
 module.exports = merge(common, {
-  devtool: shouldUseSourceMap ? 'source-map' : false,
+  devtool: false,
   module: {
     strictExportPresence: true,
   },

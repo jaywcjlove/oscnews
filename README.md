@@ -27,6 +27,8 @@
   <img width="430px" src="./img/osc-news4.png"> 
   <img width="430px" src="./img/osc-news5.png"> 
   <img width="430px" src="./img/osc-news6.png"> 
+  <img width="430px" src="./img/osc-news7.png"> 
+  <img width="430px" src="./img/osc-news8.png"> 
 </div>
 
 ## 开发模式安装
