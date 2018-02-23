@@ -77,6 +77,7 @@ cd ~/Library/Application\ Support/Google/Chrome/Default/Extensions
   - [x] 浏览历史选择今天、周、全部
   - [x] 清空历史记录
 - [x] 开发文档导航
+  - [ ] 自定义开发文档导航
   - [x] 开发文档导航搜索过滤
   - [x] ~~添加删除文档？~~
   - [x] 文档分类前端（前端、后端、工具）
@@ -89,9 +90,11 @@ cd ~/Library/Application\ Support/Google/Chrome/Default/Extensions
   - [ ] 下拉翻页
 - [x] 空页面
   - [ ] 天气日期展示
+  - [ ] 农历日期显示
   - [x] 更换背景色
   - [x] 添加时钟效果
 - [x] 常用网站导航
+  - [ ] 自定义常用网站导航
 - [ ] 书签管理页面
 - [ ] Github
   - [ ] Github 登录，浏览自己项目
