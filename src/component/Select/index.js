@@ -64,7 +64,7 @@ export default class Select extends Component {
   onFilterLang(e) {
     const { value } = e.target;
     const { option } = this.state;
-    const filterData = option.filter(item => item.value.toLowerCase().indexOf(value) > -1);
+    const filterData = option.filter(item => item.value.toLowerCase().indexOf(value.toLowerCase()) > -1);
     this.setState({
       option: value.length > 0 ? filterData : this.props.option,
     });
