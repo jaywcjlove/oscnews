@@ -29,7 +29,7 @@ export default class Github extends Component {
         },
       ],
       optionLang,
-      suggest: ['css', 'go', 'html', 'javascript', 'objective-c', 'python', 'swift'],
+      suggest: ['go', 'html', 'javascript', 'python', 'swift'],
       since: props.conf.githubSince,
       lang: props.conf.githubLang,
     };
