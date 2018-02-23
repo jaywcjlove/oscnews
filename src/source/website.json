@@ -368,7 +368,7 @@
       {
         "label": "涂鸦王国",
         "value": "https://www.gracg.com/",
-        "icon": "https://jaywcjlove.github.io/logo/gracg.png"
+        "icon": "https://jaywcjlove.github.io/logo/gracg.jpg"
       },
       {
         "label": "UI中国",
@@ -452,9 +452,14 @@
         "icon": "https://jaywcjlove.github.io/logo/cnblogs.jpg"
       },
       {
+        "label": "Hacker News",
+        "value": "https://news.ycombinator.com/",
+        "icon": "https://jaywcjlove.github.io/logo/ycombinator.jpg"
+      },
+      {
         "label": "开源中国",
         "value": "http://www.oschina.net/",
-        "icon": "https://jaywcjlove.github.io/logo/oschina.png"
+        "icon": "https://jaywcjlove.github.io/logo/oschina.jpg"
       }
     ]
   },
@@ -463,14 +468,14 @@
     "value": "download",
     "children": [
       {
-        "label": "MacUpdate",
-        "value": "https://www.macupdate.com/",
-        "icon": "https://jaywcjlove.github.io/logo/macupdate.jpg"
-      },
-      {
         "label": "Mac程序推荐",
         "value": "http://jaywcjlove.github.io/awesome-mac/index.zh.html",
         "icon": "https://jaywcjlove.github.io/logo/developerApple.png"
+      },
+      {
+        "label": "MacUpdate",
+        "value": "https://www.macupdate.com/",
+        "icon": "https://jaywcjlove.github.io/logo/macupdate.jpg"
       },
       {
         "label": "MacX 麦克叉",
