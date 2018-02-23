@@ -53,6 +53,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "solarlunar": "^2.0.1",
     "webpack-merge": "^4.1.1"
   }
 }

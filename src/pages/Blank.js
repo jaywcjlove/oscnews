@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
+import solarLunar from 'solarLunar';
 import { theWeek } from '../utils';
 import styles from './Blank.less';
 import Clock from '../component/Clock';
@@ -95,12 +96,21 @@ export default class Blank extends Component {
   }
   render() {
     const { color, bgName, colorVisibel } = this.state;
+    const lunar = solarLunar.solar2lunar(new Date().getFullYear(), new Date().getMonth() + 1, new Date().getDate());
     return (
       <div className={classNames(styles.warpper, bgName)}>
         <div className={styles.calendar}>
           <Clock />
           {this.state.time}
           {this.state.date}
+          <div className={styles.lunar}>
+            <span>
+            农历{lunar.lYear}年 {lunar.monthCn} {lunar.dayCn} {lunar.animal}年 {lunar.term}
+            </span>
+            <div className={styles.lunarGz}>
+              {lunar.gzYear}年 {lunar.gzMonth}月 {lunar.gzDay}日
+            </div>
+          </div>
         </div>
         <div className={styles.setting}>
           <div className={classNames(styles.panel, {
