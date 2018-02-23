@@ -90,7 +90,7 @@ cd ~/Library/Application\ Support/Google/Chrome/Default/Extensions
   - [ ] 下拉翻页
 - [x] 空页面
   - [ ] 天气日期展示
-  - [ ] 农历日期显示
+  - [x] 农历日期显示
   - [x] 更换背景色
   - [x] 添加时钟效果
 - [x] 常用网站导航
