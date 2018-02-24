@@ -28,21 +28,39 @@
     }
     .title {
       display: block;
-      margin-right: 24px;
-      margin-left: 10px;
+      margin-right: 5px;
+      margin-left: 5px;
       align-self: center;
-      width: 90px;
+      position: relative;
+      width: 100px;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
       color: rgba(255,255,255,.8);
+      min-height: 32px;
+      line-height: 32px;
+      .titleInput {
+        background: #333;
+        color: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        height: 32px;
+        padding: 0 5px;
+        outline: 0;
+        border: 0;
+        border-radius: 2px;
+        position: absolute;
+        &:hover {
+          background-color: #414141;
+        }
+      }
     }
     .url {
-      padding: 16px 16px 16px;
+      padding: 16px 10px 16px;
       border: 0;
       width: 50%;
       height: 14px;
       line-height: 14px;
+      border-radius: 2px;
       outline: none;
       background-color: #414141;
       color: rgba(255,255,255,.8);

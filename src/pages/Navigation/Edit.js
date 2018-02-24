@@ -7,7 +7,7 @@ import website from '../../source/website.json';
 import addIcon from '../../assets/add-icon.png';
 
 const blankData = {
-  label: '添加网址',
+  label: '添加网址标题',
   value: '',
   icon: addIcon,
 };
@@ -18,7 +18,7 @@ export default class Edit extends Component {
     this.state = {
       websiteSource: website,
       active: '',
-      edit: blankData,
+      edit: { ...blankData },
     };
   }
   componentDidMount() {
@@ -58,7 +58,7 @@ export default class Edit extends Component {
   }
   onClickTab(type) {
     this.setListData(type);
-    this.setState({ active: type, edit: blankData });
+    this.setState({ active: type, edit: { ...blankData } });
   }
   onClickAdd(edit) {
     const { onClickAdd } = this.props;
@@ -95,13 +95,19 @@ export default class Edit extends Component {
     });
     this.setState({ edit: wb });
   }
+  onChangeTitleEdit(e) {
+    const { edit } = this.state;
+    const value = e.target.value;
+    edit.label = value;
+    this.setState({ edit });
+  }
   render() {
     const { active, edit, websiteSource } = this.state;
     return (
       <div className={styles.navEdit} ref={node => this.warpper = node}>
         <div className={classNames(styles.edit, { doc: active === 'document' })}>
           <img alt="" onError={e => e.target.src = websiteIcon} src={edit.icon} />
-          <span className={styles.title}>{edit.label}</span>
+          <span className={styles.title}><input type="text" onChange={this.onChangeTitleEdit.bind(this)} className={styles.titleInput} value={edit.label} />{edit.label}</span>
           <input className={styles.url} onChange={this.onChangeEdit.bind(this)} value={edit.value} type="text" placeholder="输入网址" />
           <button className={styles.save} onClick={this.onClickAdd.bind(this, edit)}>确定</button>
         </div>
