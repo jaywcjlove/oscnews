@@ -190,6 +190,49 @@
         "url": "http://map.qq.com/"
       },
       {
+        "label": "天地图",
+        "value": "tianditu",
+        "url": "http://map.tianditu.com/"
+      },
+      {
+        "label": "地球在线",
+        "value": "earthol",
+        "url": "http://www.earthol.com/"
+      },
+      {
+        "label": "地图吧",
+        "value": "mapbar",
+        "url": "http://www.mapbar.com/"
+      },
+      {
+        "label": "凯立德",
+        "value": "careland",
+        "url": "http://map.careland.com.cn/"
+      },
+      {
+        "label": "360地图",
+        "value": "so",
+        "url": "https://ditu.so.com/"
+      },
+      {
+        "label": "城市吧",
+        "value": "city8",
+        "target": "_blank",
+        "url": "http://ditu.city8.com/"
+      },
+      {
+        "label": "三维地图",
+        "value": "edushi",
+        "target": "_blank",
+        "url": "http://sh.edushi.com/"
+      },
+      {
+        "label": "船讯网",
+        "value": "shipxy",
+        "target": "_blank",
+        "url": "http://www.shipxy.com/"
+      },
+      {
         "label": "搜狗",
         "value": "sogou",
         "url": "http://map.sogou.com"
