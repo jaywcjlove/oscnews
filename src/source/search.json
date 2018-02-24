@@ -348,6 +348,10 @@
         "value": "huaban",
         "url": "http://huaban.com/search/?q={{kw}}"
       }, {
+        "label": "视觉中国",
+        "value": "shijue",
+        "url": "http://shijue.me/community/search?search=works&key={{kw}}"
+      }, {
         "label": "UI中国",
         "value": "uicn",
         "url": "http://s.ui.cn/index.html?keywords={{kw}}"
@@ -537,6 +541,11 @@
         "label": "AMiner",
         "value": "aminer",
         "url": "https://www.aminer.cn/search?q={{kw}}"
+      },
+      {
+        "label": "机器之心",
+        "value": "jiqizhixin",
+        "url": "https://handbook.jiqizhixin.com/search/{{kw}}"
       },
       {
         "label": "必应学术",
