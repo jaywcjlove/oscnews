@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 import styles from './index.less';
 import addIcon from '../../assets/add-icon.png';
 import websiteIcon from '../../assets/website.svg';
@@ -120,7 +121,7 @@ export default class Navigation extends Component {
           <div className={styles.navContent} ref={this.resizeContent.bind(this)}>
             {navContent.map((item, idx) => {
               return (
-                <a key={idx} href={item.value} target="_top">
+                <a key={idx} href={item.value} className={classNames({ doc: item.type === 'doc' })} target="_top">
                   <img alt={item.label} onError={e => e.target.src = websiteIcon} src={item.icon} />
                   <p>{item.label}</p>
                   {optionDown && <i onClick={this.onKeyDownOption.bind(this, item)} className={styles.keyDown} />}

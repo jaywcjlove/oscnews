@@ -13,6 +13,12 @@
     margin: 0 50px;
     padding: 40px 0 0 0;
     box-sizing: border-box;
+    &:global(.doc) {
+      img {
+        background-color: #fff;
+        padding: 5px;
+      }
+    }
     img {
       width: 31px;
       height: 31px;
@@ -91,9 +97,17 @@
       align-content: flex-start;
       padding: 30px 0;
       min-height: 280px;
+      max-height: 280px;
       display: none;
+      overflow: auto;
       &:global(.show) {
         display: flex;
+      }
+      &:global(.doc) {
+        img {
+          background-color: #fff;
+          padding: 10px;
+        }
       }
       span {
         display: inline-block;
@@ -110,7 +124,7 @@
       img {
         border-radius: 3px;
         display: block;
-        background-color: #ffffff2b;
+        background-color: #ffffff36;
         width: 62px;
         height: 62px;
         filter: brightness(0.99);
