@@ -98,7 +98,7 @@ cd ~/Library/Application\ Support/Google/Chrome/Default/Extensions
   - [x] 更换背景色
   - [x] 添加时钟效果
 - [x] 常用网站导航
-  - [ ] 自定义常用网站导航
+  - [x] 自定义常用网站导航
 - [ ] 书签管理页面
 - [ ] Github
   - [ ] Github 登录，浏览自己项目
