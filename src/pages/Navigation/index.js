@@ -113,15 +113,28 @@ export default class Navigation extends Component {
     storage.set({ dbs });
     this.setState({ navContent: itemfilter });
   }
+  onContextMenu(e) {
+    e.preventDefault();
+    const optionDown = !this.state.optionDown;
+    this.setState({ optionDown });
+    return false;
+  }
+  onClickContextMenu(e) {
+    const { optionDown } = this.state;
+    if (optionDown) {
+      e.preventDefault();
+    }
+    this.setState({ optionDown: false });
+  }
   render() {
     const { navContent, optionDown } = this.state;
     return (
-      <div className={styles.nav}>
+      <div className={styles.nav} onClick={this.onClickContextMenu.bind(this)}>
         <div className={styles.navBox}>
           <div className={styles.navContent} ref={this.resizeContent.bind(this)}>
             {navContent.map((item, idx) => {
               return (
-                <a key={idx} href={item.value} className={classNames({ doc: item.type === 'doc' })} target="_top">
+                <a key={idx} href={optionDown ? '#' : item.value} onContextMenu={this.onContextMenu.bind(this)} className={classNames({ doc: item.type === 'doc' })} target="_top">
                   <img alt={item.label} onError={e => e.target.src = websiteIcon} src={item.icon} />
                   <p>{item.label}</p>
                   {optionDown && <i onClick={this.onKeyDownOption.bind(this, item)} className={styles.keyDown} />}

@@ -106,7 +106,7 @@ export default class Edit extends Component {
     return (
       <div className={styles.navEdit} ref={node => this.warpper = node}>
         <div className={classNames(styles.edit, { doc: active === 'document' })}>
-          <img alt="" onError={e => e.target.src = websiteIcon} src={edit.icon} />
+          <img alt={edit.label} onError={e => e.target.src = websiteIcon} src={edit.icon} />
           <span className={styles.title}><input type="text" onChange={this.onChangeTitleEdit.bind(this)} className={styles.titleInput} value={edit.label} />{edit.label}</span>
           <input className={styles.url} onChange={this.onChangeEdit.bind(this)} value={edit.value} type="text" placeholder="输入网址" />
           <button className={styles.save} onClick={this.onClickAdd.bind(this, edit)}>确定</button>
