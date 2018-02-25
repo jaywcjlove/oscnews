@@ -685,6 +685,11 @@
         "url": "http://www.jobcn.com/search/result.xhtml?p.keyword={{kw}}"
       },
       {
+        "label": "大街",
+        "value": "dajie",
+        "url": "https://so.dajie.com/job/search?keyword={{kw}}"
+      },
+      {
         "label": "中国人才热线",
         "value": "cjol",
         "url": "http://s.cjol.com/kw-{{kw}}"

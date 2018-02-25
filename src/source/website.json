@@ -237,6 +237,26 @@
         "icon": "https://jaywcjlove.github.io/logo/guazi.jpg"
       },
       {
+        "label": "中国国旅",
+        "value": "http://www.cits.cn/",
+        "icon": "https://jaywcjlove.github.io/logo/cits.jpg"
+      },
+      {
+        "label": "快递100",
+        "value": "http://www.kuaidi100.com/",
+        "icon": "https://jaywcjlove.github.io/logo/kuaidi100.jpg"
+      },
+      {
+        "label": "顺丰快递",
+        "value": "http://www.sf-express.com",
+        "icon": "https://jaywcjlove.github.io/logo/sf-express.jpg"
+      },
+      {
+        "label": "圆通快递",
+        "value": "http://www.yto.net.cn/",
+        "icon": "https://jaywcjlove.github.io/logo/yto.jpg"
+      },
+      {
         "label": "大众点评",
         "value": "https://www.dianping.com/",
         "icon": "https://jaywcjlove.github.io/logo/dianping.png"

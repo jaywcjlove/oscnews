@@ -40,30 +40,33 @@
       min-height: 32px;
       line-height: 32px;
       .titleInput {
-        background: #333;
         color: rgba(255, 255, 255, 0.8);
         width: 100%;
         height: 32px;
         padding: 0 5px;
-        outline: 0;
-        border: 0;
-        border-radius: 2px;
         position: absolute;
         &:hover {
-          background-color: #414141;
+          background-color: #505050;
         }
       }
     }
+    .titleInput, .url {
+      border-radius: 2px;
+      outline: 0;
+      border: 0;
+      background-color: #414141;
+      transition: all .3s;
+    }
     .url {
       padding: 16px 10px 16px;
-      border: 0;
-      width: 50%;
+      max-width: 400px;
+      width: 100%;
       height: 14px;
       line-height: 14px;
-      border-radius: 2px;
-      outline: none;
-      background-color: #414141;
       color: rgba(255,255,255,.8);
+      &:hover {
+        background-color: #505050;
+      }
     }
     .save {
       margin-left: 10px;
@@ -79,6 +82,27 @@
       &:active {
         background-color: #076a39;
         color: #fff;
+      }
+    }
+    .otherUrl {
+      display: flex;
+      flex-flow: row wrap;
+      align-content: flex-start;
+      span {
+        margin: 0 0 0 5px;
+        cursor: pointer;
+        padding: 0 11px;
+        border-radius: 2px;
+        background-color: #d4f5db;
+        line-height: 32px;
+        transition: all .3s;
+        &:hover {
+          background-color: #7eca8e;
+        }
+        &:active {
+          background-color: #076a39;
+          color: #fff;
+        }
       }
     }
   }
