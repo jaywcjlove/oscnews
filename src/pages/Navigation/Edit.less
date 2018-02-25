@@ -76,6 +76,7 @@
       outline: none;
       cursor: pointer;
       transition: all .3s;
+        white-space: nowrap;
       &:hover {
         background-color: #cccccc;
       }
@@ -88,6 +89,7 @@
       display: flex;
       flex-flow: row wrap;
       align-content: flex-start;
+      flex-wrap: nowrap;
       span {
         margin: 0 0 0 5px;
         cursor: pointer;
@@ -96,6 +98,9 @@
         background-color: #d4f5db;
         line-height: 32px;
         transition: all .3s;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         &:hover {
           background-color: #7eca8e;
         }

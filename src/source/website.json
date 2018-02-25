@@ -65,6 +65,16 @@
         "icon": "https://jaywcjlove.github.io/logo/mailqq.png"
       },
       {
+        "label": "Gmail",
+        "value": "https://mail.google.com",
+        "icon": "https://jaywcjlove.github.io/logo/gmail.jpg"
+      },
+      {
+        "label": "Tom",
+        "value": "http://mail.tom.com",
+        "icon": "https://jaywcjlove.github.io/logo/tom.jpg"
+      },
+      {
         "label": "ProcessOn",
         "value": "http://www.processon.com/",
         "icon": "https://jaywcjlove.github.io/logo/processon.png"
@@ -89,6 +99,11 @@
         "label": "YouTube",
         "value": "https://www.youtube.com",
         "icon": "https://jaywcjlove.github.io/logo/youtube.jpg"
+      },
+      {
+        "label": "芒果TV",
+        "value": "https://www.mgtv.com/",
+        "icon": "https://jaywcjlove.github.io/logo/mgtv.jpg"
       },
       {
         "label": "网易音乐",
@@ -126,6 +141,26 @@
         "icon": "https://jaywcjlove.github.io/logo/tvsohu.jpg"
       },
       {
+        "label": "CCTV",
+        "value": "http://www.cctv.com/",
+        "icon": "https://jaywcjlove.github.io/logo/cctv.jpg"
+      },
+      {
+        "label": "电影网1905",
+        "value": "http://www.1905.com",
+        "icon": "https://jaywcjlove.github.io/logo/1905.jpg"
+      },
+      {
+        "label": "天天看看",
+        "value": "http://www.kankan.com",
+        "icon": "https://jaywcjlove.github.io/logo/kankan.jpg"
+      },
+      {
+        "label": "暴风影音",
+        "value": "http://www.baofeng.com",
+        "icon": "https://jaywcjlove.github.io/logo/baofeng.jpg"
+      },
+      {
         "label": "虾米音乐",
         "value": "http://www.xiami.com",
         "icon": "https://jaywcjlove.github.io/logo/xiami.png"
@@ -156,6 +191,11 @@
         "icon": "https://jaywcjlove.github.io/logo/doubanfm.png"
       },
       {
+        "label": "清风DJ",
+        "value": "http://www.vvvdj.com",
+        "icon": "https://jaywcjlove.github.io/logo/vvvdj.jpg"
+      },
+      {
         "label": "喜马拉雅FM",
         "value": "http://www.ximalaya.com",
         "icon": "https://jaywcjlove.github.io/logo/ximalaya.jpg"
@@ -173,27 +213,27 @@
     "children": [
       {
         "label": "淘宝",
-        "value": "https://www.taobao.com/",
+        "value": "https://www.taobao.com",
         "icon": "https://jaywcjlove.github.io/logo/taobao.png"
       },
       {
         "label": "京东",
-        "value": "https://www.jd.com/",
+        "value": "https://www.jd.com",
         "icon": "https://jaywcjlove.github.io/logo/jindong.png"
       },
       {
         "label": "亚马逊",
-        "value": "https://www.amazon.cn/",
+        "value": "https://www.amazon.cn",
         "icon": "https://jaywcjlove.github.io/logo/amazon.png"
       },
       {
         "label": "当当网",
-        "value": "http://www.dangdang.com/",
+        "value": "http://www.dangdang.com",
         "icon": "https://jaywcjlove.github.io/logo/dangdang.png"
       },
       {
         "label": "1药网",
-        "value": "http://www.111.com.cn/",
+        "value": "http://www.111.com.cn",
         "icon": "https://jaywcjlove.github.io/logo/111.png"
       },
       {
@@ -213,8 +253,18 @@
       },
       {
         "label": "百度外卖",
-        "value": "https://waimai.baidu.com/",
+        "value": "https://waimai.baidu.com",
         "icon": "https://jaywcjlove.github.io/logo/waimaibaidu.png"
+      },
+      {
+        "label": "国美",
+        "value": "https://www.gome.com.cn",
+        "icon": "https://jaywcjlove.github.io/logo/gome.jpg"
+      },
+      {
+        "label": "唯品会",
+        "value": "https://www.vip.com",
+        "icon": "https://jaywcjlove.github.io/logo/vip.jpg"
       },
       {
         "label": "汽车之家",
@@ -223,7 +273,7 @@
       },
       {
         "label": "聚美优品",
-        "value": "http://bj.jumei.com/",
+        "value": "http://bj.jumei.com",
         "icon": "https://jaywcjlove.github.io/logo/jumei.jpg"
       },
       {
@@ -238,12 +288,12 @@
       },
       {
         "label": "中国国旅",
-        "value": "http://www.cits.cn/",
+        "value": "http://www.cits.cn",
         "icon": "https://jaywcjlove.github.io/logo/cits.jpg"
       },
       {
         "label": "快递100",
-        "value": "http://www.kuaidi100.com/",
+        "value": "http://www.kuaidi100.com",
         "icon": "https://jaywcjlove.github.io/logo/kuaidi100.jpg"
       },
       {
@@ -253,12 +303,12 @@
       },
       {
         "label": "圆通快递",
-        "value": "http://www.yto.net.cn/",
+        "value": "http://www.yto.net.cn",
         "icon": "https://jaywcjlove.github.io/logo/yto.jpg"
       },
       {
         "label": "大众点评",
-        "value": "https://www.dianping.com/",
+        "value": "https://www.dianping.com",
         "icon": "https://jaywcjlove.github.io/logo/dianping.png"
       }
     ]
@@ -488,6 +538,21 @@
         "label": "富途证券",
         "value": "https://www.futu5.com/",
         "icon": "https://jaywcjlove.github.io/logo/futu5.png"
+      },
+      {
+        "label": "金联储金服",
+        "value": "https://www.jinlianchu.cn/",
+        "icon": "https://jaywcjlove.github.io/logo/jinlianchu.jpg"
+      },
+      {
+        "label": "和信贷",
+        "value": "https://www.hexindai.com/",
+        "icon": "https://jaywcjlove.github.io/logo/hexindai.jpg"
+      },
+      {
+        "label": "V金融",
+        "value": "http://www.wdclc.cn/",
+        "icon": "https://jaywcjlove.github.io/logo/wdclc.jpg"
       }
     ]
   },
