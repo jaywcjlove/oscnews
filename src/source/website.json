@@ -450,6 +450,11 @@
         "icon": "https://jaywcjlove.github.io/logo/hexun.png"
       },
       {
+        "label": "中国经济网",
+        "value": "http://www.ce.cn",
+        "icon": "https://jaywcjlove.github.io/logo/ce.jpg"
+      },
+      {
         "label": "东方财富网",
         "value": "http://www.eastmoney.com/",
         "icon": "https://jaywcjlove.github.io/logo/eastmoney.jpg"
