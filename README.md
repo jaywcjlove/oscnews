@@ -35,6 +35,14 @@
 
 - 删除网址：摁住 `alt` 键，出现删除按钮
 
+#### 兼容FireFox
+
+只需要安装 [Chrome Store Foxified ](https://addons.mozilla.org/zh-CN/firefox/addon/chrome-store-foxified/) 扩展，就能直接在 Firefox 里安装 Chrome 扩展，不过，还是需要先登录 https://addons.mozilla.org/ 然后就可以打开 [Chrome 网上商店](https://chrome.google.com/webstore/detail/oscnews/iheapfheanfjcemgneblljhaebonakbg) 里的 oscnews 。点击 ADD TO FIREFOX 后，Chrome Store Foxified 就在后台工作了，最终会在 addons 里提交一个临时扩展，并且安装在你的 Firefox 里。
+
+> [Github下载 oscnews.xpi 文件](https://github.com/jaywcjlove/oscnews/releases) 
+
+下载 xpi 文件，将 xpi 文件拖拽到扩展列表中安装。
+
 ## 开发模式安装
 
 下载源文件
