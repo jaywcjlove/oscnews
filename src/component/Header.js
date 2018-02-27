@@ -98,6 +98,7 @@ export default class Header extends Component {
   render() {
     return (
       <div className={styles.warpper} style={{ marginTop: this.state.visible ? 0 : -50 }}>
+        <div onClick={this.onDropDown.bind(this)} className={styles.dropDown} />
         <div className={ styles.logo } >
           <a href="http://www.oschina.net/" rel="noopener noreferrer" target="_blank" >
             <img title="开源中国" alt="开源中国" src={ logo } />
@@ -120,7 +121,6 @@ export default class Header extends Component {
             </svg>
           </Dropdown>
         </div>
-        <div onClick={this.onDropDown.bind(this)} className={styles.dropDown} />
       </div>
     );
   }
