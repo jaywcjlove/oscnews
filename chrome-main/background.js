@@ -1,6 +1,7 @@
 
 chrome.browserAction.onClicked.addListener(function () {
   chrome.management.getSelf(function (res) {
+    // moz-extension://9dc71e1a-5801-b14e-906e-883d3c24d07e/7e4e10b3bb36ac2d03095a183833b2b1.html#/
     chrome.tabs.create({ url: 'chrome-extension://' + res.id + '/index.html#normal' });
   });
   // chrome.tabs.create({ url: 'chrome://newtab' });

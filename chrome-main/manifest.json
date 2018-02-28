@@ -7,8 +7,6 @@
   },
   "permissions": [
     "*://*/*",
-    "<all_urls>",
-    "declarativeContent",
     "tabs",
     "unlimitedStorage",
     "storage",
