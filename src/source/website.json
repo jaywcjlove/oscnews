@@ -103,7 +103,7 @@
       {
         "label": "腾讯视频",
         "value": "https://v.qq.com",
-        "icon": "https://jaywcjlove.github.io/logo/vqq.png"
+        "icon": "https://jaywcjlove.github.io/logo/v.qq.svg"
       },
       {
         "label": "熊猫直播",
@@ -274,7 +274,7 @@
       {
         "label": "1药网",
         "value": "http://www.111.com.cn",
-        "icon": "https://jaywcjlove.github.io/logo/111.png"
+        "icon": "https://jaywcjlove.github.io/logo/111.svg"
       },
       {
         "label": "饿了么",
@@ -334,7 +334,7 @@
       {
         "label": "聚美优品",
         "value": "http://bj.jumei.com",
-        "icon": "https://jaywcjlove.github.io/logo/jumei.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/jumei.svg"
       },
       {
         "label": "优信二手车",
@@ -770,12 +770,12 @@
       {
         "label": "500px",
         "value": "https://500px.com/",
-        "icon": "https://jaywcjlove.github.io/logo/500px.png"
+        "icon": "https://jaywcjlove.github.io/logo/500px.svg"
       },
       {
         "label": "站酷",
         "value": "http://www.zcool.com.cn/",
-        "icon": "https://jaywcjlove.github.io/logo/zcool.png"
+        "icon": "https://jaywcjlove.github.io/logo/zcool.svg"
       },
       {
         "label": "TOPYS",
@@ -805,7 +805,7 @@
       {
         "label": "优艾网",
         "value": "http://www.chinaui.com/",
-        "icon": "https://jaywcjlove.github.io/logo/chinaui.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/chinaui.svg"
       },
       {
         "label": "涂鸦王国",
@@ -815,22 +815,22 @@
       {
         "label": "UI中国",
         "value": "http://www.ui.cn/",
-        "icon": "https://jaywcjlove.github.io/logo/ui.png"
+        "icon": "https://jaywcjlove.github.io/logo/ui.svg"
       },
       {
         "label": "Pinterest",
         "value": "https://www.pinterest.com/",
-        "icon": "https://jaywcjlove.github.io/logo/pinterest.png"
+        "icon": "https://jaywcjlove.github.io/logo/pinterest.svg"
       },
       {
         "label": "Behance",
         "value": "https://www.behance.net/",
-        "icon": "https://jaywcjlove.github.io/logo/behance.png"
+        "icon": "https://jaywcjlove.github.io/logo/behance.svg"
       },
       {
         "label": "Dribbble",
         "value": "https://dribbble.com/",
-        "icon": "https://jaywcjlove.github.io/logo/dribbble.png"
+        "icon": "https://jaywcjlove.github.io/logo/dribbble.svg"
       },
       {
         "label": "PSDDD.co",
@@ -840,17 +840,17 @@
       {
         "label": "视觉",
         "value": "http://shijue.me/",
-        "icon": "https://jaywcjlove.github.io/logo/shijue.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/shijue.svg"
       },
       {
         "label": "素材中国",
         "value": "http://www.sccnn.com/",
-        "icon": "https://jaywcjlove.github.io/logo/sccnn.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/sccnn.svg"
       },
       {
         "label": "花瓣网",
         "value": "http://huaban.com/",
-        "icon": "https://jaywcjlove.github.io/logo/huaban.png"
+        "icon": "https://jaywcjlove.github.io/logo/huaban.svg"
       }
     ]
   },
@@ -861,7 +861,7 @@
       {
         "label": "Mac程序推荐",
         "value": "http://jaywcjlove.github.io/awesome-mac/index.zh.html",
-        "icon": "https://jaywcjlove.github.io/logo/developerApple.png"
+        "icon": "https://jaywcjlove.github.io/logo/MacApple.svg"
       },
       {
         "label": "MacUpdate",
@@ -902,12 +902,12 @@
       {
         "label": "MDN Web",
         "value": "https://developer.mozilla.org",
-        "icon": "https://jaywcjlove.github.io/logo/mozilla.png"
+        "icon": "https://jaywcjlove.github.io/logo/mozilla.svg"
       },
       {
         "label": "Apple Developer",
         "value": "https://developer.apple.com/",
-        "icon": "https://jaywcjlove.github.io/logo/developerApple.png"
+        "icon": "https://jaywcjlove.github.io/logo/MacApple.svg"
       },
       {
         "label": "NPM",
@@ -922,12 +922,12 @@
       {
         "label": "CSDN",
         "value": "http://www.csdn.net/",
-        "icon": "https://jaywcjlove.github.io/logo/csdn.png"
+        "icon": "https://jaywcjlove.github.io/logo/csdn.svg"
       },
       {
         "label": "SegmentFault",
         "value": "https://segmentfault.com/",
-        "icon": "https://jaywcjlove.github.io/logo/segmentfault.png"
+        "icon": "https://jaywcjlove.github.io/logo/segmentfault.svg"
       },
       {
         "label": "博客园",
@@ -992,12 +992,12 @@
       {
         "label": "Coding",
         "value": "https://coding.net/",
-        "icon": "https://jaywcjlove.github.io/logo/coding.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/coding.svg"
       },
       {
         "label": "CodePen",
         "value": "https://codepen.io/",
-        "icon": "https://jaywcjlove.github.io/logo/codepen.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/codepen.svg"
       },
       {
         "label": "RunJS",
