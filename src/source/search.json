@@ -280,6 +280,11 @@
     "value": "icon",
     "children": [
       {
+        "label": "iconfont",
+        "value": "iconfont",
+        "url": "http://www.iconfont.cn/search/index?q={{kw}}"
+      },
+      {
         "label": "FindIcons",
         "value": "findicons",
         "url": "https://findicons.com/search/{{kw}}"
@@ -290,14 +295,29 @@
         "url": "https://icons8.cn/icon/set/{{kw}}/all"
       },
       {
+        "label": "Share Icon",
+        "value": "shareicon",
+        "url": "https://www.shareicon.net/search?kwd={{kw}}"
+      },
+      {
+        "label": "worldvectorlogo",
+        "value": "worldvectorlogo",
+        "url": "https://worldvectorlogo.com/search/{{kw}}"
+      },
+      {
+        "label": "Instant Logo",
+        "value": "instantlogosearch",
+        "url": "http://instantlogosearch.com/?q={{kw}}"
+      },
+      {
+        "label": "60logo",
+        "value": "60logo",
+        "url": "http://www.60logo.com/plus/search.php?q={{kw}}"
+      },
+      {
         "label": "IconFinder",
         "value": "iconfinder",
         "url": "https://www.iconfinder.com/search/?q={{kw}}"
-      },
-      {
-        "label": "iconfont",
-        "value": "iconfont",
-        "url": "http://www.iconfont.cn/search/index?q={{kw}}"
       },
       {
         "label": "EasyIcon",
