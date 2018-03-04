@@ -6,27 +6,27 @@
       {
         "label": "百度",
         "value": "https://www.baidu.com",
-        "icon": "https://jaywcjlove.github.io/logo/baidu.png"
+        "icon": "https://jaywcjlove.github.io/logo/baidu.svg"
       },
       {
         "label": "谷歌",
         "value": "https://www.google.com",
-        "icon": "https://jaywcjlove.github.io/logo/google.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/google.svg"
       },
       {
         "label": "必应",
         "value": "https://www.bing.com",
-        "icon": "https://jaywcjlove.github.io/logo/bing.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/bing.svg"
       },
       {
         "label": "搜狗",
         "value": "https://www.sogou.com",
-        "icon": "https://jaywcjlove.github.io/logo/sogou.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/sogou.svg"
       },
       {
         "label": "360搜索",
         "value": "https://www.so.com",
-        "icon": "https://jaywcjlove.github.io/logo/so.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/so.svg"
       }
     ]
   },
@@ -37,27 +37,27 @@
       {
         "label": "Teambition",
         "value": "https://www.teambition.com/",
-        "icon": "https://jaywcjlove.github.io/logo/teambition.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/teambition.svg"
       },
       {
         "label": "Microsoft Office",
         "value": "https://www.office.com/",
-        "icon": "https://jaywcjlove.github.io/logo/office.png"
+        "icon": "https://jaywcjlove.github.io/logo/office.svg"
       },
       {
         "label": "印象笔记",
         "value": "https://www.yinxiang.com/",
-        "icon": "https://jaywcjlove.github.io/logo/yinxiang.png"
+        "icon": "https://jaywcjlove.github.io/logo/yinxiang.svg"
       },
       {
         "label": "Slack",
         "value": "https://slack.com/",
-        "icon": "https://jaywcjlove.github.io/logo/slack.png"
+        "icon": "https://jaywcjlove.github.io/logo/slack.svg"
       },
       {
         "label": "Gitter",
         "value": "https://gitter.im/",
-        "icon": "https://jaywcjlove.github.io/logo/gitter.png"
+        "icon": "https://jaywcjlove.github.io/logo/gitter.svg"
       },
       {
         "label": "QQ邮箱",
@@ -67,12 +67,17 @@
       {
         "label": "Gmail",
         "value": "https://mail.google.com",
-        "icon": "https://jaywcjlove.github.io/logo/gmail.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/gmail.svg"
       },
       {
         "label": "Tom",
         "value": "http://mail.tom.com",
         "icon": "https://jaywcjlove.github.io/logo/tom.jpg"
+      },
+      {
+        "label": "Google Docs",
+        "value": "https://docs.google.com/",
+        "icon": "https://jaywcjlove.github.io/logo/docsgoogle.svg"
       },
       {
         "label": "优品PPT",
@@ -108,7 +113,7 @@
       {
         "label": "YouTube",
         "value": "https://www.youtube.com",
-        "icon": "https://jaywcjlove.github.io/logo/youtube.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/youtube.svg"
       },
       {
         "label": "芒果TV",
@@ -118,47 +123,47 @@
       {
         "label": "网易音乐",
         "value": "http://music.163.com",
-        "icon": "https://jaywcjlove.github.io/logo/music163.png"
+        "icon": "https://jaywcjlove.github.io/logo/music163.svg"
       },
       {
         "label": "大麦网",
         "value": "https://www.damai.cn",
-        "icon": "https://jaywcjlove.github.io/logo/damai.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/damai.svg"
       },
       {
         "label": "哔哩哔哩",
         "value": "https://www.bilibili.com",
-        "icon": "https://jaywcjlove.github.io/logo/bilibili.png"
+        "icon": "https://jaywcjlove.github.io/logo/bilibili.svg"
       },
       {
         "label": "AcFun",
         "value": "http://www.acfun.cn",
-        "icon": "https://jaywcjlove.github.io/logo/acfun.png"
+        "icon": "https://jaywcjlove.github.io/logo/acfun.svg"
       },
       {
         "label": "优酷",
         "value": "https://www.youku.com",
-        "icon": "https://jaywcjlove.github.io/logo/youku.png"
+        "icon": "https://jaywcjlove.github.io/logo/youku.svg"
       },
       {
         "label": "爱奇艺",
         "value": "http://www.iqiyi.com",
-        "icon": "https://jaywcjlove.github.io/logo/iqiyi.png"
+        "icon": "https://jaywcjlove.github.io/logo/iqiyi.svg"
       },
       {
         "label": "搜狐视频",
         "value": "https://tv.sohu.com",
-        "icon": "https://jaywcjlove.github.io/logo/tvsohu.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/tvsohu.svg"
       },
       {
         "label": "CCTV",
         "value": "http://www.cctv.com/",
-        "icon": "https://jaywcjlove.github.io/logo/cctv.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/cctv.svg"
       },
       {
         "label": "时光网",
         "value": "http://www.mtime.com",
-        "icon": "https://jaywcjlove.github.io/logo/mtime.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/mtime.svg"
       },
       {
         "label": "电影网1905",
@@ -183,7 +188,7 @@
       {
         "label": "乐视视频",
         "value": "http://www.le.com",
-        "icon": "https://jaywcjlove.github.io/logo/le.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/le.svg"
       },
       {
         "label": "虾米音乐",
@@ -203,7 +208,7 @@
       {
         "label": "音悦Tai",
         "value": "http://www.yinyuetai.com",
-        "icon": "https://jaywcjlove.github.io/logo/yinyuetai.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/yinyuetai.svg"
       },
       {
         "label": "斗鱼",
@@ -239,22 +244,22 @@
       {
         "label": "淘宝",
         "value": "https://www.taobao.com",
-        "icon": "https://jaywcjlove.github.io/logo/taobao.png"
+        "icon": "https://jaywcjlove.github.io/logo/taobao.svg"
       },
       {
         "label": "京东",
         "value": "https://www.jd.com",
-        "icon": "https://jaywcjlove.github.io/logo/jindong.png"
+        "icon": "https://jaywcjlove.github.io/logo/jindong.svg"
       },
       {
         "label": "亚马逊",
         "value": "https://www.amazon.cn",
-        "icon": "https://jaywcjlove.github.io/logo/amazon.png"
+        "icon": "https://jaywcjlove.github.io/logo/amazon.svg"
       },
       {
         "label": "当当网",
         "value": "http://www.dangdang.com",
-        "icon": "https://jaywcjlove.github.io/logo/dangdang.png"
+        "icon": "https://jaywcjlove.github.io/logo/dangdang.svg"
       },
       {
         "label": "贝贝",
@@ -274,12 +279,12 @@
       {
         "label": "饿了么",
         "value": "https://www.ele.me",
-        "icon": "https://jaywcjlove.github.io/logo/eleme.png"
+        "icon": "https://jaywcjlove.github.io/logo/eleme.svg"
       },
       {
         "label": "美团",
         "value": "http://www.meituan.com/",
-        "icon": "https://jaywcjlove.github.io/logo/meituan.png"
+        "icon": "https://jaywcjlove.github.io/logo/meituan.jpg"
       },
       {
         "label": "天猫",
@@ -304,27 +309,27 @@
       {
         "label": "小米商城",
         "value": "https://www.mi.com/",
-        "icon": "https://jaywcjlove.github.io/logo/mi.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/mi.svg"
       },
       {
         "label": "国美",
         "value": "https://www.gome.com.cn",
-        "icon": "https://jaywcjlove.github.io/logo/gome.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/gome.svg"
       },
       {
         "label": "梦芭莎",
         "value": "http://www.moonbasa.com",
-        "icon": "https://jaywcjlove.github.io/logo/moonbasa.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/moonbasa.svg"
       },
       {
         "label": "唯品会",
         "value": "https://www.vip.com",
-        "icon": "https://jaywcjlove.github.io/logo/vip.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/vip.svg"
       },
       {
         "label": "汽车之家",
         "value": "https://www.autohome.com.cn",
-        "icon": "https://jaywcjlove.github.io/logo/autohome.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/autohome.svg"
       },
       {
         "label": "聚美优品",
@@ -354,7 +359,7 @@
       {
         "label": "顺丰快递",
         "value": "http://www.sf-express.com",
-        "icon": "https://jaywcjlove.github.io/logo/sf-express.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/sf-express.svg"
       },
       {
         "label": "圆通快递",
@@ -364,7 +369,7 @@
       {
         "label": "大众点评",
         "value": "https://www.dianping.com",
-        "icon": "https://jaywcjlove.github.io/logo/dianping.png"
+        "icon": "https://jaywcjlove.github.io/logo/dianping.svg"
       }
     ]
   },
@@ -375,22 +380,22 @@
       {
         "label": "豆瓣",
         "value": "https://www.douban.com",
-        "icon": "https://jaywcjlove.github.io/logo/douban.png"
+        "icon": "https://jaywcjlove.github.io/logo/douban.svg"
       },
       {
         "label": "知乎",
         "value": "https://www.zhihu.com",
-        "icon": "https://jaywcjlove.github.io/logo/zhihu.png"
+        "icon": "https://jaywcjlove.github.io/logo/zhihu.svg"
       },
       {
         "label": "果壳网",
         "value": "https://www.guokr.com",
-        "icon": "https://jaywcjlove.github.io/logo/guokr.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/guokr.svg"
       },
       {
         "label": "威锋网",
         "value": "http://www.feng.com",
-        "icon": "https://jaywcjlove.github.io/logo/feng.png"
+        "icon": "https://jaywcjlove.github.io/logo/feng.svg"
       },
       {
         "label": "猫扑",
@@ -400,12 +405,12 @@
       {
         "label": "V2EX",
         "value": "https://www.v2ex.com",
-        "icon": "https://jaywcjlove.github.io/logo/v2ex.png"
+        "icon": "https://jaywcjlove.github.io/logo/v2ex.svg"
       },
       {
         "label": "天涯",
         "value": "http://www.tianya.cn",
-        "icon": "https://jaywcjlove.github.io/logo/tianya.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/tianya.svg"
       },
       {
         "label": "科学公园",
@@ -431,12 +436,12 @@
       {
         "label": "36氪",
         "value": "http://36kr.com",
-        "icon": "https://jaywcjlove.github.io/logo/36kr.png"
+        "icon": "https://jaywcjlove.github.io/logo/36kr.svg"
       },
       {
         "label": "InfoQ",
         "value": "https://www.infoq.com/",
-        "icon": "https://jaywcjlove.github.io/logo/infoq.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/infoq.svg"
       },
       {
         "label": "创业邦",
@@ -446,12 +451,12 @@
       {
         "label": "Engadget",
         "value": "https://cn.engadget.com",
-        "icon": "https://jaywcjlove.github.io/logo/engadget.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/engadget.svg"
       },
       {
         "label": "cnBeta",
         "value": "http://www.cnbeta.com",
-        "icon": "https://jaywcjlove.github.io/logo/cnbeta.png"
+        "icon": "https://jaywcjlove.github.io/logo/cnbeta.svg"
       },
       {
         "label": "爱范儿",
@@ -536,7 +541,7 @@
       {
         "label": "极客视界",
         "value": "http://geekview.cn/",
-        "icon": "https://jaywcjlove.github.io/logo/geekview.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/geekview.svg"
       },
       {
         "label": "娱乐资本论",
@@ -560,34 +565,39 @@
     "value": "social-media",
     "children": [
       {
-        "label": "微博",
+        "label": "新浪微博",
         "value": "https://weibo.com",
-        "icon": "https://jaywcjlove.github.io/logo/weibo.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/weibo.svg"
       },
       {
         "label": "Twitter",
         "value": "https://twitter.com/",
-        "icon": "https://jaywcjlove.github.io/logo/twitter.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/twitter.svg"
       },
       {
         "label": "Facebook",
         "value": "https://www.facebook.com/",
-        "icon": "https://jaywcjlove.github.io/logo/facebook.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/facebook.svg"
+      },
+      {
+        "label": "Google+",
+        "value": "https://plus.google.com/",
+        "icon": "https://jaywcjlove.github.io/logo/plus.google.svg"
       },
       {
         "label": "人人网",
         "value": "http://www.renren.com/",
-        "icon": "https://jaywcjlove.github.io/logo/renren.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/renren.svg"
       },
       {
         "label": "腾讯微博",
         "value": "http://t.qq.com/",
-        "icon": "https://jaywcjlove.github.io/logo/tqq.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/t.qq.svg"
       },
       {
         "label": "Linkedin",
         "value": "https://www.linkedin.com/",
-        "icon": "https://jaywcjlove.github.io/logo/linkedin.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/linkedin.svg"
       }
     ]
   },
@@ -704,7 +714,7 @@
       {
         "label": "飞猪",
         "value": "http://www.fliggy.com/",
-        "icon": "https://jaywcjlove.github.io/logo/fliggy.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/fliggy.svg"
       },
       {
         "label": "艺龙",
@@ -775,7 +785,12 @@
       {
         "label": "IconFont",
         "value": "http://iconfont.cn/",
-        "icon": "https://jaywcjlove.github.io/logo/iconfont.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/iconfont.svg"
+      },
+      {
+        "label": "Worldvectorlogo",
+        "value": "https://worldvectorlogo.com/",
+        "icon": "https://jaywcjlove.github.io/logo/worldvectorlogo.svg"
       },
       {
         "label": "优设",
@@ -897,12 +912,12 @@
       {
         "label": "NPM",
         "value": "https://www.npmjs.com/",
-        "icon": "https://jaywcjlove.github.io/logo/npm.png"
+        "icon": "https://jaywcjlove.github.io/logo/npm.svg"
       },
       {
         "label": "掘金",
         "value": "https://juejin.im",
-        "icon": "https://jaywcjlove.github.io/logo/juejin.png"
+        "icon": "https://jaywcjlove.github.io/logo/juejin.svg"
       },
       {
         "label": "CSDN",
@@ -917,7 +932,17 @@
       {
         "label": "博客园",
         "value": "https://www.cnblogs.com/",
-        "icon": "https://jaywcjlove.github.io/logo/cnblogs.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/cnblogs.svg"
+      },
+      {
+        "label": "小专栏",
+        "value": "https://xiaozhuanlan.com/",
+        "icon": "https://jaywcjlove.github.io/logo/xiaozhuanlan.svg"
+      },
+      {
+        "label": "Android 开发技术周报",
+        "value": "https://www.androidweekly.cn",
+        "icon": "https://jaywcjlove.github.io/logo/androidweekly.jpg"
       },
       {
         "label": "干货集中营",
@@ -927,12 +952,17 @@
       {
         "label": "开发者头条",
         "value": "https://toutiao.io",
-        "icon": "https://jaywcjlove.github.io/logo/toutiao.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/toutiao.svg"
       },
       {
         "label": "Hacker News",
         "value": "https://news.ycombinator.com/",
-        "icon": "https://jaywcjlove.github.io/logo/ycombinator.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/ycombinator.svg"
+      },
+      {
+        "label": "Startup News",
+        "value": "http://news.dbanotes.net/",
+        "icon": "https://jaywcjlove.github.io/logo/news.dbanotes.jpg"
       },
       {
         "label": "Code4App",
@@ -942,22 +972,22 @@
       {
         "label": "开源中国",
         "value": "http://www.oschina.net/",
-        "icon": "https://jaywcjlove.github.io/logo/oschina.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/oschina.svg"
       },
       {
         "label": "GitHub",
         "value": "https://github.com/",
-        "icon": "https://jaywcjlove.github.io/logo/github.png"
+        "icon": "https://jaywcjlove.github.io/logo/github.svg"
       },
       {
         "label": "Gitlab",
         "value": "https://gitlab.com/",
-        "icon": "https://jaywcjlove.github.io/logo/gitlab.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/gitlab.svg"
       },
       {
         "label": "码云",
         "value": "https://gitee.com/",
-        "icon": "https://jaywcjlove.github.io/logo/gitee.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/gitee.svg"
       },
       {
         "label": "Coding",
@@ -977,12 +1007,17 @@
       {
         "label": "w3cschool",
         "value": "https://www.w3cschool.cn/",
-        "icon": "https://jaywcjlove.github.io/logo/w3cschool.jpg"
+        "icon": "https://jaywcjlove.github.io/logo/w3cschool.svg"
       },
       {
         "label": "Can I use",
         "value": "https://caniuse.com/",
         "icon": "https://jaywcjlove.github.io/logo/caniuse.png"
+      },
+      {
+        "label": "极客学院",
+        "value": "http://www.jikexueyuan.com/",
+        "icon": "https://jaywcjlove.github.io/logo/jikexueyuan.jpg"
       }
     ]
   }
