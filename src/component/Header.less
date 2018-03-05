@@ -14,49 +14,14 @@
   }
 }
 
-.nav {
-  display: inline-block;
-  color: #585858;
-  user-select: none;
-  font-size: 12px;
-  :global {
-    .active, span.active:hover {
-      color: #fff;
-      background-color: #555;
-    }
-  }
-  span, a {
-    padding: 1px 4px;
-    transition: all .3s;
-    vertical-align: middle;
-    border-radius: 3px;
-    margin: 0 2px;
-    transition: all .3s;
-    &:hover {
-      background-color: #e0e0e0;
-    }
-    &:active {
-      background-color: #555;
-      color: #fff;
-    }
-  }
-  span {
-    cursor: pointer;
-    display: inline-block;
-  }
-  a {
-    display: inline-block;
-    img {
-      height: 18px;
-      display: block;
-    }
-  }
-}
 
 .setting {
   display: inline-block;
   vertical-align: middle;
   padding: 2px 6px;
+  position: fixed;
+  top: 11px;
+  right: 8px;
   img {
     height: 100%;
     display: block;
@@ -70,6 +35,8 @@
   }
   .switchItem {
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
   }
   .switch {
     margin-left: 20px;
@@ -108,5 +75,66 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
+  }
+}
+
+.navPanel {
+  width: 190px;
+  span {
+    display: inline-block;
+    min-width: 62px;
+    cursor: pointer;
+    margin: 3px 0;
+    padding: 1px 5px;
+    border-radius: 3px;
+    transition: all .3s;
+    &:global(.active) {
+      background-color: #e2e2e2;
+      color: #333;
+    }
+    &:hover {
+      background-color: #e2e2e2;
+    }
+  }
+}
+
+
+.nav {
+  display: inline-block;
+  color: #585858;
+  user-select: none;
+  font-size: 12px;
+  padding: 0 30px 0 0;
+  :global {
+    .active, span.active:hover {
+      color: #fff;
+      background-color: #555;
+    }
+  }
+  span, a {
+    padding: 1px 4px;
+    transition: all .3s;
+    vertical-align: middle;
+    border-radius: 3px;
+    margin: 0 2px;
+    transition: all .3s;
+    &:hover {
+      background-color: #e0e0e0;
+    }
+    &:active {
+      background-color: #555;
+      color: #fff;
+    }
+  }
+  span {
+    cursor: pointer;
+    display: inline-block;
+  }
+  a {
+    display: inline-block;
+    img {
+      height: 18px;
+      display: block;
+    }
   }
 }

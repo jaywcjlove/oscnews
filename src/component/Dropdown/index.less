@@ -38,7 +38,7 @@
   }
   .item {
     display: block !important;
-    padding: 8px 10px !important;
+    padding: 6px 8px !important;
     color: #868686;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -50,6 +50,15 @@
     }
     &:active {
       background-color: #dedede;
+    }
+    &:global(.panel) {
+      text-overflow: inherit;
+      white-space: inherit;
+      overflow: inherit;
+      &:hover {
+        background-color: transparent;
+        color: #868686;
+      }
     }
     img {
       display: inline-block;

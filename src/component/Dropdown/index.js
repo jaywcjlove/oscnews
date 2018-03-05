@@ -33,16 +33,17 @@ export default class Dropdown extends Component {
     }
   }
   renderObjectMenu(menu) {
-    return menu.map(({ title, line, url, divider, target, ...otherProps }, idx) => {
+    return menu.map(({ title, line, panel, url, divider, target, ...otherProps }, idx) => {
       const titleView = title && typeof title === 'function' ? title() : title;
+      const cls = classNames(styles.item, { panel });
       if (divider) {
         return (
           <div {...otherProps} key={idx} className={classNames(styles.divider, { line })}>{titleView}</div>
         );
       } else if (url) {
-        return <a {...otherProps} key={idx} className={styles.item} target={target} href={url}>{titleView}</a>;
+        return <a {...otherProps} key={idx} className={cls} target={target} href={url}>{titleView}</a>;
       } else if (titleView) {
-        return <div {...otherProps} key={idx} className={styles.item}>{titleView}</div>;
+        return <div {...otherProps} key={idx} className={cls}>{titleView}</div>;
       }
       return null;
     });
