@@ -146,15 +146,16 @@ export default class Navigation extends Component {
     if (currentIndex > -1 && overIndex > -1) {
       const curData = navContent[currentIndex];
       if (currentIndex > overIndex) {
-        this.parentElm.insertBefore(e.target, this.DragOverElm);
+        // this.parentElm.insertBefore(e.target, this.DragOverElm);
         navContent.splice(currentIndex, 1);
         navContent.splice(overIndex, 0, curData);
       }
       if (currentIndex < overIndex) {
-        this.parentElm.insertBefore(e.target, this.DragOverElm.nextSibling);
+        // this.parentElm.insertBefore(e.target, this.DragOverElm.nextSibling);
         navContent.splice(overIndex + 1 >= child.length ? overIndex : overIndex + 1, 0, curData);
         navContent.splice(currentIndex, 1);
       }
+      this.setState({ navContent });
       dbs.nav = navContent;
       storage.set({ dbs });
     }
