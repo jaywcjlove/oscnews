@@ -155,7 +155,6 @@ export default class Navigation extends Component {
         navContent.splice(overIndex + 1 >= child.length ? overIndex : overIndex + 1, 0, curData);
         navContent.splice(currentIndex, 1);
       }
-      this.setState({ navContent });
       dbs.nav = navContent;
       storage.set({ dbs });
     }

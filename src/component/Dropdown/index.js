@@ -36,7 +36,11 @@ export default class Dropdown extends Component {
     return menu.map(({ title, line, panel, url, divider, target, ...otherProps }, idx) => {
       const titleView = title && typeof title === 'function' ? title() : title;
       const cls = classNames(styles.item, { panel });
-      if (divider) {
+      if (line && !divider && !title) {
+        return (
+          <div {...otherProps} key={idx} className={classNames({ line })} />
+        );
+      } else if (divider) {
         return (
           <div {...otherProps} key={idx} className={classNames(styles.divider, { line })}>{titleView}</div>
         );

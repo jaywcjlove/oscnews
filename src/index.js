@@ -6,15 +6,44 @@ import './index.less';
 
 const storage = chrome.storage.sync;
 
-storage.get(['oscconfig', 'visible', 'conf', 'dbs'], (items) => {
+storage.get(['oscconfig', 'visible', 'conf', 'dbs', 'todo'], (items) => {
   // 默认顶部菜单，和新闻是否展示判断
   if (!items.visible) items.visible = {};
   if (items.visible.header === undefined) items.visible.header = true;
   if (items.visible.newBar === undefined) items.visible.newBar = true;
-
   // 数据存储
   if (!items.dbs) items.dbs = {};
   if (items.dbs.nav === undefined) items.dbs.nav = [];
+
+  // 默认清单(Todo)数据内容
+  if (!items.todo) items.todo = {};
+  if (items.todo.active < 0) items.todo.active = 0;
+  if (!items.todo.list) {
+    items.todo.list = [
+      { label: '旅游', list: [] },
+      { label: '私人', list: [] },
+      { label: '家庭', list: [] },
+      {
+        label: '工作',
+        list: [
+          {
+            id: new Date().getTime(), // TODO ID
+            task: '欢迎使用 TODO 任务清单！', // 任务描述
+            complete: false, // 完成状态
+            comment: '这里放任务注释！', // 注释
+            star: false, // 是否收藏
+          },
+          {
+            id: (new Date().getTime()) + 1, // TODO ID
+            task: '开发 TODO 功能！', // 任务描述
+            complete: true, // 完成状态
+            comment: '这里放任务注释！', // 注释
+            star: false, // 是否收藏
+          },
+        ],
+      },
+    ];
+  }
 
   // 默认选中的栏目
   if (!items.conf) items.conf = {};

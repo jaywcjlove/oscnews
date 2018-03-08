@@ -6,6 +6,7 @@ import Documents from './pages/Document';
 import Navigation from './pages/Navigation';
 import Linux from './pages/Linux';
 import Search from './pages/Search';
+import Todo from './pages/Todo';
 
 export const getNavData = () => [
   {
@@ -17,11 +18,15 @@ export const getNavData = () => [
     type: 'navigation',
     component: Navigation,
   }, {
+    title: '清单',
+    type: 'todo',
+    component: Todo,
+  }, {
     title: '搜索',
     type: 'search',
     component: Search,
   }, {
-    title: '命令大全',
+    title: '命令',
     type: 'linux',
     component: Linux,
   }, {

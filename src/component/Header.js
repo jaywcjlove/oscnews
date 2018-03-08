@@ -20,18 +20,15 @@ export default class Header extends Component {
       isNewTab: props.conf.isNewTab,
       option: [
         {
-          title: <span><img alt="" src={chromeApp} /> Chrome Apps</span>,
-          onClick: this.openChromeApps.bind(this),
+          title: this.renderFeature.bind(this),
+          panel: true, // 这是一个面包
         },
         {
-          title: '功能',
-          divider: true,
           line: true,
         },
         {
-          title: this.renderFeature.bind(this),
-          panel: true, // 这是一个面包
-          line: false,
+          title: <span><img alt="" src={chromeApp} /> Chrome Apps</span>,
+          onClick: this.openChromeApps.bind(this),
         },
         {
           title: '应用选项',
@@ -51,11 +48,6 @@ export default class Header extends Component {
         },
         {
           title: '问题帮助',
-          url: 'https://github.com/jaywcjlove/oscnews/issues',
-          target: '_blank',
-        },
-        {
-          title: '反馈意见',
           url: 'https://github.com/jaywcjlove/oscnews/issues',
           target: '_blank',
         },
@@ -87,9 +79,9 @@ export default class Header extends Component {
   }
   onClickSwitchHideHeader(e) {
     e.preventDefault();
-    const { storage, conf } = this.props;
-    conf.isNewTab = !this.state.visible;
-    storage.set({ conf });
+    const { storage, visible } = this.props;
+    visible.header = !this.state.visible;
+    storage.set({ visible });
     this.setState({ visible: !this.state.visible });
   }
   renderFeature() {
@@ -115,7 +107,7 @@ export default class Header extends Component {
     return (
       <div className={styles.switchItem} onClick={this.onClickSwitchHideHeader.bind(this)}>
         <span>显示导航</span>
-        <Switch className={styles.switch} checked={this.state.visible} onChange={this.onChangeSwitchHideHeader.bind(this)}/>
+        <Switch className={styles.switch} checked={this.state.visible} onChange={this.onChangeSwitchHideHeader.bind(this)} />
       </div>
     );
   }
