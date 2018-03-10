@@ -49,6 +49,10 @@ storage.get(['oscconfig', 'visible', 'conf', 'dbs', 'todo'], (items) => {
   if (!items.conf) items.conf = {};
   // 默认是否在新标签页显示
   if (items.conf.isNewTab === undefined) items.conf.isNewTab = true;
+  // 默认是否在界面上展示 OSC 新闻，包括隐藏按钮
+  if (items.conf.isHideOSC === undefined) items.conf.isHideOSC = true;
+  // 默认是否隐藏导航
+  if (items.conf.isHideNav === undefined) items.conf.isHideNav = true;
   // 默认是否在新标签页显示
   if (items.conf.historyTabType === undefined) items.conf.historyTabType = 'today';
   // 默认展示页面

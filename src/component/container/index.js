@@ -55,6 +55,10 @@ export default class Container extends Component {
   render() {
     const { children, config } = this.props;
     const { visible, siderBarWidth } = this.state;
+    const OSCNewsLeft = () => {
+      if (config.conf.isHideOSC) return visible ? 0 : -siderBarWidth;
+      return -siderBarWidth;
+    };
     return (
       <div className={styles.warpper}>
         <div className={styles.header}>
@@ -71,10 +75,12 @@ export default class Container extends Component {
           />
         </div>
         <div className={styles.content}>
-          <div ref={node => this.siderBar = node} className={styles.oscnews} style={{ marginLeft: visible ? 0 : -siderBarWidth, width: siderBarWidth }}>
-            <div className={classNames(styles.switchBtn, { show: visible, hidden: !visible })} onClick={this.onSwitchBtn.bind(this)}>
-              {visible ? '隐藏' : '显示新闻'}
-            </div>
+          <div ref={node => this.siderBar = node} className={styles.oscnews} style={{ marginLeft: OSCNewsLeft(), width: siderBarWidth }}>
+            {config.conf.isHideOSC && (
+              <div className={classNames(styles.switchBtn, { show: visible, hidden: !visible })} onClick={this.onSwitchBtn.bind(this)}>
+                {visible ? '隐藏' : '显示新闻'}
+              </div>
+            )}
             <OSCNews {...config} />
             <div
               onMouseDown={this.onMouseDown.bind(this)}

@@ -15,9 +15,7 @@ export default class Header extends Component {
     super(props);
     this.state = {
       type: props.conf.pageType,
-      visible: props.visible.header,
       menus: props.menus,
-      isNewTab: props.conf.isNewTab,
       option: [
         {
           title: this.renderFeature.bind(this),
@@ -36,10 +34,13 @@ export default class Header extends Component {
           line: true,
         },
         {
-          title: this.renderSiwtchOption.bind(this),
+          title: this.renderSiwtchOption.bind(this, 'isNewTab'),
         },
         {
-          title: this.renderHideHeaderOption.bind(this),
+          title: this.renderSiwtchOption.bind(this, 'isHideOSC'),
+        },
+        {
+          title: this.renderSiwtchOption.bind(this, 'isHideNav'),
         },
         {
           title: '关于应用',
@@ -59,30 +60,9 @@ export default class Header extends Component {
       ],
     };
     this.renderSiwtchOption = this.renderSiwtchOption.bind(this);
-    this.renderHideHeaderOption = this.renderHideHeaderOption.bind(this);
   }
   openChromeApps() {
     chrome.tabs.update({ url: 'chrome://apps/' });
-  }
-  onChangeSwitch(_, checked) {
-    this.setState({ isNewTab: checked });
-  }
-  onClickSwitch(e) {
-    e.preventDefault();
-    const { storage, conf } = this.props;
-    conf.isNewTab = !this.state.isNewTab;
-    storage.set({ conf });
-    this.setState({ isNewTab: !this.state.isNewTab });
-  }
-  onChangeSwitchHideHeader(_, checked) {
-    this.setState({ visible: checked });
-  }
-  onClickSwitchHideHeader(e) {
-    e.preventDefault();
-    const { storage, visible } = this.props;
-    visible.header = !this.state.visible;
-    storage.set({ visible });
-    this.setState({ visible: !this.state.visible });
   }
   renderFeature() {
     return (
@@ -95,19 +75,22 @@ export default class Header extends Component {
       </div>
     );
   }
-  renderSiwtchOption() {
-    return (
-      <div className={styles.switchItem} onClick={this.onClickSwitch.bind(this)}>
-        <span>在新标签页显示</span>
-        <Switch className={styles.switch} checked={this.state.isNewTab} onChange={this.onChangeSwitch.bind(this)} />
-      </div>
-    );
+  onClickSwitch(ty, e) {
+    e.preventDefault();
+    const { storage, conf } = this.props;
+    conf[ty] = !conf[ty];
+    storage.set({ conf });
   }
-  renderHideHeaderOption() {
+  renderSiwtchOption(ty) {
+    const { conf } = this.props;
+    let label = '';
+    if (ty === 'isNewTab') label = '在新标签页显示';
+    if (ty === 'isHideOSC') label = '隐藏新闻';
+    if (ty === 'isHideNav') label = '显示导航';
     return (
-      <div className={styles.switchItem} onClick={this.onClickSwitchHideHeader.bind(this)}>
-        <span>显示导航</span>
-        <Switch className={styles.switch} checked={this.state.visible} onChange={this.onChangeSwitchHideHeader.bind(this)} />
+      <div className={styles.switchItem} onClick={this.onClickSwitch.bind(this, ty)}>
+        <span>{label}</span>
+        <Switch className={styles.switch} checked={conf[ty]} />
       </div>
     );
   }
@@ -117,19 +100,15 @@ export default class Header extends Component {
     onChange(type);
   }
   onDropDown() {
-    const { storage, visible } = this.props;
-    this.setState({
-      visible: !this.state.visible,
-    }, () => {
-      visible.header = this.state.visible;
-      storage.set({ visible });
-    });
+    const { storage, conf } = this.props;
+    conf.isHideNav = !conf.isHideNav;
+    storage.set({ conf });
   }
   render() {
-    const { visible } = this.state;
+    const { conf } = this.props;
     return (
-      <div className={styles.warpper} style={{ marginTop: this.state.visible ? 0 : -50 }}>
-        {visible && <div onClick={this.onDropDown.bind(this)} className={styles.dropDown} />}
+      <div className={styles.warpper} style={{ marginTop: conf.isHideNav ? 0 : -50 }}>
+        {conf.isHideNav && <div onClick={this.onDropDown.bind(this)} className={styles.dropDown} />}
         <div className={styles.logo} >
           <a href="http://www.oschina.net/" rel="noopener noreferrer" target="_blank" >
             <img title="开源中国" alt="开源中国" src={logo} />
