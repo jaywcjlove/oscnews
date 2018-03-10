@@ -186,6 +186,7 @@ export default class Todo extends Component {
   renderMenuTask(item, idx) {
     const { todo } = this.props;
     const { editTask } = this.state;
+    const undone = item.list ? item.list.filter(child => child.complete === false) : [];
     return (
       <div
         key={idx}
@@ -207,7 +208,7 @@ export default class Todo extends Component {
           {editTask !== idx && iconList}
           {editTask !== idx && <span className={styles.innerText}>{item.label}</span>}
         </div>
-        {editTask !== idx && <span className={styles.count}>{item.list.length > 0 ? item.list.length : ''}</span>}
+        {editTask !== idx && <span className={styles.count}>{undone.length > 0 ? undone.length : ''}</span>}
       </div>
     );
   }
