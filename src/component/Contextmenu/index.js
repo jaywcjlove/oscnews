@@ -43,8 +43,18 @@ export default class Contextmenu extends Component {
     this.setState({ visible: true }, () => {
       if (!e || !this.menu) return;
       // 根据事件对象中鼠标点击的位置，进行定位
-      this.menu.style.left = `${e.clientX}px`;
-      this.menu.style.top = `${e.clientY}px`;
+      const winHeight = document.documentElement.clientHeight;
+      const winWidth = document.documentElement.clientWidth;
+      if (winHeight - e.clientY > this.menu.clientHeight) {
+        this.menu.style.top = `${e.clientY}px`;
+      } else {
+        this.menu.style.bottom = 0;
+      }
+      if (winWidth - e.clientX > this.menu.clientWidth) {
+        this.menu.style.left = `${e.clientX}px`;
+      } else {
+        this.menu.style.bottom = 0;
+      }
     });
   }
   onClickMenuItem(item) {
