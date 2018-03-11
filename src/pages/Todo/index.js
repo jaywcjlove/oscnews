@@ -20,13 +20,20 @@ export default class Todo extends Component {
       list: [],
       inputFocus: false, // 任务列表，是否在编辑状态
       rightMenuOption: [],
-      color: ['#ffcbd7', '#ffef62', '#e7f4a1', '#b0dffa', '#cdc5f4'],
+      color: ['#f3f3f3', '#ffcbd7', '#ffef62', '#e7f4a1', '#b0dffa', '#cdc5f4'],
     };
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.todo !== this.props.todo) {
       this.setState({ todo: nextProps.todo });
     }
+  }
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickOutside, true);
+  }
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside, true);
   }
   onClickItem(item, idx) {
     const { storage, todo } = this.props;
@@ -155,32 +162,29 @@ export default class Todo extends Component {
       this.setState({ addTask: false });
     }
   }
-  onTaskFocus() {
-    console.log('111')
-    this.isTaskFocus = true;
-  }
-  onTaskBlur(item, e) {
-    console.log('222')
+  handleClickOutside(e) {
     const { storage, todo } = this.props;
-    e.target.contentEditable = false;
-    item.task = e.target.innerText;
-    storage.set({ todo });
-    this.currentTaskNode = e.target;
-    this.currentTaskItem = item;
     this.timer = setTimeout(() => {
-      clearTimeout(this.timer);
-      if (!this.isTaskFocus) {
-        this.setState({
-          inputFocus: false,
-        });
+      if (this.taskNode !== e.target && this.taskColorNode !== e.target) {
+        this.currentTaskItem.task = this.taskNode.innerText;
+        storage.set({ todo });
+        this.setState({ inputFocus: false });
       }
-      this.isTaskFocus = false;
     }, 300);
   }
-  onModifyTodoColor(color) {
+  onTaskFocus(item, e) {
+    this.taskNode = e.target;
+    this.currentTaskItem = item;
+  }
+  onModifyTodoColor(color, e) {
     const { storage, todo } = this.props;
-    this.currentTaskNode.focus();
-    this.currentTaskItem.color = color;
+    this.taskNode.focus();
+    if (this.state.color[0] === color) {
+      delete this.currentTaskItem.color;
+    } else {
+      this.currentTaskItem.color = color;
+    }
+    this.taskColorNode = e.target;
     storage.set({ todo });
   }
   renderItemTodo(item, idx) {
@@ -199,7 +203,6 @@ export default class Todo extends Component {
           className={styles.task}
           onClick={this.onTask.bind(this, item)}
           onKeyPress={this.onKeyPressTask.bind(this, item)}
-          onBlur={this.onTaskBlur.bind(this, item)}
           onFocus={this.onTaskFocus.bind(this, item)}
         >
           {item.task}
@@ -258,15 +261,15 @@ export default class Todo extends Component {
           <div className={styles.content}>
             <div className={styles.title}>
               <h1>{listTodo.label}</h1>
-              <div className={styles.color}>
-                {inputFocus && color.map((item, idx) => (
-                  <span key={idx} onClick={this.onModifyTodoColor.bind(this, item)} style={{ backgroundColor: item }} />
-                ))}
-              </div>
             </div>
             <div className={styles.progress}>
               <Progress percent={percent} style={{ height: 3, marginBottom: 10, width: 100 }} />
               <label className={styles.percent}>完成 {percent.toFixed(0)}%</label>
+            </div>
+            <div className={styles.color}>
+              {inputFocus && color.map((item, idx) => (
+                <span key={idx} onClick={this.onModifyTodoColor.bind(this, item)} style={{ backgroundColor: item }} />
+              ))}
             </div>
             <div className={styles.input}>
               <input value={this.state.value} onChange={this.onChangeInput.bind(this)} onKeyPress={this.onKeyPressInput.bind(this)} placeholder="请添加一个任务..." />
