@@ -20,7 +20,7 @@ export default class Todo extends Component {
       list: [],
       inputFocus: false, // 任务列表，是否在编辑状态
       rightMenuOption: [],
-      color: ['#fa88a1', '#ffef62', '#e7f4a1', '#b0dffa', '#cdc5f4'],
+      color: ['#ffcbd7', '#ffef62', '#e7f4a1', '#b0dffa', '#cdc5f4'],
     };
   }
   componentWillReceiveProps(nextProps) {
@@ -78,15 +78,6 @@ export default class Todo extends Component {
     e.target.contentEditable = true;
     e.target.focus();
     this.setState({ inputFocus: true });
-  }
-  onTaskBlur(item, e) {
-    const { storage, todo } = this.props;
-    e.target.contentEditable = false;
-    item.task = e.target.innerText;
-    storage.set({ todo });
-    this.setState({
-      inputFocus: false,
-    });
   }
   onKeyPressTask(item, e) {
     const keyCode = e.keyCode || e.which || e.charCode;
@@ -164,10 +155,43 @@ export default class Todo extends Component {
       this.setState({ addTask: false });
     }
   }
+  onTaskFocus() {
+    console.log('111')
+    this.isTaskFocus = true;
+  }
+  onTaskBlur(item, e) {
+    console.log('222')
+    const { storage, todo } = this.props;
+    e.target.contentEditable = false;
+    item.task = e.target.innerText;
+    storage.set({ todo });
+    this.currentTaskNode = e.target;
+    this.currentTaskItem = item;
+    this.timer = setTimeout(() => {
+      clearTimeout(this.timer);
+      if (!this.isTaskFocus) {
+        this.setState({
+          inputFocus: false,
+        });
+      }
+      this.isTaskFocus = false;
+    }, 300);
+  }
+  onModifyTodoColor(color) {
+    const { storage, todo } = this.props;
+    this.currentTaskNode.focus();
+    this.currentTaskItem.color = color;
+    storage.set({ todo });
+  }
   renderItemTodo(item, idx) {
+    const props = {};
+    if (item.color) {
+      props.backgroundColor = item.color;
+    }
     return (
       <div
         key={idx}
+        style={props}
         className={classNames(styles.item, { del: item.complete === true })}
       >
         <input className={styles.toggle} readOnly checked={item.complete} onClick={this.onToggleChecked.bind(this, item, idx)} type="checkbox" />
@@ -176,6 +200,7 @@ export default class Todo extends Component {
           onClick={this.onTask.bind(this, item)}
           onKeyPress={this.onKeyPressTask.bind(this, item)}
           onBlur={this.onTaskBlur.bind(this, item)}
+          onFocus={this.onTaskFocus.bind(this, item)}
         >
           {item.task}
         </label>
@@ -235,7 +260,7 @@ export default class Todo extends Component {
               <h1>{listTodo.label}</h1>
               <div className={styles.color}>
                 {inputFocus && color.map((item, idx) => (
-                  <span key={idx} style={{ backgroundColor: item }} />
+                  <span key={idx} onClick={this.onModifyTodoColor.bind(this, item)} style={{ backgroundColor: item }} />
                 ))}
               </div>
             </div>
