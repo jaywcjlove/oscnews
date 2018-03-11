@@ -1,6 +1,6 @@
 {
   "name": "oscnews",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "查看开源中国软件更新资讯，内置文档导航，GitHub 趋势榜，linux命令索引，浏览历史记录和时钟页面。",
   "icons": {
     "128": "osc-logo.png"
