@@ -1005,6 +1005,11 @@
         "icon": "https://jaywcjlove.github.io/logo/codepen.svg"
       },
       {
+        "label": "JS Fiddle",
+        "value": "https://jsfiddle.net",
+        "icon": "https://jaywcjlove.github.io/logo/jsfiddle.svg"
+      },
+      {
         "label": "RunJS",
         "value": "http://runjs.cn/",
         "icon": "https://jaywcjlove.github.io/logo/runjs.jpg"
