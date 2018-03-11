@@ -449,6 +449,11 @@
         "icon": "https://jaywcjlove.github.io/logo/cyzone.jpg"
       },
       {
+        "label": "极客邦",
+        "value": "https://www.geekbang.org",
+        "icon": "https://jaywcjlove.github.io/logo/geekbang.svg"
+      },
+      {
         "label": "Engadget",
         "value": "https://cn.engadget.com",
         "icon": "https://jaywcjlove.github.io/logo/engadget.svg"
