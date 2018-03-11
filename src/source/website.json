@@ -613,7 +613,7 @@
       {
         "label": "和讯",
         "value": "http://www.hexun.com/",
-        "icon": "https://jaywcjlove.github.io/logo/hexun.png"
+        "icon": "https://jaywcjlove.github.io/logo/hexun.svg"
       },
       {
         "label": "中国经济网",
@@ -684,7 +684,7 @@
       {
         "label": "蚂蜂窝",
         "value": "http://www.mafengwo.cn/",
-        "icon": "https://jaywcjlove.github.io/logo/mafengwo.png"
+        "icon": "https://jaywcjlove.github.io/logo/mafengwo.svg"
       },
       {
         "label": "携程",
