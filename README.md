@@ -33,9 +33,13 @@
 
 #### 网址导航
 
-- 删除网址：摁住 `alt` 键，出现删除按钮
+- 删除网址：摁住 `alt` 键，出现删除按钮，也可以右键
 
 <img width="430px" src="./img/newtab1.gif"> 
+
+#### 任务清单
+
+<img width="430px" src="./img/newtab2.gif"> 
 
 #### 兼容FireFox
 
