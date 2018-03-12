@@ -118,8 +118,8 @@ cd ~/Library/Application\ Support/Google/Chrome/Default/Extensions
 - [ ] 插件官方网站
 - [ ] 密码管理器
 - [ ] RSS订阅功能
-- [ ] 提醒事项
-  - [ ] 记录代办事项
+- [x] 提醒事项
+  - [x] 记录代办事项
   - [ ] Chrome通知
 - [x] 设置功能
   - [x] 设置是否替换新标签页显示
