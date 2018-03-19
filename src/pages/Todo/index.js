@@ -165,7 +165,7 @@ export default class Todo extends Component {
   handleClickOutside(e) {
     const { storage, todo } = this.props;
     this.timer = setTimeout(() => {
-      if (this.taskNode !== e.target && this.taskColorNode !== e.target) {
+      if (this.taskNode !== e.target && this.taskColorNode !== e.target && this.taskNode) {
         this.currentTaskItem.task = this.taskNode.innerText;
         storage.set({ todo });
         this.setState({ inputFocus: false });

@@ -295,6 +295,11 @@
         "url": "https://icons8.cn/icon/set/{{kw}}/all"
       },
       {
+        "label": "FlatIcon",
+        "value": "flaticon",
+        "url": "https://www.flaticon.com/search?word={{kw}}"
+      },
+      {
         "label": "Share Icon",
         "value": "shareicon",
         "url": "https://www.shareicon.net/search?kwd={{kw}}"
