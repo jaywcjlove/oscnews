@@ -1,4 +1,4 @@
-const path = require('path');
+// const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const paths = require('./paths');
@@ -39,12 +39,12 @@ module.exports = {
             test: /\.(js|jsx|mjs)$/,
             exclude: [/node_modules/, /\.(cache)/],
             loader: require.resolve('babel-loader'),
-            options: require('./.babelrc'),
+            options: require('./.babelrc'), // eslint-disable-line
           }, {
             test: /\.(js|jsx|mjs)$/,
             exclude: [/node_modules/, /\.(cache)/],
             loader: require.resolve('babel-loader'),
-            options: require('./.babelrc'),
+            options: require('./.babelrc'), // eslint-disable-line
           }, {
             test: /\.(png|svg|jpg|gif)$/,
             loader: require.resolve('url-loader'),
@@ -65,11 +65,11 @@ module.exports = {
                 },
               },
               require.resolve('less-loader'),
-            ]
-          }
-        ]
+            ],
+          },
+        ],
       },
-    ]
+    ],
   },
   plugins: [
     new CleanWebpackPlugin([paths.output]),
@@ -78,7 +78,7 @@ module.exports = {
         {
           copy: paths.copyFile,
         },
-      ]
-    })
-  ]
-}
+      ],
+    }),
+  ],
+};

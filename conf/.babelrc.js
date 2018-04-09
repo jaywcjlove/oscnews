@@ -1,8 +1,6 @@
 const eslintrc = {
   "presets": [
-    [
-      "env",
-      {
+    [ "env", {
         "targets": {
           "browsers": ["last 2 versions", "ie > 8"]
         }

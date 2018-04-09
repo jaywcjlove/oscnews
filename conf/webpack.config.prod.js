@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const common = require('./webpack.config');
 const webpack = require('webpack');
 
-const shouldUseSourceMap = true
+const shouldUseSourceMap = true;
 
 module.exports = merge(common, {
   devtool: false,
@@ -12,7 +12,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
+      'process.env.NODE_ENV': JSON.stringify('production'),
     }),
     new HtmlWebpackPlugin({
       inject: true,
@@ -52,5 +52,5 @@ module.exports = merge(common, {
       },
       sourceMap: shouldUseSourceMap,
     }),
-  ]
+  ],
 });

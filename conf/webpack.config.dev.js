@@ -6,12 +6,12 @@ const paths = require('./paths');
 module.exports = merge(common, {
   devtool: 'source-map',
   devServer: {
-    contentBase: paths.output
+    contentBase: paths.output,
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: '',
-      template: './src/index.html'
+      template: './src/index.html',
     }),
-  ]
+  ],
 });
