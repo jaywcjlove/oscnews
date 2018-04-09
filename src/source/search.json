@@ -614,6 +614,11 @@
         "url": "http://www.cilimao.me/search?word={{kw}}"
       },
       {
+        "label": "去转盘网",
+        "value": "quzhuanpan",
+        "url": "http://www.quzhuanpan.com/source/search.action?q={{kw}}"
+      },
+      {
         "label": "网盘115",
         "value": "pan115",
         "url": "http://www.pan115.com/search?key={{kw}}"
