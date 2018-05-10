@@ -1000,6 +1000,11 @@
         "icon": "https://jaywcjlove.github.io/logo/coding.svg"
       },
       {
+        "label": "StackBlitz",
+        "value": "https://stackblitz.com/",
+        "icon": "https://jaywcjlove.github.io/logo/stackblitz.svg"
+      },
+      {
         "label": "CodePen",
         "value": "https://codepen.io/",
         "icon": "https://jaywcjlove.github.io/logo/codepen.svg"
