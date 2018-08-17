@@ -67,6 +67,7 @@ export default class Github extends Component {
       const $ = cheerio.load(response);
       // 清除头像，避免被和谐
       $('.f6 .mr-3').not('.mr-3:first-child').empty();
+      $('.starring-container').empty();
       const _html = $('div.explore-content').html();
       if (!_html) return;
       localStorage.setItem('github-list', _html);
