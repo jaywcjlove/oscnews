@@ -72,7 +72,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin([paths.output]),
+    new CleanWebpackPlugin(['oscnews'], {
+      root: process.cwd(),
+    }),
     new FileManagerPlugin({
       onEnd: [
         {
