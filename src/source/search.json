@@ -350,6 +350,11 @@
         "url": "http://www.iconarchive.com/search?q={{kw}}"
       },
       {
+        "label": "SFont.CN",
+        "value": "sfont",
+        "url": "http://www.sfont.cn/search?q={{kw}}"
+      },
+      {
         "label": "Fontello",
         "value": "fontello",
         "url": "http://fontello.com/#search={{kw}}"
