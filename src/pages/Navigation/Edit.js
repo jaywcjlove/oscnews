@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import styles from './Edit.less';
+import styles from './Edit.module.less';
 import websiteIcon from '../../assets/website.svg';
 import document from '../../dev-site/src/document.json';
 import website from '../../source/website.json';
@@ -136,7 +136,7 @@ export default class Edit extends Component {
             {edit.label}
           </span>
           <input className={styles.url} onChange={this.onChangeEdit.bind(this)} value={edit.value} type="text" placeholder="输入网址" />
-          <button className={styles.save} onClick={this.onClickAdd.bind(this, edit)}>添加</button>
+          <button type="button" className={styles.save} onClick={this.onClickAdd.bind(this, edit)}>添加</button>
           {active === 'document' && edit.urls && <div className={styles.otherUrl}>{this.renderEditItemURL(edit)}</div>}
         </div>
         <div className={styles.editTabList}>

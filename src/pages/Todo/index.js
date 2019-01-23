@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import styles from './index.less';
+import styles from './index.module.less';
 import Progress from '../../component/Progress';
 import Contextmenu from '../../component/Contextmenu';
 import { list as iconList } from '../../component/Icon';
@@ -207,7 +207,7 @@ export default class Todo extends Component {
         >
           {item.task}
         </label>
-        <button className={styles.destroy} onClick={this.onRemoveTodoItem.bind(this, item, idx)} />
+        <button type="button" className={styles.destroy} onClick={this.onRemoveTodoItem.bind(this, item, idx)} />
       </div>
     );
   }

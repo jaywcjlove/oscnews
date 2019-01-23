@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import styles from './index.less';
+import styles from './index.module.less';
 import addIcon from '../../assets/add-icon.png';
 import websiteIcon from '../../assets/website.svg';
 import website from '../../source/website.json';

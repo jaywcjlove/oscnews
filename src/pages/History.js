@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
 import Footer from '../component/Footer';
-import styles from './History.less';
+import styles from './History.module.less';
 
 function isToday(str) {
   const d = new Date(str.replace(/-/g, '/'));
@@ -54,6 +54,7 @@ export default class History extends PureComponent {
       microsecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
     }
     const oneWeekAgo = (new Date()).getTime() - microsecondsPerWeek;
+    // eslint-disable-next-line
     chrome.history.search({
       text: '',
       startTime: oneWeekAgo,
@@ -64,6 +65,7 @@ export default class History extends PureComponent {
     });
   }
   onClickClean() {
+    // eslint-disable-next-line
     chrome.history.deleteAll(() => {
       this.setState({
         list: [],
@@ -101,7 +103,7 @@ export default class History extends PureComponent {
               <li key={idx}>
                 <div className={styles.favicon} style={{ backgroundImage: `-webkit-image-set(url("chrome://favicon/size/16@1x/${item.url}") 1x, url("chrome://favicon/size/16@2x/${item.url}") 2x)` }} />
                 <div>{time(item.lastVisitTime)}</div>
-                <a target="_blank" href={item.url}>{item.title || item.url}</a>
+                <a target="_blank" rel="noopener noreferrer" href={item.url}>{item.title || item.url}</a>
               </li>
             );
           })}

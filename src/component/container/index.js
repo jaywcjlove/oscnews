@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import Header from '../Header';
 import OSCNews from '../OSCNews';
-import styles from './index.less';
+import styles from './index.module.less';
 
 export default class Container extends Component {
   constructor(props) {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import styles from './index.less';
+import styles from './index.module.less';
 
 
 const rotations = [0, 0, 0]; // [seconds, minutes, hours]

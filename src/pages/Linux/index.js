@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import command from 'linux-command';
 import classNames from 'classnames';
-import styles from './index.less';
+import styles from './index.module.less';
 import Search from '../../component/Search';
 import Footer from '../../component/Footer';
 import logo from '../../assets/linux-logo.svg';
@@ -79,14 +79,14 @@ export default class Linux extends Component {
             href={`https://jaywcjlove.github.io/linux-command/c/${item.n}.html`}
             dangerouslySetInnerHTML={{ __html: `${name} - ${des}` }}
           />
-          <a className={styles.edit} target="_blank" href={`https://github.com/jaywcjlove/linux-command/edit/master/command/${item.n}.md`}>编辑</a>
+          <a className={styles.edit} target="_blank" rel="noopener noreferrer" href={`https://github.com/jaywcjlove/linux-command/edit/master/command/${item.n}.md`}>编辑</a>
         </div>
       );
     });
     return (
       <div className={styles.warpper}>
         <div className={styles.header}>
-          <a href="https://github.com/jaywcjlove/linux-command" rel="noopener noreferrer" target="_blank" title="Linux命令搜索工具"><img alt="linux-command logo" src={logo} /></a>
+          <a href="https://github.com/jaywcjlove/linux-command" target="_blank" rel="noopener noreferrer" title="Linux命令搜索工具"><img alt="linux-command logo" src={logo} /></a>
         </div>
         <Search placeholder="请输入命令" style={{ width: 430 }} onChange={this.onChange.bind(this)} onKeyUp={this.onKeyUp.bind(this)} onSearch={this.onSearch.bind(this)} />
         <div className={styles.list}>

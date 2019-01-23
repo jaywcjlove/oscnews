@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Dropdown from '../component/Dropdown';
-import Switch from '../component/Switch';
+import Dropdown from './Dropdown';
+import Switch from './Switch';
 import logo from '../assets/oschina.svg';
 import chromeApp from '../assets/chrome-app.svg';
 // import gitee from '../assets/gitee.svg';
 // import github from '../assets/github.svg';
 // import apple from '../assets/apple.svg';
-import styles from './Header.less';
+import styles from './Header.module.less';
 
 export default class Header extends Component {
   constructor(props) {
@@ -62,6 +62,7 @@ export default class Header extends Component {
     this.renderSiwtchOption = this.renderSiwtchOption.bind(this);
   }
   openChromeApps() {
+    // eslint-disable-next-line
     chrome.tabs.update({ url: 'chrome://apps/' });
   }
   renderFeature() {

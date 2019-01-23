@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Root from './Root';
 import './index.less';
 
+// eslint-disable-next-line
 const storage = chrome.storage.sync;
 
 storage.get(['oscconfig', 'visible', 'conf', 'dbs', 'todo'], (items) => {
@@ -75,6 +76,7 @@ storage.get(['oscconfig', 'visible', 'conf', 'dbs', 'todo'], (items) => {
 
   items.storage = storage;
   if (!/#normal$/.test(location.hash) && items.conf.isNewTab === false) {
+    // eslint-disable-next-line
     chrome.tabs.update({ url: 'chrome-search://local-ntp/local-ntp.html' });
   } else {
     ReactDOM.render(

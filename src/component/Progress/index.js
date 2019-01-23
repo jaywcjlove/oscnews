@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styles from './index.less';
+import styles from './index.module.less';
 
 export default class Progress extends Component {
   constructor(props) {

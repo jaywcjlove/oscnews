@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import styles from './index.less';
+import styles from './index.module.less';
 
 export default class Contextmenu extends Component {
   constructor(props) {

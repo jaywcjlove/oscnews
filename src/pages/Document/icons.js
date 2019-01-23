@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './index.less';
+import styles from './index.module.less';
 
 const github = (
   <svg version="1.1" viewBox="0 0 16 16">

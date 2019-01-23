@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import cheerio from 'cheerio';
-import { fetchInterval, fetchTimely } from '../utils/';
+import { fetchInterval, fetchTimely } from '../utils';
 import Footer from '../component/Footer';
 import Select from '../component/Select';
 import Loading from '../component/Loading';
-import styles from './Github.less';
+import styles from './Github.module.less';
 import optionLang from '../source/trending.json';
 
 const githublist = localStorage.getItem('github-list');

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import styles from './index.less';
+import styles from './index.module.less';
 import Footer from '../../component/Footer';
 import source from '../../dev-site/src/document.json';
 import { github, zhHans, heart, website } from './icons';

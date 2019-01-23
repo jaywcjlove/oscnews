@@ -11,6 +11,7 @@ export default class Root extends Component {
   }
   componentDidMount() {
     const { config } = this.state;
+    // eslint-disable-next-line
     chrome.storage.onChanged.addListener((changes) => {
       for (const i in changes) {
         if (Object.prototype.hasOwnProperty.call(changes, i)) {

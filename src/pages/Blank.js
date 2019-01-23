@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
-import solarLunar from 'solarLunar';
+import solarLunar from 'solarlunar';
 import { theWeek } from '../utils';
-import styles from './Blank.less';
+import styles from './Blank.module.less';
 import Clock from '../component/Clock';
 
 // 搜索地点

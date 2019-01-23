@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import styles from './index.less';
+import styles from './index.module.less';
 import Select from '../Select';
 
 export default class Search extends Component {
@@ -13,7 +13,7 @@ export default class Search extends Component {
       className,
       placeholder,
       autoComplete = 'off',
-      autoFocus,
+      // autoFocus,
       select,
       query,
       onChange,
@@ -27,10 +27,10 @@ export default class Search extends Component {
       <div className={classNames(styles.search, className)} style={style}>
         <div className={classNames(styles.input, { [`${styles.noSelect}`]: !select })}>
           {select && <Select {...select} />}
-          <input ref={input => this.input = input} placeholder={placeholder} autoFocus={autoFocus} autoComplete={autoComplete} style={inputStyle} value={query} onChange={onChange} onKeyUp={onKeyUp} />
+          <input type="text" ref={input => this.input = input} placeholder={placeholder} autoComplete={autoComplete} style={inputStyle} value={query} onChange={onChange} onKeyUp={onKeyUp} />
         </div>
         <div className={styles.searchBtn}>
-          <button onClick={onSearch}>搜索</button>
+          <button type="button" onClick={onSearch}>搜索</button>
         </div>
       </div>
     );

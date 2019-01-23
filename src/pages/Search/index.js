@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import Search from '../../component/Search';
 import searchdb from '../../source/search.json';
-import styles from './index.less';
+import styles from './index.module.less';
 import Loading from '../../component/Loading';
 
 export default class SearchView extends Component {
