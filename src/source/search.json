@@ -290,6 +290,11 @@
         "url": "https://findicons.com/search/{{kw}}"
       },
       {
+        "label": "Noun Project",
+        "value": "thenounproject",
+        "url": "https://thenounproject.com/search/?q={{kw}}"
+      },
+      {
         "label": "Icons8",
         "value": "icons8",
         "url": "https://icons8.cn/icon/set/{{kw}}/all"
