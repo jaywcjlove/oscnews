@@ -29,7 +29,7 @@
     "babel-polyfill": "^6.26.0",
     "cheerio": "^1.0.0-rc.2",
     "classnames": "^2.2.5",
-    "linux-command": "^1.0.6",
+    "linux-command": "^1.2.8",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
