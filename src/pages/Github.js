@@ -75,21 +75,23 @@ export default class Github extends Component {
       });
       const resultData = [];
       const $ = cheerio.load(response);
-      $('.Box-row').each(function (idx, item) {
+      $('.Box-row').each((idx, item) => {
         // 不需要头像，避免被和谐
-        const full_name = $(item).find('h1 a').text().replace(/(\n|\s)/g, '');
+        /* eslint-disable */
+        const fullName = $(item).find('h1 a').text().replace(/(\n|\s)/g, '');
         const href = $(item).find('h1 a').attr('href').replace(/(\n|\s)/g, '');
         const language = $(item).find('span[itemprop=programmingLanguage]').text().replace(/(\n|\s)/g, '');
         const languageColor = $(item).find('span.repo-language-color');
-        const stargazers_count = $(item).find('svg[aria-label="star"].octicon.octicon-star').parent().text().replace(/(\n|\s|,)/g, '');
+        const stargazersCount = $(item).find('svg[aria-label="star"].octicon.octicon-star').parent().text().replace(/(\n|\s|,)/g, '');
         const forked = $(item).find('svg[aria-label="fork"].octicon.octicon-repo-forked').parent().text().replace(/(\n|\s|,)/g, '');
         const todayStar = $(item).find('.float-sm-right svg.octicon.octicon-star').parent().text().replace(/(\n|,)/g, '').trim();
         const description = $(item).find('p.text-gray').text().replace(/(\n)/g, '').trim();
+        /* eslint-enable */
         let color = '';
         if (language && languageColor && languageColor.css) {
           color = languageColor.css('background-color');
         }
-        resultData.push({ full_name, language, color, description, forked, stargazers_count: Number(stargazers_count), todayStar, html_url: href, rank: idx + 1 });
+        resultData.push({ full_name: fullName, language, color, description, forked, stargazers_count: Number(stargazersCount), todayStar, html_url: href, rank: idx + 1 });
       });
       if (!resultData) return;
       localStorage.setItem('github-list', JSON.stringify(resultData));
@@ -98,7 +100,7 @@ export default class Github extends Component {
         loading: false,
         content: resultData,
       });
-    }).catch((err) => {
+    }).catch(() => {
       this.setState({ loading: false });
       if (!this.mounted) return;
       this.setState({
@@ -167,7 +169,7 @@ export default class Github extends Component {
                       <span className={styles.todayStar}>{starSVG}<span>{item.todayStar}</span></span>
                     </div>
                   </li>
-                )
+                );
               })}
             </ul>
           )}
