@@ -30,26 +30,31 @@
 }
 
 .list {
-  padding: 0 10px;
+  ul {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
   a {
     text-decoration: none;
   }
-  ol, li, h3 {
+  li, h3 {
     margin: 0;
     padding: 0;
   }
-  ol, li {
-    list-style: none;
-  }
   li {
+    list-style: none;
+    min-width: 0;
+    box-sizing: border-box;
     background-color: #fff;
-    margin-bottom: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 10px;
     border-radius: 3px;
     transition: all .3s;
-    width: calc(~"50% - 10px");
+    margin-bottom: 10px;
+    padding: 10px;
+    flex: calc(~"50% - 10px");
+    margin-left: 5px;
+    margin-right: 5px;
     display: inline-block;
     &:hover {
       background-color: #f9f9f9;
@@ -65,61 +70,33 @@
         text-decoration: underline;
       }
     }
-  }
-  :global {
-    .repo-list {
-      display: flex;
-      flex-wrap: wrap;
-      font-size: 12px;
+    .description {
+      padding: 8px 0;
+      line-height: 14px;
+      min-height: 28px;
     }
-    .repo-language-color {
-      position: relative;
-      top: 1px;
+    .star, .language, .forked, .todayStar {
       display: inline-block;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-    }
-    .avatar {
-      display: inline-block;
-      overflow: hidden;
-      line-height: 1;
-      vertical-align: middle;
-      border-radius: 3px;
-      border-style: none;
-      height: 12px;
-      width: 12px;
-    }
-    .mr-3 {
-      margin-right: 10px;
-    }
-    .float-sm-right {
-      float: right;
-    }
-    .octicon {
-      vertical-align: text-bottom;
-      display: inline-block;
-      fill: currentColor;
-    }
-    .d-inline-block {
-      display: inline-block;
-    }
-    .float-right {
-      float: right;
-      a {
-        color: #0366d6;
+      margin-right: 8px!important;
+      svg {
+        vertical-align: middle;
+        margin-right: 5px;
+        height: 14px;
+        margin-top: -3px;
       }
     }
-    .text-gray {
-      color: #586069;
-      a:first-child {
-        margin-right: 10px;
-      }
-      span + a, a + a {
-        margin-right: 10px;
-      }
-      a {
-        color: #586069;
+    .star {
+      svg {}
+    }
+    .language {
+      span {
+        border-radius: 50%;
+        display: inline-block;
+        height: 12px;
+        position: relative;
+        top: 1px;
+        width: 12px;
+        margin-right: 5px;
       }
     }
   }
