@@ -28,7 +28,7 @@ const date = () => {
   return (
     <div className={styles.date}>
       {`${new Date().getMonth() + 1}月${new Date().getDate()}日  ${['周日', '周一', '周二', '周三', '周四', '周五', '周六'][new Date().getDay()]} `}
-      <sup>{`第${theWeek() + 1}周`}</sup>
+      <sup>{`第${theWeek()}周`}</sup>
     </div>
   );
 };

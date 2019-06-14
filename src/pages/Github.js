@@ -143,9 +143,9 @@ export default class Github extends Component {
             <div>Loading...</div>
           ) : (
             <ul>
-              {content.map((item) => {
+              {content.map((item, idx) => {
                 return (
-                  <li>
+                  <li key={idx}>
                     <h3>
                       <a href={item.html_url}>{item.full_name}</a>
                     </h3>
