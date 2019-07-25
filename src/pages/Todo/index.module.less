@@ -173,17 +173,22 @@
         .task {
           text-decoration: line-through;
         }
-        color: #d9d9d9;
+        color: #9f9f9f;
       }
       &:hover {
         .destroy {
           display: block;
         }
       }
+      &:not(:global(.del)) .task {
+        -webkit-user-modify: read-write-plaintext-only;
+      }
+      svg {
+        margin: 7px 5px 0 8px;
+      }
     }
     .task {
       flex: 1;
-      -webkit-user-modify: read-write-plaintext-only;
       overflow: hidden;
       outline: 0;
     }
@@ -205,33 +210,6 @@
       &::after {
         content: '×';
         line-height: 32px;
-      }
-    }
-    .toggle {
-      text-align: center;
-      height: auto;
-      position: relative;
-      border: none;
-      background: none;
-      vertical-align: middle;
-      outline: 0;
-      outline: none;
-      -webkit-appearance: none;
-      appearance: none;
-      margin-right: 10px;
-      width: 18px;
-      height: auto;
-      &::after {
-        content: url(../../assets/todo-unchecked.svg);
-        display: block;
-        margin-top: 5px;
-        margin-left: 3px;
-      }
-      &:active:after {
-        content: url(../../assets/todo-checked.svg);
-      }
-      &:checked:after {
-        content: url(../../assets/todo-checked.svg);
       }
     }
   }

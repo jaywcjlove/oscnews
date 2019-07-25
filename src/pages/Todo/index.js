@@ -4,6 +4,7 @@ import styles from './index.module.less';
 import Progress from '../../component/Progress';
 import Contextmenu from '../../component/Contextmenu';
 import { list as iconList } from '../../component/Icon';
+import { Checked, Unchecked } from './icon';
 
 
 export default class Todo extends Component {
@@ -198,7 +199,7 @@ export default class Todo extends Component {
         style={props}
         className={classNames(styles.item, { del: item.complete === true })}
       >
-        <input className={styles.toggle} readOnly checked={item.complete} onClick={this.onToggleChecked.bind(this, item, idx)} type="checkbox" />
+        {item.complete ? <Checked onClick={this.onToggleChecked.bind(this, item, idx)} /> : <Unchecked onClick={this.onToggleChecked.bind(this, item, idx)} />}
         <label
           className={styles.task}
           onClick={this.onTask.bind(this, item)}
