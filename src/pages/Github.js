@@ -82,16 +82,16 @@ export default class Github extends Component {
         const href = $(item).find('h1 a').attr('href').replace(/(\n|\s)/g, '');
         const language = $(item).find('span[itemprop=programmingLanguage]').text().replace(/(\n|\s)/g, '');
         const languageColor = $(item).find('span.repo-language-color');
-        const stargazersCount = $(item).find('svg[aria-label="star"].octicon.octicon-star').parent().text().replace(/(\n|\s|,)/g, '');
-        const forked = $(item).find('svg[aria-label="fork"].octicon.octicon-repo-forked').parent().text().replace(/(\n|\s|,)/g, '');
-        const todayStar = $(item).find('.float-sm-right svg.octicon.octicon-star').parent().text().replace(/(\n|,)/g, '').trim();
+        const stargazersCount = $(item).find('span[aria-label="star"] svg[aria-label="star"].octicon.octicon-star').parent().parent().text().replace(/(\n|\s|,)/g, '');
+        const forked = $(item).find('span[aria-label="fork"] svg.octicon.octicon-repo-forked').parent().parent().text().replace(/(\n|\s|,)/g, '');
+        const todayStar = $(item).find('span.float-sm-right').text().replace(/(\n|,)/g, '').trim();
         const description = $(item).find('p.text-gray').text().replace(/(\n)/g, '').trim();
         /* eslint-enable */
         let color = '';
         if (language && languageColor && languageColor.css) {
           color = languageColor.css('background-color');
         }
-        resultData.push({ full_name: fullName, language, color, description, forked, stargazers_count: Number(stargazersCount), todayStar, html_url: href, rank: idx + 1 });
+        resultData.push({ full_name: fullName, language, color, description, forked, stargazers_count: parseInt(stargazersCount, 10), todayStar, html_url: href, rank: idx + 1 });
       });
       if (!resultData) return;
       localStorage.setItem('github-list', JSON.stringify(resultData));
