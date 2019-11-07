@@ -82,7 +82,7 @@ export default class Github extends Component {
         const href = $(item).find('h1 a').attr('href').replace(/(\n|\s)/g, '');
         const language = $(item).find('span[itemprop=programmingLanguage]').text().replace(/(\n|\s)/g, '');
         const languageColor = $(item).find('span.repo-language-color');
-        const stargazersCount = $(item).find('span[aria-label="star"] svg[aria-label="star"].octicon.octicon-star').parent().parent().text().replace(/(\n|\s|,)/g, '');
+        const stargazersCount = $(item).find('svg[aria-label="star"].octicon.octicon-star').parent().text().replace(/(\n|\s|,)/g, '');
         const forked = $(item).find('span[aria-label="fork"] svg.octicon.octicon-repo-forked').parent().parent().text().replace(/(\n|\s|,)/g, '');
         const todayStar = $(item).find('span.float-sm-right').text().replace(/(\n|,)/g, '').trim();
         const description = $(item).find('p.text-gray').text().replace(/(\n)/g, '').trim();
