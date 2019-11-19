@@ -82,8 +82,6 @@ export default class Github extends Component {
         const href = $(item).find('h1 a').attr('href').replace(/(\n|\s)/g, '');
         const language = $(item).find('span[itemprop=programmingLanguage]').text().replace(/(\n|\s)/g, '');
         const languageColor = $(item).find('span.repo-language-color');
-        const stargazersCount = $(item).find('svg[aria-label="star"].octicon.octicon-star').parent().text().replace(/(\n|\s|,)/g, '');
-        const forked = $(item).find('span[aria-label="fork"] svg.octicon.octicon-repo-forked').parent().parent().text().replace(/(\n|\s|,)/g, '');
         const todayStar = $(item).find('span.float-sm-right').text().replace(/(\n|,)/g, '').trim();
         const description = $(item).find('p.text-gray').text().replace(/(\n)/g, '').trim();
         /* eslint-enable */
@@ -91,6 +89,18 @@ export default class Github extends Component {
         if (language && languageColor && languageColor.css) {
           color = languageColor.css('background-color');
         }
+        let stargazersCount = '';
+        let node = $(item).find('svg[aria-label="star"].octicon.octicon-star');
+        if (node && node[0] && node[0].next) {
+          stargazersCount = node[0].next.data.replace(/(\n|\s|,)/g, '');
+        }
+
+        let forked = '-';
+        node = $(item).find('svg[aria-label="repo-forked"].octicon.octicon-repo-forked');
+        if (node) {
+          forked = node[0].next.data.replace(/(\n|\s|,)/g, '');
+        }
+
         resultData.push({ full_name: fullName, language, color, description, forked, stargazers_count: parseInt(stargazersCount, 10), todayStar, html_url: href, rank: idx + 1 });
       });
       if (!resultData) return;
