@@ -6,7 +6,8 @@
     "128": "osc-logo.png"
   },
   "permissions": [
-    "*://*/*",
+    "*://*.github.com/*",
+    "*://www.oschina.net/*",
     "tabs",
     "activeTab",
     "unlimitedStorage",
