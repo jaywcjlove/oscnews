@@ -2,6 +2,7 @@
   "name": "oscnews",
   "version": "1.14.2",
   "description": "开源中国新闻，查看开源中国软件更新资讯，文档导航，GitHub 趋势榜，和时钟页面。",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "start": "kkt watch",
@@ -19,11 +20,10 @@
   },
   "homepage": "https://github.com/jaywcjlove/oscnews#readme",
   "devDependencies": {
-    "@kkt/plugin-less": "^1.2.0",
-    "clean-webpack-plugin": "^1.0.1",
-    "filemanager-webpack-plugin": "^2.0.5",
-    "kkt": "^3.1.0",
-    "webpack-cli": "^3.2.1"
+    "@kkt/loader-less": "5.10.3",
+    "clean-webpack-plugin": "3.0.0",
+    "filemanager-webpack-plugin": "2.0.5",
+    "kkt": "5.10.3"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
@@ -35,5 +35,20 @@
     "react-dom": "^16.2.0",
     "solarlunar": "^2.0.1",
     "webpack-merge": "^4.1.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
