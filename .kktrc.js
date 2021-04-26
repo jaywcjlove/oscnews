@@ -1,13 +1,12 @@
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import FileManagerPlugin from 'filemanager-webpack-plugin';
+import lessModules from '@kkt/less-modules';
 
-export const loaderOneOf = [
-  require.resolve('@kkt/loader-less')
-];
-
-export default (conf) => {
+export default (conf, env, options) => {
+  conf = lessModules(conf, env, options);
   conf.output.publicPath = './';
-  const regexp = /(HotModuleReplacementPlugin)/;
+
+  const regexp = /(ReactRefreshWebpackPlugin)/;
   conf.plugins = conf.plugins.map((item) => {
     if (item.constructor && item.constructor.name && regexp.test(item.constructor.name)) {
       return null;
@@ -18,15 +17,20 @@ export default (conf) => {
   conf.plugins.push(new CleanWebpackPlugin({
     cleanStaleWebpackAssets: true
   }));
-  conf.plugins.push(new FileManagerPlugin({
-    onEnd: [{
-      copy: [
-        { source: './chrome-main/manifest.json', destination: './build/manifest.json' },
-        { source: './chrome-main/background.js', destination: './build/background.js' },
-        { source: './chrome-main/osc-logo.png', destination: './build/osc-logo.png' },
-        { source: './src/dev-site/public/icons', destination: './build/icons' },
-      ],
-    }],
-  }));
+
+  conf.plugins.push(
+    new FileManagerPlugin({
+      events: {
+        onEnd: {
+          copy: [
+            { source: './chrome-main/manifest.json', destination: './dist/manifest.json' },
+            { source: './chrome-main/background.js', destination: './dist/background.js' },
+            { source: './chrome-main/osc-logo.png', destination: './dist/osc-logo.png' },
+            { source: './src/dev-site/public/icons', destination: './dist/icons' },
+          ],
+        },
+      },
+    }),
+  );
   return conf;
 }
