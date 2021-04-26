@@ -5,8 +5,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "FAST_REFRESH=false kkt start --watch --no-open-browser",
-    "build": "kkt build"
+    "start": "BUILD_PATH=dist kkt start --watch --no-open-browser",
+    "build": "BUILD_PATH=dist kkt build"
   },
   "repository": {
     "type": "git",

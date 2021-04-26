@@ -15,7 +15,7 @@ export default (conf, env, options) => {
   }).filter(Boolean);
 
   conf.plugins.push(new CleanWebpackPlugin({
-    cleanStaleWebpackAssets: true
+    // cleanStaleWebpackAssets: true
   }));
 
   conf.plugins.push(
