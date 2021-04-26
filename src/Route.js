@@ -33,11 +33,13 @@ export const getNavData = () => [
     title: '开发文档',
     type: 'document',
     component: Documents,
-  }, {
-    title: '趋势榜',
-    type: 'trending',
-    component: Github,
-  }, {
+  },
+  // {
+  //   title: '趋势榜',
+  //   type: 'trending',
+  //   component: Github,
+  // },
+  {
     title: '历史记录',
     type: 'history',
     component: Historys,
