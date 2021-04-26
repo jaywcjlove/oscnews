@@ -1,0 +1,131 @@
+.warpper {
+  height: 100%;
+  overflow: auto;
+  :global {
+    .active {
+      font-weight: bold;
+      color: #0e693c;
+    }
+  }
+  .tabs {
+    flex-direction: row;
+    display: flex;
+    padding: 0 10px;
+    border-bottom: 1px solid #f1f1f1;
+    div {
+      padding: 10px 5px;
+      cursor: pointer;
+      &:hover {
+        color: #0e693c;
+      }
+    }
+  }
+}
+
+.newList {
+  font-size: 14px;
+  padding: 10px 10px 15px;
+  :global {
+    .item {
+      padding: 8px 5px;
+      border-bottom: 1px dashed #ececec;
+      background-color: #fff;
+      transition: all .3s;
+      &:hover {
+        background: #f7f7f7;
+        .summary:after {
+          background: linear-gradient(to right, rgba(255, 255, 255, 0), #f7f7f7 96%);
+        }
+      }
+      .title {
+        font-size: 14px;
+        line-height: 18px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #333;
+        display: block;
+        transition: color .3s;
+        &:hover {
+          color: #0e693c;
+        }
+        .text-ellipsis {
+          display: block;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          position: relative;
+        }
+      }
+      .summary {
+        font-size: 12px;
+        max-height: 3em;
+        margin: 8px 0;
+        color: #a0a0a0;
+        position: relative;
+        overflow: hidden;
+        &:after {
+          position: absolute;
+          bottom: 0;
+          content: '';
+          right: 0;
+          display: block;
+          width: 160px;
+          height: 20px;
+          background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 96%);
+        }
+      }
+      .thumb {
+        max-width: 150px;
+        margin-top: -38px;
+        margin-left: 11px;
+        position: relative;
+        z-index: 9;
+        float: right;
+        img {
+          max-height: 40px;
+          overflow: hidden;
+        }
+      }
+      .from {
+        a, img, span, svg:not([class~=hide]) {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        svg {
+          width: 14px !important;
+          height: 12px !important;
+          vertical-align: middle;
+          path {
+            fill: #868686;
+          }
+        }
+        .avatar {
+          overflow: hidden;
+          display: block;
+          width: 14px;
+          min-width: 14px;
+          max-width: 14px;
+          height: 14px;
+          border-radius: 12px;
+        }
+        .mr {
+          margin-right: 15px;
+          font-size: .75rem;
+          color: #9d9d9d;
+          font-weight: normal;
+          vertical-align: middle;
+          a {
+            vertical-align: initial;
+            color: #a0a0a0;
+            &:hover {
+              color: #0e693c;
+            }
+          }
+        }
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

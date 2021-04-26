@@ -1,6 +1,6 @@
 
 import Blank from './pages/Blank';
-import Github from './pages/Github';
+// import Github from './pages/Github';
 import Historys from './pages/History';
 import Documents from './pages/Document';
 import Navigation from './pages/Navigation';

@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './Root';
@@ -75,7 +74,7 @@ storage.get(['oscconfig', 'visible', 'conf', 'dbs', 'todo'], (items) => {
   if (!items.conf.selectSubType) items.conf.selectSubType = ''; // 为空默认数组第一个
 
   items.storage = storage;
-  if (!/#normal$/.test(location.hash) && items.conf.isNewTab === false) {
+  if (!/#normal$/.test(window.location.hash) && items.conf.isNewTab === false) {
     // eslint-disable-next-line
     chrome.tabs.update({ url: 'chrome-search://local-ntp/local-ntp.html' });
   } else {

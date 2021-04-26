@@ -193,6 +193,7 @@ export default class Navigation extends Component {
               );
             })}
             {navContent.length < 18 && (
+              // eslint-disable-next-line jsx-a11y/anchor-is-valid
               <a className={styles.addIcon} onClick={this.onShowEdit.bind(this)}>
                 <img alt="" src={addIcon} />
               </a>
