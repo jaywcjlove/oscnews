@@ -18,6 +18,7 @@ jobs:
 
       - run: npm install --unsafe-perm
       - run: npm run build
+      - run: mkdir -p build
 
       - name: Converts Markdown to HTML
         uses: jaywcjlove/markdown-to-html-cli@main
