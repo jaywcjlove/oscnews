@@ -26,6 +26,7 @@
     "kkt": "~7.1.5"
   },
   "dependencies": {
+    "@wcj/dark-mode": "~1.0.13",
     "cheerio": "~1.0.0-rc.10",
     "classnames": "~2.3.1",
     "linux-command": "~1.9.0",

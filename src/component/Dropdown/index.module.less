@@ -12,10 +12,9 @@
   right: 0;
   margin-top: 4px;
   font-size: 14px;
-  color: #586069;
-  background-color: #fff;
+  background-color: var(--color-theme-bg);
   background-clip: padding-box;
-  border: 1px solid rgba(27,31,35,0.15);
+  border: 1px solid var(--color-border-color);
   border-radius: 4px;
   box-shadow: 0 3px 12px rgba(27,31,35,0.15);
   transition: all .3s;
@@ -38,8 +37,7 @@
   }
   .item {
     display: block !important;
-    padding: 6px 8px !important;
-    color: #868686;
+    padding: 6px 8px !important;  
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -67,9 +65,8 @@
   .divider {
     padding: 9px 10px 9px 10px;
     font-size: 12px;
-    color: #a0a0a0;
   }
   :global(.line) {
-    border-top: 1px solid #ececec;
+    border-top: 1px solid var(--color-border-color);
   }
 }

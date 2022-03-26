@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '@wcj/dark-mode';
 import classNames from 'classnames';
 import Dropdown from './Dropdown';
 import Switch from './Switch';
@@ -41,6 +42,11 @@ export default class Header extends Component {
         },
         {
           title: this.renderSiwtchOption.bind(this, 'isHideNav'),
+        },
+        {
+          title: <dark-mode light="Dart" dark="Light"></dark-mode>,
+          divider: true,
+          line: true,
         },
         {
           title: '关于应用',

@@ -7,7 +7,7 @@
   display: flex;
   user-select: none;
   .menus {
-    border-right: 1px solid #ccc;
+    border-right: 1px solid var(--color-border-color);
     width: 210px;
     overflow: auto;
     .item {
@@ -24,7 +24,7 @@
         color: #333;
       }
       &:global(.active) {
-        background-color: #dedddd;
+        background-color: var(--color-active);
         svg {
           fill: #555 !important;
         }
@@ -58,7 +58,7 @@
       width: 100%;
       &:focus {
         color: #495057;
-        background-color: #fff;
+        background-color:  var(--color-active);
         border-color: #80bdff;
         outline: 0;
         box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
@@ -67,9 +67,9 @@
     .addTask {
       -webkit-user-modify: read-write-plaintext-only;
       margin: 3px;
-      border: 1px solid #dfdfdf;
+      border: 1px solid var(--color-border-color);
       word-wrap: break-word;
-      background-color: #fff;
+      background-color:  var(--color-active);
       padding: 5px 5px;
       border-radius: 3px;
       outline: 0;
@@ -84,7 +84,6 @@
   }
 
   .content {
-    background-color: #fff;
     padding: 10px;
     width: 100px;
     overflow: auto;
@@ -141,7 +140,7 @@
         height: 32px;
         padding: 0 10px;
         border-radius: 2px;
-        background-color: #00000020;
+        background-color: var(--color-active);
         border: 1px solid transparent;
         &:focus {
           background-color: #00000006;
@@ -161,7 +160,7 @@
       line-height: 36px;
       margin: 5px 0;
       padding: 0 0px 0 0px;
-      background-color: #f3f3f3;
+      background-color:  var(--color-active);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;

@@ -15,25 +15,22 @@
   border-radius: 5px;
   font-size: 14px;
   line-height: 32px;
-  background-color: #f9f9f9;
+  background-color:  var(--color-active);
   min-height: 100px;
   a {
     text-decoration: none;
-    &:hover {
-      color: #333;
-    }
     :global(.kw) {
       color: red;
       font-style: initial;
     }
   }
   .info {
-    color: #555;
+    // color: #555;
     font-size: 14px;
     text-align: center;
   }
   .infoTotal {
-    color:#b3b3b3;
+    // color:#b3b3b3;
     display: flex;
     padding: 0 10px;
     span {
@@ -43,7 +40,7 @@
       color: #0366d6;
     }
     a {
-      color: #b3b3b3;
+      // color: #b3b3b3;
       &:hover {
         color: #034ad6;
       }
@@ -54,10 +51,10 @@
     line-height: 14px;
     padding: 6px 10px;
     &:global(.active) {
-      background-color: #efefef;
+      background-color:  var(--color-active);
     }
     &:hover{
-      background-color: #efefef;
+      background-color:  var(--color-active);
     }
     .title {
       flex: 1;
