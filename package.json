@@ -20,21 +20,19 @@
   },
   "homepage": "https://github.com/jaywcjlove/oscnews#readme",
   "devDependencies": {
-    "@kkt/less-modules": "6.9.0",
-    "clean-webpack-plugin": "3.0.0",
-    "filemanager-webpack-plugin": "3.1.1",
-    "kkt": "6.9.0"
+    "@kkt/less-modules": "~7.1.1",
+    "clean-webpack-plugin": "~4.0.0",
+    "filemanager-webpack-plugin": "~6.1.7",
+    "kkt": "~7.1.5"
   },
   "dependencies": {
-    "babel-polyfill": "6.26.0",
-    "cheerio": "1.0.0-rc.5",
-    "classnames": "2.2.6",
-    "linux-command": "1.5.1",
-    "prop-types": "15.7.2",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "solarlunar": "2.0.7",
-    "webpack-merge": "4.2.2"
+    "cheerio": "~1.0.0-rc.10",
+    "classnames": "~2.3.1",
+    "linux-command": "~1.9.0",
+    "prop-types": "~15.8.1",
+    "react": "~17.0.2",
+    "react-dom": "~17.0.2",
+    "solarlunar": "~2.0.7"
   },
   "eslintConfig": {
     "extends": "react-app"

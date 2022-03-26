@@ -6,29 +6,21 @@
     "128": "osc-logo.png"
   },
   "permissions": [
-    "*://*.github.com/*",
-    "*://www.oschina.net/*",
     "tabs",
     "activeTab",
     "unlimitedStorage",
     "storage",
     "history",
-    "chrome://favicon/",
     "management",
     "webRequest",
-    "webRequestBlocking"
+    "scripting"
   ],
+  "host_permissions": ["https://www.oschina.net/", "https://github.com/"],
+  "manifest_version": 3,
   "background": {
-    "scripts": [
-      "background.js"
-    ]
-  },
-  "browser_action": {
-    "default_title": "",
-    "default_icon": "osc-logo.png"
+    "service_worker": "background.js"
   },
   "offline_enabled": true,
-  "manifest_version": 2,
   "chrome_url_overrides": {
     "newtab": "index.html"
   }

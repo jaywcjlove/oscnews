@@ -20,9 +20,9 @@ export default class Contextmenu extends Component {
     document.removeEventListener('contextmenu', this.handleContextmenu, false);
     document.removeEventListener('mousedown', this.handleClickOutside, true);
   }
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.visible !== this.props.visible) {
-      this.setState({ visible: nextProps.visible });
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.visible !== this.props.visible) {
+      this.setState({ visible: this.props.visible });
     }
   }
   handleClickOutside(e) {

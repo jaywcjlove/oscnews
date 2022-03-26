@@ -25,9 +25,9 @@ export default class Todo extends Component {
     };
     this.handleClickOutside = this.handleClickOutside.bind(this);
   }
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.todo !== this.props.todo) {
-      this.setState({ todo: nextProps.todo });
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.todo !== this.props.todo) {
+      this.setState({ todo: this.props.todo });
     }
   }
   componentDidMount() {

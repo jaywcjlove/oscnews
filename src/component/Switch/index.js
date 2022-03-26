@@ -10,9 +10,9 @@ export default class Switch extends Component {
     };
     this.onChange = this.onChange.bind(this);
   }
-  componentWillReceiveProps(nextProps) {
-    if (this.props.checked !== nextProps.checked) {
-      this.setState({ _checked: nextProps.checked });
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.checked !== prevProps.checked) {
+      this.setState({ _checked: this.props.checked });
     }
   }
   onChange(e) {

@@ -48,7 +48,7 @@ export default class OSCNews extends PureComponent {
     if (!visible && newList) return;
     conf.oscType = newType;
     storage.set({ conf });
-    fetchInterval(`http://www.oschina.net/action/ajax/get_more_news_list?newsType=${newType}&p=${newPage}`, 1).then((response) => {
+    fetchInterval(`https://www.oschina.net/action/ajax/get_more_news_list?newsType=${newType}&p=${newPage}`, 1).then((response) => {
       if (!this.mounted) return;
       response = response.replace(/<a\b[^>]+\bhref="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (node, url, text) => {
         if (/^\//.test(url)) {

@@ -29,12 +29,12 @@ export default class Select extends Component {
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleClickOutside, true);
   }
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.option !== this.props.option) {
-      this.setState({ option: nextProps.option });
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.option !== this.props.option) {
+      this.setState({ option: this.props.option });
     }
-    if (nextProps.value !== this.props.value) {
-      this.setState({ value: nextProps.value });
+    if (prevProps.value !== this.props.value) {
+      this.setState({ value: this.props.value });
     }
   }
   handleClickOutside(e) {

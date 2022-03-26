@@ -108,7 +108,7 @@ export default class SearchView extends Component {
     }
   }
   render() {
-    const { select, value, query, searchNav, iframe, iframeUrl } = this.state;
+    const { select, value, query, searchNav, iframeUrl } = this.state;
     const option = this.getSubNavData();
     const optionMenu = searchNav.filter(item => item.value === select)[0] || {};
     const optionItem = option.filter(item => item.value === value)[0] || option[0];
