@@ -28,7 +28,7 @@
   "dependencies": {
     "@wcj/dark-mode": "~1.0.13",
     "cheerio": "~1.0.0-rc.10",
-    "classnames": "~2.3.1",
+    "classnames": "~2.5.0",
     "linux-command": "~1.9.0",
     "prop-types": "~15.8.1",
     "react": "~17.0.2",
