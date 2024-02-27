@@ -17,9 +17,6 @@
   ],
   "host_permissions": ["https://www.oschina.net/", "https://github.com/"],
   "manifest_version": 3,
-  "background": {
-    "service_worker": "background.js"
-  },
   "offline_enabled": true,
   "chrome_url_overrides": {
     "newtab": "index.html"
