@@ -23,7 +23,7 @@
     "@kkt/less-modules": "~7.1.1",
     "clean-webpack-plugin": "~4.0.0",
     "filemanager-webpack-plugin": "~6.1.7",
-    "kkt": "~7.1.5"
+    "kkt": "~7.1.7"
   },
   "dependencies": {
     "@wcj/dark-mode": "~1.0.13",
