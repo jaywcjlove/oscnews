@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/jaywcjlove/oscnews#readme",
   "devDependencies": {
-    "@kkt/less-modules": "~7.1.1",
+    "@kkt/less-modules": "~7.5.0",
     "clean-webpack-plugin": "~4.0.0",
     "filemanager-webpack-plugin": "~6.1.7",
     "kkt": "~7.1.5"
